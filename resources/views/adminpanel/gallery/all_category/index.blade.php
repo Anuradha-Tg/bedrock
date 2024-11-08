@@ -87,16 +87,16 @@
 
 
 
-                                        <section class="col col-12">
+                                        {{-- <section class="col col-12"> --}}
                                             {{-- <label class="label">{{ __('Show in the Home page') }}</label> --}}
-                                            <div style="display:  flex-wrap: wrap; gap: 100px;">
+                                            {{-- <div style="display:  flex-wrap: wrap; gap: 100px;">
 
                                             <label class="checkbox" style="display: flex; align-items: center;  gap: 100px;">
 
                                                     <input type="checkbox" name="checkbox" value="1" >
                                                     <i></i>Show in the Home page
                                                 </label>
-                                        </section>
+                                        </section> --}}
                                     </div>
 
 
