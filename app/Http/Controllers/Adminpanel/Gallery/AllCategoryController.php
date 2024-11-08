@@ -52,7 +52,7 @@ class AllCategoryController extends Controller
 
         $allCategory = new AllCategory();
         $allCategory->image = $pathimage;
-        $allCategory->checkbox = $request->checkbox ?? 0;
+        $allCategory->checkbox = 1;
         $allCategory->order = $request->order;
         $allCategory->save();
 
@@ -114,11 +114,9 @@ class AllCategoryController extends Controller
     public function updateCheckboxStatus(Request $request)
     {
         $category = AllCategory::find($request->id);
-        // Count the number of records with the checkbox enabled
         $checkedCount = AllCategory::where('checkbox', 1)->count();
 
-        // If trying to enable a new checkbox and the limit has been reached
-        if ($category->checkbox == "0" && $checkedCount >= 8) {
+        if ($category->checkbox == "1" && $checkedCount <= 8) {
             return redirect()->route('all-category-list')
                 ->with('error', 'Only 8 records can be activated at the same time.');
         } else {
