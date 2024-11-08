@@ -1,0 +1,401 @@
+@include('frontend.includes.header')
+
+<!-- ============================== -->
+<!-- ============================== -->
+
+<div class="container-fluid cover_bg inner_banner"
+    style=" background-image: linear-gradient(to bottom, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url({{ asset('storage/app/' . $topBanner->banner_image) }});">
+    <div class="container">
+        <div class="row">
+            <!-- <h1>Fred’s Cave</h1> -->
+        </div>
+    </div>
+</div>
+
+<!-- main slider end -->
+
+<!-- ============================== -->
+<!-- ============================== -->
+
+<div class="clearfix"></div>
+
+<!-- slider section start -->
+<div class="container-fluid cover_bg py-5 room_detail_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <a href="{{ route('rooms') }}"></a>
+                <h1>{{ $roomDetails->title }}</h1>
+                <h4><i>{{ $roomDetails->subtitle }}</i></h4>
+
+                <div class="row my-4">
+                    @foreach ($roomFeatureDetails as $featureData)
+                        <div class="col-2">
+                            <div class="small_icon_box">
+                                <img src="{{ asset($featureData->icon2) }}" alt="">
+                                <!-- Assuming 'check' holds the icon file name -->
+                                <p>{{ $featureData->feature_name }}</p>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+
+
+                {{-- <!-- =============== -->
+
+                <div class="col-2">
+                  <div class="small_icon_box">
+                    <img src="images/lake_y.png" alt="">
+                    <p>Lake view</p>
+                  </div>
+                </div>
+
+                <!-- =============== -->
+
+                <div class="col-2">
+                  <div class="small_icon_box">
+                    <img src="images/garden_y.png" alt="">
+                    <p>Garden view</p>
+                  </div>
+                </div>
+
+                <!-- =============== -->
+
+                <div class="col-2">
+                  <div class="small_icon_box">
+                    <img src="images/bed_y.png" alt="">
+                    <p>2 single beds</p>
+                  </div>
+                </div>
+
+                <!-- =============== -->
+
+                <div class="col-2">
+                  <div class="small_icon_box">
+                    <img src="images/ac_y.png" alt="">
+                    <p>Air conditioning</p>
+                  </div>
+                </div>
+
+                <!-- =============== -->
+
+                <div class="col-2">
+                  <div class="small_icon_box">
+                    <img src="images/sq_y.png" alt="">
+                    <p>50 m²</p>
+                  </div>
+                </div>
+
+                <!-- =============== --> --}}
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper thumb-swiper2">
+                <div class="swiper-wrapper">
+                    @foreach ($roomDetails->room_images as $image)
+                        <div class="swiper-slide cover_bg"
+                            style="background-image: url('{{ asset('storage/app/' . $image->image_name) }}');">
+                        </div>
+                    @endforeach
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div thumbsSlider="" class="swiper thumb-swiper">
+                <div class="swiper-wrapper">
+                    @foreach ($roomDetails->room_images as $image)
+                        <div class="swiper-slide cover_bg"
+                            style="background-image: url('{{ asset('storage/app/' . $image->image_name) }}');">
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- slider section end -->
+
+<div class="clearfix"></div>
+
+<!-- description start -->
+
+<div class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
+            
+            <h4 class="mb-3">Description of the Room</h4>
+
+            <div class="ms-4 mb-5">
+                {!! $roomDetails->description1 !!}
+
+                {!! $roomDetails->description2 !!}
+
+
+                <div class="d-flex gap-3 mt-4">
+                    <div class="blue_box">
+                        <img src="{{ asset('public/frontend/images/size_w.png') }}" alt="">
+                        <p>Room Size</p>
+                        <h4>{{ $roomDetails->room_size }}</h4>
+                    </div>
+
+                    <!-- ============= -->
+
+                    <div class="blue_box">
+                        <img src="{{ asset('public/frontend/images/bed_w.png') }}" alt="">
+                        <p>Rooms Bed</p>
+                        <h4>{{ $roomDetails->rooms_bed }}</h4>
+                    </div>
+
+                    <!-- ============= -->
+
+                    <div class="blue_box">
+                        <img src="{{ asset('public/frontend/images/user_w.png') }}" alt="">
+                        <p>Occupancy</p>
+                        <h4>{{ $roomDetails->occupancy }}</h4>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="mb-3">Facility of the Room</h4>
+
+            <div class="ms-4">
+                <div class="row">
+                    <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
+                        <div class="row">
+                            @foreach ($roomFacilityDetails as $facility)
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                                    <p class="ul">
+                                        <i class="fa-solid fa-check"></i>
+                                        {{ $facility->facility_name }}
+                                    </p>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- description start -->
+
+<div class="clearfix"></div>
+
+<!-- inquire form -->
+<div class="container mb-5">
+    <div class="row inq_row">
+
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+            <div class="text_box">
+
+                <h4>Inquiries</h4>
+
+                <h2 class="mb-3">Ready to unwind in paradise</h2>
+
+                <p>Book your stay at Bedrock Kalpitiya and immerse yourself in comfort and adventure.
+                </p>
+
+            </div>
+        </div>
+
+        <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+            <div class="row">
+                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 cover_bg"
+                    style="background-image: url({{ asset('public/frontend/images/wave_bg.jpg') }}); box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;">
+                    <div class=" contact_col">
+
+                        <div class="contact_box">
+                            <p class="head">Address</p>
+                            <p class="detail">
+                                {{ $contactDetails->address }}
+                            </p>
+                        </div>
+
+                        <!-- ================== -->
+
+                        <div class="contact_box">
+                            <p class="head">Phone Number</p>
+                            <p class="detail">
+                                <a href="">
+                                    {{ $contactDetails->contact_no }}
+                                </a>
+                            </p>
+                        </div>
+
+                        <!-- ================== -->
+
+                        <div class="contact_box">
+                            <p class="head">Email Address</p>
+                            <p class="detail">
+                                <a href="">
+                                    {{ $contactDetails->email }}
+                                </a>
+                            </p>
+                        </div>
+
+                        <!-- ================== -->
+
+                        <div class="contact_box">
+                            <p class="head">Social Media</p>
+                            <p class="detail d-flex gap-3">
+                                <a href="{{ $contactDetails->facebook_url }}">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="{{ $contactDetails->instagram_url }}">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="{{ $contactDetails->twitter_url }}">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+                                <a href="{{ $contactDetails->youtube_url }}">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                            </p>
+                        </div>
+
+                        <!-- ================== -->
+
+                        <div class="contact_box">
+                            <p class="head">Online Booking</p>
+                            <div class="detail d-flex gap-3">
+                                <a href="{{ $contactDetails->banking1 }}">
+                                    <img src="{{ asset('public/frontend/images/agoda_icon.jpg') }}" alt=""
+                                        class="w-100">
+                                </a>
+                                <a href="{{ $contactDetails->banking2 }}">
+                                    <img src="{{ asset('public/frontend/images/booking_icon.png') }}" alt=""
+                                        class="w-100">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ============= -->
+
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <strong>Please submit again!</strong><br><br>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                @if ($message = Session::get('success'))
+                    <div class="alert alert-success">
+                        <p>{{ $message }}</p>
+                    </div>
+                @endif
+                @if ($errors->has('token'))
+                    <span class="text-danger">{{ $errors->first('token') }}</span>
+                @endif
+                <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 dark_bg py-4 px-5"
+                    style="z-index: 9;">
+                    <form id="inquiry_form" name="inquiry_form" action="{{ route('new-enquiry') }}"
+                        enctype="multipart/form-data" method="post" class="smart-form">
+                        @csrf
+                        <div class="row form_row">
+
+                            <div class="col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="full_name" class="form-control" id="full_name"
+                                        required="" placeholder="Full Name" fdprocessedid="kcqaug">
+                                    <label for="floatingInput">Full Name</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="email" name="email" class="form-control" id="email"
+                                        required="" placeholder="Email Address" fdprocessedid="kcqaug">
+                                    <label for="floatingInputEmail">Email Address</label>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+
+                                <div class="form-floating d-flex mb-3">
+                                    <input type="text"
+                                        class="datepicker_input form-control shadow-none datepicker-input"
+                                        id="check_in" placeholder="DD/MM/YYYY" fdprocessedid="d9zs0c"
+                                        autocomplete="off" name="check_in">
+                                    <label for="datepicker1">Check In</label>
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                </div>
+
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+
+                                <div class="form-floating d-flex mb-3">
+                                    <input type="text"
+                                        class="datepicker_input form-control shadow-none datepicker-input"
+                                        id="check_out" placeholder="DD/MM/YYYY" fdprocessedid="d9zs0c"
+                                        autocomplete="off" name="check_out">
+                                    <label for="datepicker1">Check Out</label>
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                </div>
+
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating mb-3">
+                                    <select class="form-select shadow-none" name="country" id="country"
+                                        aria-label="Floating label select example" fdprocessedid="i20ioc">
+                                        <option value="">Select the country</option>
+                                        <option value="">Select the country</option>
+                                        <option value="">Select the country</option>
+                                    </select>
+                                    <label for="country">Country</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" placeholder="" name="message" id="message" rows="5" required=""
+                                        spellcheck="false"></textarea>
+                                    <label for="floatingTextarea">Message</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row form_btn_row justify-content-end">
+                            <button type ="submit">
+                                <div class="d-flex align-items-center light_read_btn">
+                                    <p class="mb-0"><i>Send Now</i></p>
+                                    <div class="circle">
+                                        <span class="icon arrow1"><i class="fa fa-long-arrow-right "></i></span>
+                                        <span class="icon arrow2"><i class="fa fa-long-arrow-right"></i></span>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 right_col">
+
+            <div style="width: 100%"><iframe width="100%" height="550" frameborder="0" scrolling="no" marginheight="0"
+                marginwidth="0"
+                src="https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=bedrock%20kalpitiya+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                href="https://www.gps.ie/">gps tracker sport</a></iframe></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- inquire form -->
+<!-- inquire form -->
+
+<!-- ================================= -->
+<!-- ================================= -->
+@include('frontend.includes.footer')
