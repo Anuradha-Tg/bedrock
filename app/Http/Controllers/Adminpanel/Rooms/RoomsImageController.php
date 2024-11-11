@@ -72,8 +72,8 @@ class RoomsImageController extends Controller
                     $btn = '<a href="' . $edit_url . '"><i class="fa fa-edit"></i></a>';
                     return $btn;
                 })
-                ->addColumn('blockimages', 'adminpanel.gallery.images.actionBlock')
-                ->rawColumns(['title', 'image_name', 'edit', 'blockimages'])
+                ->addColumn('blockroomimages', 'adminpanel.gallery.images.actionBlock')
+                ->rawColumns(['title', 'image_name', 'edit', 'blockroomimages'])
                 ->make(true);
         }
 

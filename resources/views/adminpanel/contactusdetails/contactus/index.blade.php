@@ -56,7 +56,7 @@
                                         </label>
                                     </section>
                                     <section class="col col-4">
-                                        <label class="label">{{ __('Hotline') }}<span style=" color: red;">*</span> </label>
+                                        <label class="label">{{ __('Hotline') }} </label>
                                         <label class="input">
                                             <input type="text" id="hotline" name="hotline"   value="{{ $data->hotline }}">
                                         </label>

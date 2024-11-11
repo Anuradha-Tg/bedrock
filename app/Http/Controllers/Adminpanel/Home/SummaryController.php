@@ -31,6 +31,7 @@ class SummaryController extends Controller
 
     public function update(Request $request)
     {
+        // dd($request->description);
         $request->validate([
             'title' => 'required',
             'description' => 'required'

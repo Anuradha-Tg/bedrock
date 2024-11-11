@@ -92,15 +92,14 @@
                 <div class="row">
                   <section class="col col-4">
                     <label class="label">{{ __('user.role') }} <span style=" color: red;">*</span></label>
-                    {{-- <label class="select"> --}}
-                      <select id="roles" name="roles" class="select2" required>
-                        <option value=""></option>
+                    <label class="select">
+                      <select id="roles" name="roles" class="select" required>
                         @foreach ($roles as $x => $val)
                         <option value="{{ $val }}">{{ $val }}</option>
                         @endforeach
                       </select>
                       <i></i>
-                    {{-- </label> --}}
+                    </label>
                   </section>
                 </div>
 

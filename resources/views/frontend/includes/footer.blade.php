@@ -6,7 +6,9 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 right_border p-3">
+              <a href="{{ url('/') }}">
               <img src="{{asset('public/frontend/images/logo.jpg')}}" alt="" class="footer_logo mb-3">
+              </a>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
               aliqua. Ut enim ad minim veniam.  </p>
             </div>

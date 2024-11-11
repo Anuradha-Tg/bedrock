@@ -155,7 +155,7 @@
                     processing: true,
                     serverSide: true,
                     ajax: "{{ route('all-category-list') }}",
-                    // order: [ 1, 'asc' ],
+                    order: [ 2, 'asc' ],
                     columns: [{
                             data: 'DT_RowIndex',
                             name: 'id'

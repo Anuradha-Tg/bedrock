@@ -26,9 +26,9 @@ class ExperienceController extends Controller
     {
         $request->validate([
             'heading' => 'required',
-            'description' => 'required',
-            'image1' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
-            'home_image1' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'description' => 'required|max:1000',
+            'image1' => 'image|mimes:jpg,png,jpeg,gif,svg',
+            'home_image1' => 'image|mimes:jpg,png,jpeg,gif,svg',
             'status' => 'required|in:Y,N'
         ]);
 
@@ -115,7 +115,7 @@ class ExperienceController extends Controller
     {
         $request->validate([
             'heading' => 'required',
-            'description' => 'required',
+            'description' => 'required|max:1000',
             'image1' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             'home_image1' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
 

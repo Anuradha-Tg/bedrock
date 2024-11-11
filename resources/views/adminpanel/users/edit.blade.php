@@ -15,7 +15,7 @@
         <!-- END RIBBON -->
         <div id="content">
             <div class="row">
-            <div class="col-lg-12">
+                <div class="col-lg-12">
                     <div class="row cms_top_btn_row" style="margin-left:auto;margin-right:auto;">
                         <a href="{{ route('users.index') }}">
                             <button class="btn cms_top_btn top_btn_height ">{{ __('user.add_new') }}</button>
@@ -29,22 +29,23 @@
             </div>
 
             @if ($errors->any())
-            <div class="alert alert-danger">
-                <!-- <strong>Whoops!</strong> There were some problems with your input.<br><br> -->
-                <ul>
-                    @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
+                <div class="alert alert-danger">
+                    <!-- <strong>Whoops!</strong> There were some problems with your input.<br><br> -->
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
             @endif
             @if ($message = Session::get('success'))
-            <div class="alert alert-success">
-                <p>{{ $message }}</p>
-            </div>
+                <div class="alert alert-success">
+                    <p>{{ $message }}</p>
+                </div>
             @endif
             <!-- Widget ID (each widget will need unique ID)-->
-            <div class="jarviswidget" id="wid-id-1" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-custombutton="false" role="widget">
+            <div class="jarviswidget" id="wid-id-1" data-widget-colorbutton="false" data-widget-editbutton="false"
+                data-widget-custombutton="false" role="widget">
                 <header>
                     <h2>{{ __('user.title') }}</h2>
                 </header>
@@ -57,21 +58,26 @@
                     <!-- end widget edit box -->
                     <!-- widget content -->
                     <div class="widget-body no-padding">
-                        <form action="{{ route('save-user') }}" enctype="multipart/form-data" method="post" id="user-form" class="smart-form">
+                        <form action="{{ route('save-user') }}" enctype="multipart/form-data" method="post"
+                            id="user-form" class="smart-form">
                             @csrf
                             @method('PUT')
                             <fieldset>
                                 <div class="row">
                                     <section class="col col-4">
-                                        <label class="label">{{ __('user.name') }} <span style=" color: red;">*</span> </label>
+                                        <label class="label">{{ __('user.name') }} <span style=" color: red;">*</span>
+                                        </label>
                                         <label class="input">
-                                            <input type="text" id="name" name="name" required value="{{ $user->name }}">
+                                            <input type="text" id="name" name="name" required
+                                                value="{{ $user->name }}">
                                         </label>
                                     </section>
                                     <section class="col col-4">
-                                        <label class="label">{{ __('user.email') }} <span style=" color: red;">*</span> </label>
+                                        <label class="label">{{ __('user.email') }} <span
+                                                style=" color: red;">*</span> </label>
                                         <label class="input">
-                                            <input type="text" id="email" name="email" required value="{{ $user->email }}">
+                                            <input type="text" id="email" name="email" required
+                                                value="{{ $user->email }}">
                                         </label>
                                     </section>
                                 </div>
@@ -79,44 +85,55 @@
                                 <div class="row">
 
                                     <?php
-                                    $uval = "";
+                                    $uval = '';
                                     foreach ($userRole as $rol => $uval) {
                                         $uval = $uval;
                                     }
                                     ?>
 
                                     <section class="col col-4">
-                                        <label class="label">{{ __('user.role') }} <span style=" color: red;">*</span></label>
-                                        {{-- <label class="select"> --}}
-                                            <select id="roles" name="roles" class="select2" required>
-                                                <option value=""></option>
-                                                @foreach ($roles as $x => $val)
-                                                <option value="{{ $val }}" {{ $uval == $val ? 'selected' : ''}}>{{ $val }}</option>
-                                                @endforeach
-                                            </select>
-                                            <i></i>
-                                        {{-- </label> --}}
+                                        <label class="label">{{ __('user.role') }} <span
+                                                style=" color: red;">*</span></label>
+                                        <label class="select">
+                                        <select id="roles" name="roles" class="select" required>
+                                            @foreach ($roles as $x => $val)
+                                                <option value="{{ $val }}"
+                                                    {{ $uval == $val ? 'selected' : '' }}>{{ $val }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                        <i></i>
+                                        </label>
                                     </section>
                                 </div>
                                 <div class="row">
                                     <section class="col-lg-12" style="margin-top: 2%; margin-left:16px;">
                                         <label class="label">{{ __('user.change_password') }}
-                                        <button id="changepwyes" type="button" style="margin-left: 2%; width: 90px; background-color: #963c2c; color: #e7e7e7;" class="btn btn-default"> {{ __('action.yes') }} </button>
-                                        <button id="changepwno" type="button" style="margin-left: 2%; width: 90px; background-color: #963c2c; color: #e7e7e7;" class="btn btn-default"> {{ __('action.no') }} </button></label>
+                                            <button id="changepwyes" type="button"
+                                                style="margin-left: 2%; width: 90px; background-color: #963c2c; color: #e7e7e7;"
+                                                class="btn btn-default"> {{ __('Yes') }} </button>
+                                            <button id="changepwno" type="button"
+                                                style="margin-left: 2%; width: 90px; background-color: #963c2c; color: #e7e7e7;"
+                                                class="btn btn-default"> {{ __('No') }} </button></label>
                                     </section>
                                 </div>
                                 <div class="row" id="changepassword" style="display: none;">
                                     <section class="col col-4">
-                                        <label class="label">{{ __('user.password') }} <span style=" color: red;">*</span> </label>
+                                        <label class="label">{{ __('user.password') }} <span
+                                                style=" color: red;">*</span> </label>
                                         <label class="input">
-                                            <input type="password" id="password" name="password" value="" minlength="6" class="password" disabled>
+                                            <input type="password" id="password" name="password" value=""
+                                                minlength="6" class="password" disabled required>
                                         </label>
                                     </section>
 
                                     <section class="col col-4">
-                                        <label class="label">{{ __('user.confirmpassword') }} <span style=" color: red;">*</span> </label>
+                                        <label class="label">{{ __('user.confirmpassword') }} <span
+                                                style=" color: red;">*</span> </label>
                                         <label class="input">
-                                            <input type="password" id="confirm-password" name="confirm-password" value="" data-parsley-equalto="#password" class="confirmpassword" disabled>
+                                            <input type="password" id="confirm-password" name="confirm-password"
+                                                value="" data-parsley-equalto="#password" class="confirmpassword"
+                                                disabled required>
                                         </label>
                                     </section>
                                 </div>
@@ -152,20 +169,20 @@
         </script>
 
         <script>
-            $(document).ready(function () {
-                $('#changepwyes').click(function(){ // click to
+            $(document).ready(function() {
+                $('#changepwyes').click(function() { // click to
                     $('#changepassword').show(); // removing disabled in this class
-                    $('.password').attr('disabled',false); // removing disabled in this class
-                    $('.confirmpassword').attr('disabled',false); // removing disabled in this class
+                    $('.password').attr('disabled', false); // removing disabled in this class
+                    $('.confirmpassword').attr('disabled', false); // removing disabled in this class
                 });
 
-                $('#changepwno').click(function(){ // click to
+                $('#changepwno').click(function() { // click to
                     $("#changepassword").hide(); // removing disabled in this class
                     $("#confirm-password").val('');
                     $("#password").val('');
                 });
 
-                
+
             });
         </script>
     </x-slot>

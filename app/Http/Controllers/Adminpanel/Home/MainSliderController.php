@@ -27,7 +27,8 @@ class MainSliderController extends Controller
         $request->validate([
             'title_en' => 'required',
             'description_en' => 'required',
-            'desktop_image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'link' => 'required',
+            'desktop_image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             'mobile_image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             'status' => 'required|in:Y,N'
         ]);
@@ -117,6 +118,7 @@ class MainSliderController extends Controller
         $request->validate([
             'title_en' => 'required',
             'description_en' => 'required',
+            'link' => 'required',
             'desktop_image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             'mobile_image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
             // 'status' => 'required|in:Y,N'

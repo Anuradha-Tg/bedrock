@@ -153,7 +153,7 @@
                     processing: true,
                     serverSide: true,
                     ajax: "{{ route('room-feature-list') }}",
-                    // order: [ 1, 'asc' ],
+                    order: [ 3, 'asc' ],
                     columns: [{
                             data: 'DT_RowIndex',
                             name: 'id'

@@ -160,8 +160,8 @@
                             name: 'image_name'
                         },
                         {
-                            data: 'blockimages',
-                            name: 'blockimages',
+                            data: 'blockroomimages',
+                            name: 'blockroomimages',
                             orderable: false,
                             searchable: false
                         },
@@ -181,7 +181,7 @@
                     buttons: ["Cancel", "Yes"],
                 }).then(function(value) {
                     if (value == true) {
-                        window.location.replace("blockimages/" + id);
+                        window.location.replace("blockroomimages/" + id);
                     }
                 });
             });

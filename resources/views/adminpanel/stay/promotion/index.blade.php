@@ -101,7 +101,7 @@
                                 </div>
                                     <div class="row">
                                         <section class="col col-11" style="width: 100%;">
-                                            <label class="label">{{ __('Description') }}<span style=" color: red;">*</span></label>
+                                            <label class="label">{{ __('Description') }} <span style=" color: red;">*</span></label>
                                             <label class="input">
                                                 <textarea class="form-control summernote" id="description" name="description" rows="3" required></textarea>
                                             </label>
@@ -121,13 +121,13 @@
 
                                     <div class="row">
                                         <section class="col col-4">
-                                            <label class="label">{{ __('Home Title') }}<span style=" color: red;">*</span> </label>
+                                            <label class="label">{{ __('Home Title') }} </label>
                                             <label class="input">
                                                 <input type="text" id="home_title" name="home_title" >
                                             </label>
                                         </section>
                                         <section class="col col-4">
-                                            <label class="label">{{ __('Home Content') }} <span style=" color: red;">*</span> </label>
+                                            <label class="label">{{ __('Home Content') }}  </label>
                                             <label class="input">
                                                 <textarea class="form-control" id="home_content" name="home_content" rows="3" ></textarea>
                                             </label>
@@ -143,7 +143,7 @@
                                     </div>
                                     <div class="row">
                                         <section class="col col-2">
-                                            <label class="label">{{ __('Home Image ') }} (800 x 1200) <span style=" color: red;">*</span></label>
+                                            <label class="label">{{ __('Home Image ') }} (800 x 1200) </label>
                                             <label class="input">
                                                 <input type="file" class="form-control form-input" id="home_image1" name="home_image1" style="overflow: hidden;" >
                                             </label>

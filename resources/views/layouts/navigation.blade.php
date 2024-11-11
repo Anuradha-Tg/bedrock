@@ -157,11 +157,13 @@
                                                 $url_view = $url_add."-view";
                                                 $url_admin = str_replace('.index', '', $subMenu->url);
                                             ?>
+                                            @if(in_array( $subMenu->id,$permissionHave))
                                             <li class="{{ request()->is($subMenu->url) || request()->is($url_add) || Request::segment(1) == $url_edit || Request::segment(1) == $url_action || Request::segment(1) == $url_view || Request::segment(1) == $url_admin || Request::segment(1) == $url_add ? 'active' : '' }}">
                                                 @if(in_array( $subMenu->id,$permissionHave))
                                                     <a href="{{ route( $subMenu->url ) }}">{{ $subMenu->title }}</a>
                                                 @endif
                                             </li>
+                                            @endif
                                         @endif
                                     @endforeach
                                 </ul>

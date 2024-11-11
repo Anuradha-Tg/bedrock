@@ -74,6 +74,7 @@
                                         <label class="label">{{ __('Title') }}<span style=" color: red;">*</span> </label>
                                         <label class="input">
                                             <input type="text" id="title_en" name="title_en" required value="{{ $data->title_en }}">
+                                            
                                         </label>
                                     </section>
                                     <section class="col col-2">
@@ -98,15 +99,17 @@
                                             <label class="label">{{ __('Description') }}<span style=" color: red;">*</span></label>
                                             <label class="input">
                                                 <textarea class="form-control summernote" id="description_en" name="description_en" rows="3" required>{{ $data->description_en }}</textarea>
+                                                <span id="warning" style="display:none; color:red;">This value is required.</span>
+
                                             </label>
                                         </section>
                                     </div>
 
                                     <div class="row">
                                         <section class="col col-4">
-                                            <label class="label">{{ __('Read More (URL)') }} </label>
+                                            <label class="label">{{ __('Read More (URL)') }} <span style=" color: red;">*</span></label>
                                             <label class="input">
-                                                <input type="text" id="link" name="link" value="{{ $data->link }}">
+                                                <input type="text" id="link" name="link" value="{{ $data->link }}" required>
                                             </label>
                                         </section>
                                         <section class="col col-2">
@@ -178,6 +181,18 @@
                     ]
                 });
             });
+
+            $('#button1id').click(function(event) {
+            var summernoteContent = $('.summernote').summernote('isEmpty') ? '' : $('.summernote').summernote('code');
+            
+            if (summernoteContent.trim() === '') {
+                event.preventDefault(); // Prevent form submission
+                $('#warning').show(); // Show the warning message
+            } else {
+                $('#warning').hide();
+            }
+        });
+            
         </script>
 
         <script type="text/javascript">

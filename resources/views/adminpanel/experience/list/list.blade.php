@@ -152,7 +152,7 @@
                     processing: true,
                     serverSide: true,
                     ajax: "{{ route('experience-list') }}",
-                    // order: [ 1, 'asc' ],
+                    order: [ 2, 'asc' ],
                     columns: [{
                             data: 'DT_RowIndex',
                             name: 'id'

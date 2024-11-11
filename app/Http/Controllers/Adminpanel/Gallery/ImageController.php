@@ -63,8 +63,8 @@ class ImageController extends Controller
                     return $row->category->category_name ?? 'N/A'; // Display the category name, or 'N/A' if not found
                 })
                 ->addColumn('image_name', function ($row) {
-                    $imgPath = asset("storage/app/{$row->image_name}");
-                    $img = '<img src="' . $imgPath . '" style="width: 100px; height: auto;">';
+                    $imgpath = "storage/app/$row->image_name";
+                    $img = '<img src="' . $imgpath . '">';
                     return $img;
                 })
                 ->addColumn('edit', function ($row) {
@@ -107,7 +107,6 @@ class ImageController extends Controller
 
 
         $image = Image::find($request->id);
-
         Storage::delete($image->image_name); // Delete the image file from storage
         $image->delete(); // Delete the record from the database
 

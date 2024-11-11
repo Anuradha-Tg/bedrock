@@ -89,6 +89,8 @@
                                         <label class="label">{{ __('Description') }}<span style=" color: red;">*</span></label>
                                         <label class="input">
                                             <textarea class="form-control summernote" id="description" name="description" rows="3" required>{{ $data->description }}</textarea>
+                                            <span id="warning" style="display:none; color:red;">This value is required.</span>
+
                                         </label>
                                     </section>
                                 </div>
@@ -127,13 +129,13 @@
                                 </div> --}}
                                 <div class="row">
                                     <section class="col col-4">
-                                        <label class="label">{{ __('Home Title') }}<span style=" color: red;">*</span> </label>
+                                        <label class="label">{{ __('Home Title') }} </label>
                                         <label class="input">
                                             <input type="text" id="home_title" name="home_title"  value="{{ $data->home_title }}">
                                         </label>
                                     </section>
                                     <section class="col col-4">
-                                        <label class="label">{{ __('Home Content') }} <span style=" color: red;">*</span> </label>
+                                        <label class="label">{{ __('Home Content') }} </label>
                                         <label class="input">
                                             <textarea class="form-control" id="home_content" name="home_content" rows="3"  >{{ $data->home_content }}</textarea>
                                         </label>
@@ -171,13 +173,18 @@
                                 </div>
                                 <div class="row">
                                     <section class="col col-2">
-                                        <label class="label">{{ __('Home Image 1') }} (800 x 1000) <span style=" color: red;">*</span></label>
+                                        <label class="label">{{ __('Home Image 1') }} (800 x 1000) </label>
                                         <label class="input">
                                             <input type="file" class="form-control form-input" id="home_image1" name="home_image1" style="overflow: hidden;" >
                                         </label>
                                     </section>
                                     <section class="col col-2">
+                                        @if( $data->home_image1)
                                         <img id="preview-home_image1" src="../storage/app/{{ $data->home_image1 }}" alt="preview image" style="max-height: 250px;">
+                                        @else
+                                        <img id="preview-home_image1" src="{{ asset('public/back/img/whitebg.jpg') }}" alt="default image" style="max-height: 250px;">
+                                        @endif
+
                                     </section>
 
 
@@ -227,6 +234,18 @@
                     ]
                 });
 
+                $('#button1id').click(function(event) {
+            var summernoteContent = $('.summernote').summernote('isEmpty') ? '' : $('.summernote').summernote('code');
+            
+            if (summernoteContent.trim() === '') {
+                event.preventDefault(); // Prevent form submission
+                $('#warning').show(); // Show the warning message
+            } else {
+                $('#warning').hide();
+            }
+        });
+            });
+
                 // Image Preview Functionality
                 function previewImage(input, previewId) {
         const file = input.files[0];
@@ -254,7 +273,7 @@
     });
 
 
-            });
+            
         </script>
         <script>
             $(document).ready(function () {

@@ -64,6 +64,8 @@
                                         <label class="label">{{ __('Description') }}<span style=" color: red;">*</span></label>
                                         <label class="input">
                                             <textarea class="form-control summernote" id="description" name="description" rows="3" required>{{ $data->description }}</textarea>
+                                            <span id="warning" style="display:none; color:red;">This value is required.</span>
+
                                         </label>
                                     </section>
                                 </div>
@@ -174,6 +176,18 @@
                     ]
                 });
 
+                $('#button1id').click(function(event) {
+            var summernoteContent = $('.summernote').summernote('isEmpty') ? '' : $('.summernote').summernote('code');
+            
+            if (summernoteContent.trim() === '') {
+                event.preventDefault(); // Prevent form submission
+                $('#warning').show(); // Show the warning message
+            } else {
+                $('#warning').hide();
+            }
+        });
+            });
+
                 // Image Preview Functionality
                 function previewImage(input, previewId) {
         const file = input.files[0];
@@ -206,7 +220,9 @@
         previewImage(this, 'preview-image6');
     });
 
-            });
+            
+
+
         </script>
     </x-slot>
 </x-app-layout>

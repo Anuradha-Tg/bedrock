@@ -236,7 +236,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('new-room-images', [RoomsImageController::class, 'store'])->name('new-room-images');
     Route::get('room-images-list', [RoomsImageController::class, 'list'])->name('room-images-list');
     Route::put('save-room-images', [RoomsImageController::class, 'update'])->name('save-room-images');
-    Route::get('blockimages/{id}', [RoomsImageController::class, 'block'])->name('blockimages');
+    Route::get('blockroomimages/{id}', [RoomsImageController::class, 'block'])->name('blockroomimages');
 
     Route::get('top-banner-list', [TopBannerController::class, 'list'])->name('top-banner-list');
     Route::get('/edit-top-banner/{id}', [TopBannerController::class, 'edit'])->name('edit-top-banner');
