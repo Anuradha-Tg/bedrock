@@ -88,7 +88,7 @@
                                     <section class="col col-11" style="width: 100%;">
                                         <label class="label">{{ __('Description') }}<span style=" color: red;">*</span></label>
                                         <label class="input">
-                                            <textarea class="form-control summernote" id="description" name="description" rows="3" required>{{ $data->description }}</textarea>
+                                            <textarea class="form-control summernote" id="description" name="description" rows="3" maxlength="1000" required>{{ $data->description }}</textarea>
                                             <span id="warning" style="display:none; color:red;">This value is required.</span>
 
                                         </label>
