@@ -41,7 +41,6 @@
     <meta name="og:image" content="{{ asset('storage/app/' . $meta->og_image) }}" />
     <meta name="og:site_name" content="{{ $meta->og_sitename }}" />
     <meta name="og:description" content="{{ $meta->description }}" />
-    <meta name="og:email" content="{{ $meta->og_email }}" />
     <link rel="canonical" href="{{ url()->full() }}" />
     <title>{{ $meta->page_title }}</title>
 
