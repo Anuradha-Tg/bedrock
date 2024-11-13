@@ -966,26 +966,17 @@
 
                     <!-- ============= -->
 
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <strong>Please submit again!</strong><br><br>
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
-                    @if ($message = Session::get('success'))
-                        <div class="alert alert-success">
-                            <p>{{ $message }}</p>
-                        </div>
-                    @endif
-                    @if ($errors->has('token'))
-                        <span class="text-danger">{{ $errors->first('token') }}</span>
-                    @endif
                         <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 dark_bg py-4 px-5" style="z-index: 9;">
-
+                            @if ($message = Session::get('error'))
+                            <div class="alert alert-danger">
+                                <p>{{ $message }}</p>
+                            </div>
+                        @endif
+                        @if ($message = Session::get('success'))
+                            <div class="alert alert-success">
+                                <p>{{ $message }}</p>
+                            </div>
+                        @endif
                         <form id="inquiry_form" name="inquiry_form" action="{{ route('new-enquiry') }}"
                             enctype="multipart/form-data" method="post" class="smart-form">
                             @csrf
@@ -1007,7 +998,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating mb-3">
-                                        <input type="tel" name="phone" class="form-control" id="phone"
+                                        <input type="text" name="mobile_no" class="form-control" id="mobile_no"
                                             required="" placeholder="Mobile Number" fdprocessedid="kcqaug">
                                         <label for="floatingInput">Mobile Number</label>
                                     </div>
@@ -1040,9 +1031,9 @@
                                     <div class="form-floating mb-3">
                                         <select class="form-select shadow-none" name="country" id="country"
                                             aria-label="Floating label select example" fdprocessedid="i20ioc">
-                                            <option value="">Select the venue</option>
-                                            <option value="">Select the venue</option>
-                                            <option value="">Select the venue</option>
+                                            <option value="Sri Lanka">Sri Lanka</option>
+                                            <option value="Australia">Australia</option>
+                                            <option value="Japan">Japan</option>
                                         </select>
                                         <label for="floatingSelect">Country</label>
                                     </div>
