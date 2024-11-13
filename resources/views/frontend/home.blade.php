@@ -446,7 +446,7 @@
 
                 </div>
             </div>
-            <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 pt-4">
+            <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 md-pt-4 pt-2">
 
                 <p class="text-light">At Bedrock Kalpitiya, your stay could be a serene retreat or a thrilling
                     adventure as you wish. Whether you desire
@@ -910,9 +910,9 @@
                 <div class="row">
                     <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 cover_bg d-flex align-items-center"
                         style="background-image: url('{{ asset('public/frontend/images/wave_bg.jpg') }}'); box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;">
-                        <div class=" contact_col">
+                        <div class=" contact_col row">
 
-                            <div class="contact_box mb-4">
+                            <div class="contact_box mb-4 col-6 col-md-12">
                                 <p class="head">Address</p>
                                 <p class="detail">
                                     {{ $contactDetails->address }}
@@ -921,7 +921,7 @@
 
                             <!-- ================== -->
 
-                            <div class="contact_box mb-4">
+                            <div class="contact_box mb-4 col-6 col-md-12">
                                 <p class="head">Phone Number</p>
                                 <p class="detail">
                                     <a href="tel: {{ $contactDetails->contact_no }}">
@@ -932,7 +932,7 @@
 
                             <!-- ================== -->
 
-                            <div class="contact_box mb-4">
+                            <div class="contact_box mb-4 col-6 col-md-12">
                                 <p class="head">Email Address</p>
                                 <p class="detail">
                                     <a href="mailto:{{ $contactDetails->email }}">
@@ -943,7 +943,7 @@
 
                             <!-- ================== -->
 
-                            <div class="contact_box mb-4">
+                            <div class="contact_box mb-4 col-6 col-md-12">
                                 <p class="head">Social Media</p>
                                 <p class="detail d-flex gap-3">
                                     @if ($contactDetails->facebook_url != '' && $contactDetails->facebook_url != '#')
@@ -971,7 +971,7 @@
 
                             <!-- ================== -->
 
-                            <div class="contact_box mb-4">
+                            <div class="contact_box mb-0 col-6 col-md-12">
                                 <p class="head">Online Booking</p>
                                 <div class="detail d-flex gap-3">
                                     <a href="{{ $contactDetails->banking1 }}" target="_blank">
@@ -1006,14 +1006,14 @@
                             @csrf
                             <div class="row form_row">
 
-                                <div class="dol-12">
+                                <div class="col-6 col-md-12">
                                     <div class="form-floating mb-3">
                                         <input type="text" name="full_name" class="form-control" id="full_name"
                                             required="" placeholder="Full Name" fdprocessedid="kcqaug">
                                         <label for="floatingInput">Full Name</label>
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-6 col-md-12">
                                     <div class="form-floating mb-3">
                                         <input type="email" name="email" class="form-control" id="email"
                                             required="" placeholder="Email Address" fdprocessedid="kcqaug">
@@ -1027,7 +1027,7 @@
                                         <label for="floatingInput">Mobile Number</label>
                                     </div>
                                 </div>
-                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 
                                     <div class="form-floating d-flex mb-3">
                                         <input type="text"
@@ -1039,7 +1039,7 @@
                                     </div>
 
                                 </div>
-                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 
                                     <div class="form-floating d-flex mb-3">
                                         <input type="text"

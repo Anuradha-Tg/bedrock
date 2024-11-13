@@ -2,7 +2,7 @@
     <!-- ================================= -->
 
     <!-- footer start -->
-    <div class="container-fluid cover_bg py-5" style="background-image: url('{{asset('public/frontend/images/footer_bg.jpg')}}');">
+    <div class="container-fluid cover_bg py-5 footer_con" style="background-image: url('{{asset('public/frontend/images/footer_bg.jpg')}}');">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12 right_border p-lg-3 p-3">
@@ -69,7 +69,7 @@
               </div>
 
               <div class="contact_box">
-                <p class="head">Online Booking</p>
+                {{-- <p class="head">Online Booking</p> --}}
                 <div class="detail d-flex gap-3">
                 @if($contactDetails->banking1 != "" && $contactDetails->banking1 != "#")
                   <a href="{{ $contactDetails->banking1 }}" target="_blank">
@@ -87,63 +87,67 @@
             <!-- ========== -->
             <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12 p-lg-5 p-3">
 
-              <div class="contact_box mb-4">
-                <p class="head">Phone Number</p>
-                <p class="detail">
-                  <a href="tel: {{ $contactDetails->contact_no }}">
-                    {{ $contactDetails->contact_no }}
-                  </a>
-                </p>
-              </div>
+              <div class="row">
+                <div class="contact_box mb-4 col-6 col-md-12">
+                  <p class="head">Phone Number</p>
+                  <p class="detail">
+                    <a href="tel: {{ $contactDetails->contact_no }}">
+                      {{ $contactDetails->contact_no }}
+                    </a>
+                  </p>
+                </div>
 
-              <!-- ================== -->
+                <!-- ================== -->
 
-              <div class="contact_box mb-4">
-                <p class="head">Email Address</p>
-                <p class="detail">
-                  <a href="mailto:{{ $contactDetails->email }}">
-                    {{ $contactDetails->email }}
-                  </a>
-                </p>
-              </div>
+                <div class="contact_box mb-4 col-6 col-md-12">
+                  <p class="head">Email Address</p>
+                  <p class="detail">
+                    <a href="mailto:{{ $contactDetails->email }}">
+                      {{ $contactDetails->email }}
+                    </a>
+                  </p>
+                </div>
 
-              <!-- ================== -->
+                <!-- ================== -->
 
-              <div class="contact_box">
-                <p class="head">Social Media</p>
-                <div class="detail d-flex gap-3">
+                <div class="contact_box col-12">
+                  <p class="head">Social Media</p>
                   
-                  <div class="footer_social_icon">
-                    @if($contactDetails->facebook_url != "" && $contactDetails->facebook_url != "#")
-                    <a href="{{ $contactDetails->facebook_url }}" target="_blank">
-                      <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    @endif
-                  </div>
+                  <div class="detail d-flex gap-3">
+                    
+                    <div class="footer_social_icon">
+                      @if($contactDetails->facebook_url != "" && $contactDetails->facebook_url != "#")
+                      <a href="{{ $contactDetails->facebook_url }}" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                      </a>
+                      @endif
+                    </div>
 
-                  <div class="footer_social_icon">
-                    @if($contactDetails->instagram_url != "" && $contactDetails->instagram_url != "#")
-                    <a href="{{ $contactDetails->instagram_url }}" target="_blank">
-                      <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    @endif
-                  </div>
-                  
+                    <div class="footer_social_icon">
+                      @if($contactDetails->instagram_url != "" && $contactDetails->instagram_url != "#")
+                      <a href="{{ $contactDetails->instagram_url }}" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      @endif
+                    </div>
+                    
 
-                  <div class="footer_social_icon">
-                    @if($contactDetails->twitter_url != "" && $contactDetails->twitter_url != "#")
-                    <a href="{{ $contactDetails->twitter_url }}" target="_blank">
-                      <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                    @endif
-                  </div>
+                    <div class="footer_social_icon">
+                      @if($contactDetails->twitter_url != "" && $contactDetails->twitter_url != "#")
+                      <a href="{{ $contactDetails->twitter_url }}" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                      </a>
+                      @endif
+                    </div>
 
-                  <div class="footer_social_icon">
-                    @if($contactDetails->youtube_url != "" && $contactDetails->youtube_url != "#")
-                    <a href="{{ $contactDetails->youtube_url }}" target="_blank">
-                      <i class="fa-brands fa-youtube"></i>
-                    </a>
-                    @endif
+                    <div class="footer_social_icon">
+                      @if($contactDetails->youtube_url != "" && $contactDetails->youtube_url != "#")
+                      <a href="{{ $contactDetails->youtube_url }}" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                      @endif
+                    </div>
+
                   </div>
 
                 </div>
@@ -159,13 +163,13 @@
        <div class="container-fluid" style="background-color: #019392;">
         <div class="container">
           <div class="row justify-content-center copyright_row">
-            <div class="col-5">
+            <div class="col-md-5 col-6">
               <p>
                 Copyright © 2024 BEDROCK. All rights reserved.
               </p>
             </div>
 
-            <div class="col-5">
+            <div class="col-md-5 col-6">
               <p class="d-flex justify-content-end">
                 Design & Developed by <span class="ms-1"><a href="https://www.tekgeeks.net/" target="_blank" >TekGeeks</a></span>
               </p>
