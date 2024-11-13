@@ -85,6 +85,7 @@
     </link>
     <!-- date picker -->
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!--scroll bar style-->
@@ -124,7 +125,7 @@
                 <img src="{{ asset('public/frontend/images/logo.jpg') }}" alt="logo" class="header_logo">
             </a>
 
-            <div class="container d-flex justify-content-end align-items-center">
+            <div class="container d-flex justify-content-end align-items-center ">
                 <div class="row text-end">
                     <div class="top_nav d-flex justify-content-end gap-4">
 
@@ -180,6 +181,10 @@
 
                 </div>
 
+                <!-- =========================================== -->
+                <!-- =========================================== -->
+                <!-- =========================================== -->
+
                 <div>
                     <a href="#">
                         <button class="blue_btn">
@@ -188,8 +193,47 @@
                         </button>
                     </a>
                 </div>
-            </div>
 
+                {{-- mobile menu start --}}
+                <div id="menuArea" class="d-lg-none d-block mobi_menu_btn">
+                    <input type="checkbox" id="menuToggle"></input>
+
+                    <label for="menuToggle" class="menuOpen">
+                    <div class="open"></div>
+                    </label>
+
+                    <div class="menu menuEffects">
+                    <label for="menuToggle"></label>
+                    <div class="menuContent">
+                        <ul>
+                            <li>
+                                <a class="mobi_nav_link {{ request()->is('/') ? 'active' : ''}}" aria-current="page" href="{{ url('/') }}">Home</a>
+                            </li>
+                            <li>
+                                <a class="mobi_nav_link" href="#">About Us</a>
+                            </li>
+                            {{-- <li>
+                                <a class="mobi_nav_link {{ request()->is('about-us') ? 'active' : ''}}"  href="{{ route('about-us') }}">About Us</a>
+                            </li> --}}
+                            <li>
+                                <a class="mobi_nav_link {{ request()->is('rooms') ? 'active' : ''}}"  href="{{ route('rooms') }}">Rooms</a>
+                            </li>
+                            <li>
+                                <a class="mobi_nav_link {{ request()->is('experience-detail') ? 'active' : ''}}" href="{{ route('experience-detail') }}">Experiences</a>
+                            </li>
+                            <li>
+                                <a class="mobi_nav_link {{ request()->is('gallery') ? 'active' : ''}}" href="{{ route('gallery') }}">Gallery</a>
+                            </li>
+                            <li>
+                                <a class="mobi_nav_link {{ request()->is('contact-us') ? 'active' : ''}}" href="{{ route('contact-us') }}">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                {{-- mobile menu end --}}
+
+            </div>
         </div>
     </main>
 
