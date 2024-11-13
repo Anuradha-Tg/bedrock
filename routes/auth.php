@@ -1,44 +1,24 @@
 <?php
 
-use App\Http\Controllers\Adminpanel\BankGuaranteeController;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Adminpanel\AboutUs\AboutUsContentController;
+use App\Http\Controllers\Adminpanel\AboutUs\WhoWeAreController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\RoleController;
-use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Adminpanel\UserController;
 use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\Auth\RegisteredUserController;
-use App\Http\Controllers\Adminpanel\SeafarerController;
-use App\Http\Controllers\Adminpanel\VesselListController;
 use App\Http\Controllers\Adminpanel\LogActivityController;
-use App\Http\Controllers\Adminpanel\OnboardListController;
-use App\Http\Controllers\Adminpanel\RequestFormController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\ConfirmablePasswordController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
-use App\Http\Controllers\Adminpanel\ClientManagmentController;
-use App\Http\Controllers\Adminpanel\OnboardCheckListController;
 use App\Http\Controllers\Auth\EmailVerificationPromptController;
-use App\Http\Controllers\Adminpanel\Masterdata\CountryController;
-use App\Http\Controllers\Adminpanel\Masterdata\PostionController;
-use App\Http\Controllers\Adminpanel\Masterdata\LocationController;
-use App\Http\Controllers\Adminpanel\ClientHistoricalDataController;
-use App\Http\Controllers\Adminpanel\InvoiceController;
-use App\Http\Controllers\Adminpanel\Masterdata\PostionChangeStatus;
-use App\Http\Controllers\Adminpanel\Masterdata\DocumentTypeController;
-use App\Http\Controllers\Adminpanel\Masterdata\PostionGetAjaxPosition;
 use App\Http\Controllers\Auth\EmailVerificationNotificationController;
-use App\Http\Controllers\Adminpanel\Masterdata\ExperienceLevelController;
-// use App\Http\Controllers\Adminpanel\Masterdata\QualificationController;
-use App\Http\Controllers\Adminpanel\Masterdata\VesselTypeController;
-use App\Http\Controllers\Adminpanel\ReportController;
 use App\Http\Controllers\Adminpanel\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Adminpanel\TopBannerController;
 use App\Http\Controllers\Adminpanel\Home\MainSliderController;
-use App\Http\Controllers\Adminpanel\Home\AboutUsController;
 use App\Http\Controllers\Adminpanel\Home\SummaryController;
 use App\Http\Controllers\Adminpanel\Home\StayHomeController;
 use App\Http\Controllers\Adminpanel\Home\FoodHomeController;
@@ -57,7 +37,6 @@ use App\Http\Controllers\Adminpanel\Stay\FeaturesController;
 use App\Http\Controllers\Adminpanel\Stay\PromotionController;
 use App\Http\Controllers\Adminpanel\Rooms\RoomsController;
 use App\Http\Controllers\Adminpanel\MetaTagController;
-use App\Models\AllCategory;
 
 Route::get('/linkstorage', function () {
     Artisan::call('storage:link');
@@ -142,8 +121,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('changestatus-main-slider/{id}', [MainSliderController::class, 'activation'])->name('changestatus-main-slider');
     Route::get('blockmainslider/{id}', [MainSliderController::class, 'block'])->name('blockmainslider');
 
-    Route::get('about-us-edit', [AboutUsController::class, 'index'])->name('about-us-edit');
-    Route::put('save-about-us', [AboutUsController::class, 'update'])->name('save-about-us');
+    Route::get('who-we-are-edit', [WhoWeAreController::class, 'index'])->name('who-we-are-edit');
+    Route::put('save-who-we-are', [WhoWeAreController::class, 'update'])->name('save-who-we-are');
+
+    Route::get('about-us-content-edit',[AboutUsContentController::class, 'index'])->name('about-us-content-edit');
+    Route::put('save-about-us-content',[AboutUsContentController::class,'update'])->name('save-about-us-content');
 
     Route::get('contact-us-edit', [ContactUsController::class, 'index'])->name('contact-us-edit');
     Route::put('save-contact-us', [ContactUsController::class, 'update'])->name('save-contact-us');
@@ -245,16 +227,4 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('meta-tag-list', [MetaTagController::class, 'list'])->name('meta-tag-list');
     Route::get('edit-meta-tag/{id}', [MetaTagController::class, 'edit'])->name('edit-meta-tag');
     Route::put('save-meta-tag', [MetaTagController::class, 'update'])->name('save-meta-tag');
-
-    // //vessel type in master data
-    // // Route::get('qualification', [QualificationController::class, 'index'])->name('qualification');
-    // Route::get('qualification/change-status/{id}', [QualificationController::class, 'changeStatus'])->name('qualification-change-status');
-    // Route::get('qualification-list', [QualificationController::class, 'list'])->name('qualification-list');
-    // Route::get('create-qualification', [QualificationController::class, 'create'])->name('create-qualification');
-    // Route::post('store-qualification', [QualificationController::class, 'store'])->name('store-qualification');
-    // Route::get('edit-qualification/{id}', [QualificationController::class, 'edit'])->name('edit-qualification');
-    // Route::post('update-qualification', [QualificationController::class, 'update'])->name('update-qualification');
-    // Route::delete('delete-qualification/{id}', [QualificationController::class, 'destroy'])->name('delete-qualification');
-
-
 });

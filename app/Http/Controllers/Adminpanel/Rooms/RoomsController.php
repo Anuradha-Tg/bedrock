@@ -48,6 +48,7 @@ class RoomsController extends Controller
             'room_size' => 'required|string',
             'rooms_bed' => 'required|string',
             'occupancy' => 'required|string',
+            'character_image' => 'image|mimes:jpg,png,jpeg,gif,svg',
             'status' => 'required|in:Y,N',
             'home_image1' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
 
@@ -69,6 +70,12 @@ class RoomsController extends Controller
             $path = "";
         }
 
+        if(!$request->file('character_image')== ""){
+            $character_image = $request->file('character_image')->store('public/rooms_images');
+        }else{
+            $path = "";
+        }
+
         $room = new Rooms();
         $room->title = $request->title;
         $room->subtitle = $request->subtitle;
@@ -77,6 +84,7 @@ class RoomsController extends Controller
         $room->room_size = $request->room_size;
         $room->rooms_bed = $request->rooms_bed;
         $room->occupancy = $request->occupancy;
+        $room->character_image = $request->character_image;
         $room->home_image1 = $pathhome_image1;
         $room->home_title = $request->home_title;
         $room->home_content = $request->home_content;
@@ -215,6 +223,7 @@ class RoomsController extends Controller
             'room_size' => 'required|string',
             'rooms_bed' => 'required|string',
             'occupancy' => 'required|string',
+            'character_image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             'home_image1' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
 
         ]);
@@ -234,6 +243,11 @@ class RoomsController extends Controller
             $pathog_image = $request->file('og_image')->store('public/og_image');
         }
 
+        if (!$request->hasFile('character_image') == ""){
+            $character_image = $request->file('character_image')->getClientOriginalName();
+            $pathcharacter_image = $request->file('character_image')->store('public/rooms_images');
+        }
+
 
 
 
@@ -249,6 +263,10 @@ class RoomsController extends Controller
 
         if (!empty($pathhome_image1)) {
             $data->home_image1 = $pathhome_image1;
+        }
+
+        if(!empty($pathcharacter_image)){
+            $data->character_image = $pathcharacter_image;
         }
 
         $data->home_title = $request->home_title;

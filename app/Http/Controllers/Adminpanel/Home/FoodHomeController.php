@@ -110,7 +110,7 @@ class FoodHomeController extends Controller
             $data->image1 = $image1;
         }
 
-        if ($request->hasFile('image2')) {
+        if ($request->hasFile('image2')) {  
             $image2 = $request->file('image2')->store('public/food_home_images');
             $data->image2 = $image2;
         }

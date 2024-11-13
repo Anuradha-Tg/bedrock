@@ -27,7 +27,7 @@
                     </p>
                     <!-- ========== -->
                     <p class="detail ms-0">
-                      <a href="">
+                      <a href="{{ route('about-us') }}">
                         <i class="fa fa-long-arrow-right me-2"></i>
                         About Us
                       </a>

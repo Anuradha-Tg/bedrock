@@ -151,12 +151,10 @@
                                     <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" aria-current="page"
                                         href="{{ url('/') }}">Home</a>
                                 </li>
+                               
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">About Us</a>
-                                </li>
-                                {{-- <li class="nav-item">
                                 <a class="nav-link {{ request()->is('about-us') ? 'active' : ''}}"  href="{{ route('about-us') }}">About Us</a>
-                            </li> --}}
+                            </li>
                                 <li class="nav-item">
                                     <a class="nav-link {{ request()->is('rooms') ? 'active' : '' }}"
                                         href="{{ route('rooms') }}">Rooms</a>
@@ -208,12 +206,10 @@
                             <li>
                                 <a class="mobi_nav_link {{ request()->is('/') ? 'active' : ''}}" aria-current="page" href="{{ url('/') }}">Home</a>
                             </li>
+                           
                             <li>
-                                <a class="mobi_nav_link" href="#">About Us</a>
-                            </li>
-                            {{-- <li>
                                 <a class="mobi_nav_link {{ request()->is('about-us') ? 'active' : ''}}"  href="{{ route('about-us') }}">About Us</a>
-                            </li> --}}
+                            </li>
                             <li>
                                 <a class="mobi_nav_link {{ request()->is('rooms') ? 'active' : ''}}"  href="{{ route('rooms') }}">Rooms</a>
                             </li>

@@ -158,7 +158,7 @@
 
                             <div class="col-12">
                                 <div class="form-floating mb-3">
-                                    <input type="tel" name="phone" class="form-control" id="phone"
+                                    <input type="text" name="mobile_no" class="form-control" id="mobile_no"
                                         required="" placeholder="Mobile Number" fdprocessedid="kcqaug">
                                     <label for="floatingInput">Mobile Number</label>
                                 </div>
@@ -169,7 +169,7 @@
                                 <div class="form-floating d-flex mb-3">
                                     <input type="text"
                                         class="datepicker_input form-control shadow-none datepicker-input"
-                                        id="check_in" placeholder="DD/MM/YYYY" fdprocessedid="d9zs0c"
+                                        id="check_in" required="" placeholder="DD/MM/YYYY" fdprocessedid="d9zs0c"
                                         autocomplete="off" name="check_in">
                                     <label for="datepicker1">Check In</label>
                                     <i class="fa-solid fa-calendar-days"></i>
@@ -182,7 +182,7 @@
                                     <input type="text"
                                         class="datepicker_input form-control shadow-none datepicker-input"
                                         id="check_out" placeholder="DD/MM/YYYY" fdprocessedid="d9zs0c"
-                                        autocomplete="off" name="check_out">
+                                        autocomplete="off" required="" name="check_out">
                                     <label for="datepicker1">Check Out</label>
                                     <i class="fa-solid fa-calendar-days"></i>
                                 </div>
