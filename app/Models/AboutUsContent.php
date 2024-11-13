@@ -5,22 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Inquiry extends Model
+class AboutUsContent extends Model
 {
     use HasFactory;
 
-    protected $table = 'inquiries';
+    protected $table = 'about_us_content';
     public $timestamps = true;
 
 
     protected $fillable = [
-        'full_name',
-        'email',
-        'mobile_no',
-        'check_in',
-        'check_out',
-        'country',
-        'message'
+        'heading',
+        'description',
+        'image1'
     ];
 
 }

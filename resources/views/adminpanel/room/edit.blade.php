@@ -153,6 +153,26 @@
                                     </section>
                                 </div>
                                 <div class="row">
+                                    <section class="col col-2">
+                                        <label class="label">{{ __('Character Image') }} (800 x 1175) </label>
+                                        <label class="input">
+                                            <input type="file" class="form-control form-input" id="character_image"
+                                                name="character_image" style="overflow: hidden;">
+                                        </label>
+                                    </section>
+                                    <section class="col col-4">
+                                        @if ($data->character_image)
+                                            <img id="preview-character-image"
+                                                src="../storage/app/{{ $data->character_image }}" alt="preview image"
+                                                style="max-height: 250px;">
+                                        @else
+                                            <img id="preview-character-image"
+                                                src="{{ asset('public/back/img/whitebg.jpg') }}" alt="default image"
+                                                style="max-height: 250px;">
+                                        @endif
+                                    </section>
+                                </div>
+                                <div class="row">
                                     <section class="col col-12">
                                         <label class="label">{{ __('Room Features') }}</label>
                                         <div style="display:  flex-wrap: wrap; gap: 100px;">
@@ -188,7 +208,7 @@
                                     </section>
 
 
-                    
+
 
                                 </div>
                                 <div class="row">
@@ -255,86 +275,106 @@
                                         </label>
                                     </section>
                                 </div> --}}
-                                
+
                                 <div class="row">
-                                    <section class="col col-12"  style="width: 100%;">
-                                        <label class="label">{{ __('Description') }}<span style=" color: red;">*</span></label>
+                                    <section class="col col-12" style="width: 100%;">
+                                        <label class="label">{{ __('Description') }}<span
+                                                style=" color: red;">*</span></label>
                                         <label class="input">
-                                            <input type="text" id="description" name="description" value="{{ $metaTag->description }}" >
-                                        </label>
-                                    </section>
-                                </div>
-                                <div class="row">
-                                    <section class="col col-12"  style="width: 100%;">
-                                        <label class="label">{{ __('Keywords') }}</label>
-                                        <label class="input">
-                                            <input type="text" id="keywords" name="keywords" value="{{ $metaTag->keywords }}" >
-                                        </label>
-                                    </section>
-                                </div>
-                                <div class="row">
-                                    <section class="col col-12"  style="width: 100%;">
-                                        <label class="label">{{ __('OG Title') }}<span style=" color: red;">*</span></label>
-                                        <label class="input">
-                                            <input type="text" id="og_title" name="og_title" value="{{ $metaTag->og_title }}" required>
-                                        </label>
-                                    </section>
-                                </div>
-                                <div class="row">
-                                    <section class="col col-12"  style="width: 100%;">
-                                        <label class="label">{{ __('OG Type') }} <span style=" color: red;">*</span></label>
-                                        <label class="input">
-                                            <input type="text" id="og_type" name="og_type" value="{{ $metaTag->og_type }}" required>
-                                        </label>
-                                    </section>
-                                </div>
-                                <div class="row">
-                                    <section class="col col-12"  style="width: 100%;">
-                                        <label class="label">{{ __('OG Tag') }} <span style=" color: red;">*</span></label>
-                                        <label class="input">
-                                            <input type="text" id="og_tag" name="og_tag" value="{{ $metaTag->og_tag }}" required>
-                                        </label>
-                                    </section>
-                                </div>
-                                <div class="row">
-                                    <section class="col col-12"  style="width: 100%;">
-                                        <label class="label">{{ __('OG Url') }}<span style=" color: red;">*</span></label>
-                                        <label class="input">
-                                            <input type="text" id="og_url" name="og_url" value="{{ $metaTag->og_url }}" required>
+                                            <input type="text" id="description" name="description"
+                                                value="{{ $metaTag->description }}">
                                         </label>
                                     </section>
                                 </div>
                                 <div class="row">
                                     <section class="col col-12" style="width: 100%;">
-                                        <label class="label">{{ __('OG Image') }}<span style=" color: red;">*</span></label>
+                                        <label class="label">{{ __('Keywords') }}</label>
                                         <label class="input">
-                                            <input type="file" class="form-control form-input" id="og_image" name="og_image" style="overflow: hidden;">
+                                            <input type="text" id="keywords" name="keywords"
+                                                value="{{ $metaTag->keywords }}">
+                                        </label>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-12" style="width: 100%;">
+                                        <label class="label">{{ __('OG Title') }}<span
+                                                style=" color: red;">*</span></label>
+                                        <label class="input">
+                                            <input type="text" id="og_title" name="og_title"
+                                                value="{{ $metaTag->og_title }}" required>
+                                        </label>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-12" style="width: 100%;">
+                                        <label class="label">{{ __('OG Type') }} <span
+                                                style=" color: red;">*</span></label>
+                                        <label class="input">
+                                            <input type="text" id="og_type" name="og_type"
+                                                value="{{ $metaTag->og_type }}" required>
+                                        </label>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-12" style="width: 100%;">
+                                        <label class="label">{{ __('OG Tag') }} <span
+                                                style=" color: red;">*</span></label>
+                                        <label class="input">
+                                            <input type="text" id="og_tag" name="og_tag"
+                                                value="{{ $metaTag->og_tag }}" required>
+                                        </label>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-12" style="width: 100%;">
+                                        <label class="label">{{ __('OG Url') }}<span
+                                                style=" color: red;">*</span></label>
+                                        <label class="input">
+                                            <input type="text" id="og_url" name="og_url"
+                                                value="{{ $metaTag->og_url }}" required>
+                                        </label>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-12" style="width: 100%;">
+                                        <label class="label">{{ __('OG Image') }}<span
+                                                style=" color: red;">*</span></label>
+                                        <label class="input">
+                                            <input type="file" class="form-control form-input" id="og_image"
+                                                name="og_image" style="overflow: hidden;">
                                         </label>
                                     </section>
                                 </div>
 
                                 <div class="row">
                                     <section class="col col-4">
-                                        @if( $metaTag->og_image)
-                                        <img id="preview-image-before-upload" src="../storage/app/{{ $metaTag->og_image }}" alt="preview image" style="max-height: 250px;">
+                                        @if ($metaTag->og_image)
+                                            <img id="preview-image-before-upload"
+                                                src="../storage/app/{{ $metaTag->og_image }}" alt="preview image"
+                                                style="max-height: 250px;">
                                         @else
-                                        <img id="preview-image-before-upload" src="{{ asset('public/back/img/whitebg.jpg') }}" alt="default image" style="max-height: 250px;">
+                                            <img id="preview-image-before-upload"
+                                                src="{{ asset('public/back/img/whitebg.jpg') }}" alt="default image"
+                                                style="max-height: 250px;">
                                         @endif
                                     </section>
                                 </div>
                                 <div class="row">
-                                    <section class="col col-12"  style="width: 100%;">
-                                        <label class="label">{{ __('OG Sitename') }}<span style=" color: red;">*</span></label>
+                                    <section class="col col-12" style="width: 100%;">
+                                        <label class="label">{{ __('OG Sitename') }}<span
+                                                style=" color: red;">*</span></label>
                                         <label class="input">
-                                            <input type="text" id="og_sitename" name="og_sitename" value="{{ $metaTag->og_sitename }}" required>
+                                            <input type="text" id="og_sitename" name="og_sitename"
+                                                value="{{ $metaTag->og_sitename }}" required>
                                         </label>
                                     </section>
                                 </div>
                                 <div class="row">
-                                    <section class="col col-12"  style="width: 100%;">
+                                    <section class="col col-12" style="width: 100%;">
                                         <label class="label">{{ __('OG Description') }}</label>
                                         <label class="input">
-                                            <input type="text" id="og_description" name="og_description" value="{{ $metaTag->og_description }}" >
+                                            <input type="text" id="og_description" name="og_description"
+                                                value="{{ $metaTag->og_description }}">
                                         </label>
                                     </section>
                                 </div>
@@ -433,8 +473,11 @@
                 previewImage(this, 'preview-home_image1');
             });
             document.getElementById('og_image').addEventListener('change', function() {
-        previewImage(this, 'preview-image-before-upload');
-    });
+                previewImage(this, 'preview-image-before-upload');
+            });
+            document.getElementById('character_image').addEventListener('change', function() {
+                previewImage(this, 'preview-character-image');
+            });
         </script>
 
         <script>

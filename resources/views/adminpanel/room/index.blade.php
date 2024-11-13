@@ -130,6 +130,19 @@
                                     </section>
                                     </div>
                                     <div class="row">
+                                        <section class="col col-2">
+                                            <label class="label">{{ __('Character Image') }} (800 x 1175) </label>
+                                            <label class="input">
+                                                <input type="file" class="form-control form-input" id="character_image" name="character_image" style="overflow: hidden;" >
+                                            </label>
+                                        </section>
+                                        <section class="col col-2">
+                                            <img id="preview-character-image" src="{{ asset('public/back/img/whitebg.jpg'); }}" alt="preview image" style="max-height: 250px;">
+                                        </section>
+
+
+                                    </div>
+                                    <div class="row">
                                         <section class="col col-12">
                                             <label class="label">{{ __('Room Features') }}</label>
                                             <div style="display:  flex-wrap: wrap; gap: 100px;">
@@ -354,6 +367,9 @@
     });
     document.getElementById('og_image').addEventListener('change', function() {
         previewImage(this, 'preview-image-before-upload');
+    });
+    document.getElementById('character_image').addEventListener('change',function(){
+        previewImage(this, 'preview-character-image');
     });
 
 </script>

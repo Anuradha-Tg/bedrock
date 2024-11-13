@@ -12,6 +12,7 @@
 |
 */
 
+use App\Http\Controllers\Frontend\AboutUsController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\ExperienceDetailController;
@@ -41,6 +42,7 @@ Route::get('/contact-us', [ContactController::class, 'index'])->name('contact-us
 Route::post('new-enquiry', [ContactController::class, 'store'])->name('new-enquiry');
 Route::get('/room-details/{id}', [RoomController::class, 'RoomDetail'])->name('room-details');
 Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
+Route::get('about-us', [AboutUsController::class, 'index'])->name('about-us');
 
 
 require __DIR__ . '/auth.php';

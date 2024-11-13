@@ -55,13 +55,14 @@
                                         <td style="width: 20%;">{{ __('Full Name') }} </td>
                                         <td style=" border-style: hidden">:&nbsp; {{ $data->full_name }}</td>
                                     </tr>
-                                    {{-- <tr style=" border-style: hidden">
-                                        <td style=" border-style: hidden">{{ __('Contact Number') }} </td>
-                                        <td style=" border-style: hidden">:&nbsp; {{ $data->tel }}</td>
-                                    </tr> --}}
+                                    
                                     <tr style=" border-style: hidden">
                                         <td style=" border-style: hidden">{{ __('Email') }} </td>
                                         <td style=" border-style: hidden">:&nbsp; {{ $data->email }}</td>
+                                    </tr>
+                                    <tr style=" border-style: hidden">
+                                        <td style=" border-style: hidden">{{ __('Contact Number') }} </td>
+                                        <td style=" border-style: hidden">:&nbsp; {{ $data->mobile_no }}</td>
                                     </tr>
                                     <tr style=" border-style: hidden">
                                         <td style=" border-style: hidden">{{ __('Check In Date') }} </td>

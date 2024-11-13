@@ -28,6 +28,7 @@ class ContactController extends Controller
         $request->validate([
             'full_name' => 'required',
             'email' =>'required',
+            'mobile_no' => 'required',
             'check_in' =>'required',
             'check_out' =>'required',
             'country' =>'required',
@@ -35,21 +36,27 @@ class ContactController extends Controller
         ],[
             'full_name.required' => 'Full name field is required.',
             'email.required' => 'Email field is required.',
-            'check_in.required' => 'check_in field is required.',
-            'check_out.required' => 'check_out field is required.',
+            'mobile_no.required' => 'Mobile No field is required.',
+            'check_in.required' => 'check in field is required.',
+            'check_out.required' => 'check out field is required.',
             'country' =>'country field is required.',
             'message.required' => 'Message is required.'
         ]);
 
         // dd('test34');
+        // \DB::enableQueryLog();
+	
         $inquiry = new Inquiry();
         $inquiry->full_name = $request->full_name;
         $inquiry->email = $request->email;
+        $inquiry->mobile_no = $request->mobile_no;
         $inquiry->check_in = $request->check_in;
         $inquiry->check_out = $request->check_out;
         $inquiry->country = $request->country;
         $inquiry->message = $request->message;
         $inquiry->save();
+
+        // dd(\DB::getQueryLog());
 
         \Mail::send('frontend.mail.inquirymail',
         ['inquirydetails' => $inquiry, 'contactsdetails' => $contactDetails], function($message) use($contactDetails)

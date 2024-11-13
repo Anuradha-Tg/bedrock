@@ -13,14 +13,16 @@ class InquiryController extends Controller
     {
 
         $this->middleware('permission:inquiry-list', ['only' => ['list, view']]);
-
     }
 
     public function index(Request $request)
     {
+        // \DB::enableQueryLog();
+
         if ($request->ajax()) {
             $data = Inquiry::get();
-            // die(var_dump($data));
+
+            // dd($data);
             return Datatables::of($data)
                 ->addIndexColumn()
                 ->addColumn('view', function ($row) {
@@ -31,6 +33,7 @@ class InquiryController extends Controller
                 ->rawColumns(['view'])
                 ->make(true);
         }
+        // dd(\DB::getQueryLog());
 
         return view('adminpanel.contactusdetails.inquiry.index');
     }
@@ -43,5 +46,4 @@ class InquiryController extends Controller
 
         return view('adminpanel.contactusdetails.inquiry.view', ['data' => $data]);
     }
-
 }

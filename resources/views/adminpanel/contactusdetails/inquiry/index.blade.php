@@ -102,10 +102,11 @@
                                         <thead>
                                             <tr>
                                                 <th width="100px">{{ __('No') }}</th>
-                                                <th>{{ __('Subject') }}</th>
                                                 <th>{{ __('Name') }}</th>
                                                 <th>{{ __('Email') }}</th>
                                                 <th>{{ __('Contact No') }}</th>
+                                                <th>{{ __('Check In') }}</th>
+                                                <th>{{ __('Check Out') }}</th>
                                                 <th width="100px">{{ __('View') }}</th>
                                             </tr>
                                         </thead>
@@ -156,6 +157,10 @@
                         {
                             data: 'email',
                             name: 'email'
+                        },
+                        {
+                            data: 'mobile_no',
+                            name: 'mobile_no'
                         },
                         {
                             data: 'check_in',

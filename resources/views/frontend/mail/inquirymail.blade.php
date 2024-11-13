@@ -456,6 +456,14 @@
                     </td>
                 </tr>
                 <tr>
+                  <td>
+                      <label>Mobile Number :</label>
+                      </td>
+                  <td>
+                      <label><b>{{ $inquirydetails->mobile_no }}</b></label>
+                  </td>
+              </tr>
+                <tr>
                     <td>
                         <label>Message :</label>
                         </td>
