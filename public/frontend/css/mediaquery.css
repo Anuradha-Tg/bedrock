@@ -198,13 +198,14 @@
   }
 
   .top_nav{
-    flex-direction: column;
-    gap: 10px !important;
+    gap: 20px !important;
+    margin-bottom: 10px;
   }
 
   .carousel-caption {
     left: 15%;
     bottom: 5.25rem;
+    width: 600px !important;
   }
 
   .carousel-indicators {
@@ -227,6 +228,23 @@
     width: 198px;
   }
 
+  .expe_card .expe_box {
+    width: 217px;
+    min-height: 49px;
+  }
+
+  .md_col_rev{
+    flex-direction: column-reverse;
+  }
+
+  .inq_row .right_col {
+    display: none;
+  }
+
+  .food_con {
+    background-image: url(../images/ocean_bg.jpg);
+  }
+
 }
 
 /* Extra Small Devices, Phones */
@@ -235,12 +253,93 @@
     font-size: 18px;
   }
     
+  .food_right_div .food_plate {
+    margin-left: -8px;
+    width: 250px;
+  }
+
+  .banner_img {
+    height: 290px;
+  }
+
+  .contact_box .detail {
+    margin-left: 9px;
+  }
 	
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 767px) {
 
+  h1 {
+      font-size: 20px;
+    }
+
+  h2 {
+    font-size: 17px;
+  }
+
+  .top_con{
+    margin-right: 40px;
+  }
+
+  .about_left{
+    display: none;
+  }
+
+  .carousel-caption {
+    width: 459px !important;
+  }
+
+  .about_right {
+    height: 300px;
+  }
+
+  .half_dark_bg {
+    background-image: linear-gradient(to right, #00606C 92%, rgba(0, 0, 0, 0) 20%);
+  }
+
+  .wave_line_img {
+    position: absolute;
+    right: -54px;
+    width: 392px;
+  }
+
+  .custom_swiper .swiper-slide {
+    height: 318px;
+  }
+
+  .promo_col {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .promo_col .owl_img {
+    height: 410px;
+  }
+
+  .promo_col .card_text {
+    min-height: 180px;
+    left: 38px;
+  }
+
+  .food_slider .swiper-slide {
+    height: 431px;
+  }
+
+  .food_right_div .food_plate {
+    margin-left: -8px;
+    width: 200px;
+  }
+
+  .gallery_l {
+    height: 204px;
+  }
+
+  .rooms_con {
+    background-position: 0px;
+  }
 
 }
 

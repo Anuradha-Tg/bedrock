@@ -5,7 +5,7 @@
     <div class="container-fluid cover_bg py-5" style="background-image: url('{{asset('public/frontend/images/footer_bg.jpg')}}');">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 right_border p-3">
+            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12 right_border p-lg-3 p-3">
               <a href="{{ url('/') }}">
               <img src="{{asset('public/frontend/images/logo.jpg')}}" alt="logo" class="footer_logo mb-3">
               </a>
@@ -13,7 +13,7 @@
               aliqua. Ut enim ad minim veniam.  </p>
             </div>
             <!-- ========== -->
-            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 right_border p-5">
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 right_border p-lg-5 p-2">
               <div class="contact_box mb-2">
                 <p class="head">Navigation</p>
 
@@ -85,7 +85,7 @@
               </div>
             </div>
             <!-- ========== -->
-            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12 p-5">
+            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12 p-lg-5 p-3">
 
               <div class="contact_box mb-4">
                 <p class="head">Phone Number</p>
@@ -281,7 +281,7 @@
               nav: false
             },
             600: {
-              items: 4,
+              items: 2,
               nav: false
             },
 

@@ -34,7 +34,7 @@
         @foreach ($sliders as $index => $slider)
             <div class="carousel-item {{ $index === 0 ? 'active' : '' }} slider_img"
                 style="background-image: linear-gradient(to bottom, rgb(0 0 0 / 20%), rgb(0 0 0 / 20%)), url('storage/app/{{ $slider->desktop_image }}')">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption">
                     <h1 class="animate__animated animate__fadeInUp animate__delay-500ms">{{ $slider->title_en }}</h1>
 
                     <div class="slider_desc animate__animated animate__fadeInDown">
@@ -59,7 +59,7 @@
 </div>
 
 
-<div class="container">
+<div class="container d-none d-md-block">
     <div class="expe_flex">
         <div class="d-flex justify-content-center d-flex flex-column align-items-center">
             <div class="expe_div">
@@ -104,7 +104,7 @@
 <!-- about us section start -->
 
 <div class="container-fluid">
-    <div class="row">
+    <div class="row m-auto">
         <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 cover_bg about_left"
             style="background-image: url('{{ asset('public/frontend/images/about_left.jpg') }}');">
             <img src="{{ asset('public/frontend/images/about.png') }}" alt="about">
@@ -237,7 +237,7 @@
 <div class="container-fluid rooms_con"
     style="background-image: url('{{ asset('public/frontend/images/wave_full_bg.jpg') }}');">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-8 col-sm-12 col-12 mb-3">
                 <div class="text_box">
 
@@ -286,7 +286,7 @@
             </div>
 
             <!-- Promotion start -->
-            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12 promo_col">
+            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-8 col-12 promo_col">
                 <div class="item custom_card">
                     <div class="cover_bg owl_img" style="background-image: url('{{ !empty($promotion) ? asset('storage/app/' . $contentToShow->home_image1) : asset('storage/app/' . $contentToShow->image1) }}');" ></div>
 
@@ -326,71 +326,94 @@
 
 <!-- food section start -->
 
-<div class="container">
-    <div class="row">
-        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 pe-0">
-            <div class="swiper mySwiper custom_swiper food_slider top-0 mb-5">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"
-                        style="background-image: url({{ asset('storage/app/' . $food->image1) }});"></div>
-                    <!-- <div class="swiper-slide" style="background-image: url(images/food1.jpg);"></div> -->
-                    <div class="swiper-slide"
-                        style="background-image: url({{ asset('storage/app/' . $food->image2) }});"></div>
-                    <div class="swiper-slide"
-                        style="background-image: url({{ asset('storage/app/' . $food->image3) }});"></div>
-                    <div class="swiper-slide"
-                        style="background-image: url({{ asset('storage/app/' . $food->image4) }});"></div>
-                    <div class="swiper-slide"
-                        style="background-image: url({{ asset('storage/app/' . $food->image5) }});"></div>
-                    <div class="swiper-slide"
-                        style="background-image: url({{ asset('storage/app/' . $food->image6) }});"></div>
+<div class="container-fluid food_con cover_bg">
+    <div class="container">
+        <div class="row md_col_rev">
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-8 d-lg-block d-none pe-0">
+                <div class="swiper mySwiper custom_swiper food_slider top-0 mb-5">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"
+                            style="background-image: url({{ asset('storage/app/' . $food->image1) }});"></div>
+                        <!-- <div class="swiper-slide" style="background-image: url(images/food1.jpg);"></div> -->
+                        <div class="swiper-slide"
+                            style="background-image: url({{ asset('storage/app/' . $food->image2) }});"></div>
+                        <div class="swiper-slide"
+                            style="background-image: url({{ asset('storage/app/' . $food->image3) }});"></div>
+                        <div class="swiper-slide"
+                            style="background-image: url({{ asset('storage/app/' . $food->image4) }});"></div>
+                        <div class="swiper-slide"
+                            style="background-image: url({{ asset('storage/app/' . $food->image5) }});"></div>
+                        <div class="swiper-slide"
+                            style="background-image: url({{ asset('storage/app/' . $food->image6) }});"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
-        </div>
 
-        <!-- ============================= -->
+            <!-- ============================= -->
 
-        <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 p-0"
-            style="background-image: url('{{ asset('public/frontend/images/ocean_bg.jpg') }}');">
-            <div class="row cover_bg h-100">
-                <div
-                    class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 p-5 d-flex justify-content-center align-items-center">
-                    <div class="text_box">
+            <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 p-0 cover_bg"
+                style="background-image: url('{{ asset('public/frontend/images/ocean_bg.jpg') }}');">
+                <div class="row cover_bg h-100">
+                    <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 p-5 d-flex justify-content-center align-items-center">
+                        <div class="text_box">
 
-                        <h4 data-aos="fade-up">Foods</h4>
+                            <h4 data-aos="fade-up">Foods</h4>
 
-                        <h2 class="mb-3" data-aos="fade-down">{{ $food->heading }}</h2>
+                            <h2 class="mb-3" data-aos="fade-down">{{ $food->heading }}</h2>
 
-                        {!! $food->description !!}
+                            {!! $food->description !!}
 
 
-                        <a href="">
-                            <div class="d-flex align-items-center dark_read_btn">
-                                <p class="mb-0">Read More</p>
-                                <div class="circle">
-                                    <span class="icon arrow1"><i class="fa fa-long-arrow-right "></i></span>
-                                    <span class="icon arrow2"><i class="fa fa-long-arrow-right"></i></span>
+                            <a href="">
+                                <div class="d-flex align-items-center dark_read_btn">
+                                    <p class="mb-0">Read More</p>
+                                    <div class="circle">
+                                        <span class="icon arrow1"><i class="fa fa-long-arrow-right "></i></span>
+                                        <span class="icon arrow2"><i class="fa fa-long-arrow-right"></i></span>
+                                    </div>
                                 </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- ========================== -->
+
+                    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-5 col-12 pe-0 pe-lg-3">
+                        <div class="dark_bg food_right_div">
+                            <img src="{{ asset('public/frontend/images/food_plate1.png') }}" alt="food plate"
+                                class="food_plate">
+                            {{-- <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="wave line"
+                                class="wave_line"> --}}
+                        </div>
+                    </div>
+
+                    <div class="d-lg-none d-md-block col-md-7 col-sm-7 col-12 ps-0">
+                        <div class="swiper mySwiper custom_swiper food_slider top-0 mb-0">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"
+                                    style="background-image: url({{ asset('storage/app/' . $food->image1) }});"></div>
+                                <!-- <div class="swiper-slide" style="background-image: url(images/food1.jpg);"></div> -->
+                                <div class="swiper-slide"
+                                    style="background-image: url({{ asset('storage/app/' . $food->image2) }});"></div>
+                                <div class="swiper-slide"
+                                    style="background-image: url({{ asset('storage/app/' . $food->image3) }});"></div>
+                                <div class="swiper-slide"
+                                    style="background-image: url({{ asset('storage/app/' . $food->image4) }});"></div>
+                                <div class="swiper-slide"
+                                    style="background-image: url({{ asset('storage/app/' . $food->image5) }});"></div>
+                                <div class="swiper-slide"
+                                    style="background-image: url({{ asset('storage/app/' . $food->image6) }});"></div>
                             </div>
-                        </a>
-
+                            <div class="swiper-pagination"></div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- ========================== -->
-
-                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
-                    <div class="dark_bg food_right_div">
-                        <img src="{{ asset('public/frontend/images/food_plate1.png') }}" alt="food plate"
-                            class="food_plate">
-                        <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="wave line"
-                            class="wave_line">
-                    </div>
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
 </div>
 
@@ -473,7 +496,7 @@
 <!-- Gallery start -->
 <div class="container mb-5">
     <div class="row">
-        <div class="col-xxl-7 col-xl-7 col-lg-8 col-md-10 col-sm-12 col-12">
+        <div class="col-xxl-7 col-xl-7 col-lg-8 col-md-12 col-sm-12 col-12">
             <div class="text_box">
 
                 <h4 data-aos="fade-up">Gallery</h4>
@@ -555,7 +578,7 @@
 
 
     <div class="row justify-content-center mt-4 mb-5">
-        <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
+        <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12">
 
             <nav>
                 <div class="nav nav-tabs mb-1" id="nav-tab" role="tablist">
@@ -573,13 +596,14 @@
                         style="border-right: none !important;">Experiences</button>
                 </div>
             </nav>
+
             <div class="tab-content pt-3" id="nav-tabContent">
 
                 <div class="tab-pane fade active show" id="nav-home" role="tabpanel"
                     aria-labelledby="nav-home-tab">
                     <div class="row">
 
-                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $allImages[0]->image) }}" data-fancybox="images"
                                 data-caption="This image has a caption" class="w-100">
                                 <div class="cover_bg gallery_s"
@@ -594,7 +618,7 @@
                             </a>
                         </div>
 
-                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $allImages[2]->image) }}" data-fancybox="images"
                                 data-caption="This image has a caption" class="w-100">
                                 <div class="cover_bg gallery_l"
@@ -609,7 +633,7 @@
                             </a>
                         </div>
 
-                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $allImages[4]->image) }}" data-fancybox="images"
                                 data-caption="This image has a caption" class="w-100">
                                 <div class="cover_bg gallery_s"
@@ -624,7 +648,7 @@
                             </a>
                         </div>
 
-                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $allImages[6]->image) }}" data-fancybox="images"
                                 data-caption="This image has a caption" class="w-100">
                                 <div class="cover_bg gallery_l"
@@ -644,7 +668,7 @@
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                     <div class="row">
 
-                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $hotelImages[0]->image_name) }}"
                                 data-fancybox="images" data-caption="This image has a caption" class="w-100">
                                 <div class="cover_bg gallery_s"
@@ -659,7 +683,7 @@
                             </a>
                         </div>
 
-                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $hotelImages[2]->image_name) }}"
                                 data-fancybox="images" data-caption="This image has a caption" class="w-100">
                                 <div class="cover_bg gallery_l"
@@ -674,7 +698,7 @@
                             </a>
                         </div>
 
-                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $hotelImages[4]->image_name) }}"
                                 data-fancybox="images" data-caption="This image has a caption" class="w-100">
                                 <div class="cover_bg gallery_s"
@@ -689,7 +713,7 @@
                             </a>
                         </div>
 
-                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $hotelImages[6]->image_name) }}"
                                 data-fancybox="images" data-caption="This image has a caption" class="w-100">
                                 <div class="cover_bg gallery_l"
@@ -709,7 +733,7 @@
                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                     <div class="row">
 
-                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $foodImages[0]->image_name) }}" data-fancybox="images"
                                 data-caption="This image has a caption" class="w-100">
                                 <div class="cover_bg gallery_s"
@@ -724,7 +748,7 @@
                             </a>
                         </div>
 
-                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $foodImages[2]->image_name) }}" data-fancybox="images"
                                 data-caption="This image has a caption" class="w-100">
                                 <div class="cover_bg gallery_l"
@@ -739,7 +763,7 @@
                             </a>
                         </div>
 
-                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $foodImages[4]->image_name) }}" data-fancybox="images"
                                 data-caption="This image has a caption" class="w-100">
                                 <div class="cover_bg gallery_s"
@@ -754,7 +778,7 @@
                             </a>
                         </div>
 
-                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $foodImages[6]->image_name) }}"
                                 data-fancybox="images" data-caption="This image has a caption" class="w-100">
                                 <div class="cover_bg gallery_l"
@@ -774,7 +798,7 @@
                 <div class="tab-pane fade" id="exp-contact" role="tabpanel" aria-labelledby="exp-contact-tab">
                     <div class="row">
 
-                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $experienceImages[0]->image_name) }}"
                                 data-fancybox="images" data-caption="This image has a caption" class="w-100">
                                 <div class="cover_bg gallery_s"
@@ -789,7 +813,7 @@
                             </a>
                         </div>
 
-                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $experienceImages[2]->image_name) }}"
                                 data-fancybox="images" data-caption="This image has a caption" class="w-100">
                                 <div class="cover_bg gallery_l"
@@ -804,7 +828,7 @@
                             </a>
                         </div>
 
-                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $experienceImages[4]->image_name) }}"
                                 data-fancybox="images" data-caption="This image has a caption" class="w-100">
                                 <div class="cover_bg gallery_s"
@@ -819,7 +843,7 @@
                             </a>
                         </div>
 
-                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $experienceImages[6]->image_name) }}"
                                 data-fancybox="images" data-caption="This image has a caption" class="w-100">
                                 <div class="cover_bg gallery_l"
@@ -850,19 +874,19 @@
                 </a>
             </div>
 
-            {{-- </div>
-    </div> --}}
+            </div>
         </div>
     </div>
-    <!-- Gallery end -->
+</div>
+<!-- Gallery end -->
 
-    <div class="clearfix"></div>
+<div class="clearfix"></div>
 
-    <!-- Inquiries start -->
-    <div class="container mb-5">
-        <div class="row inq_row">
+<!-- Inquiries start -->
+<div class="container mb-lg-5 mb-0">
+    <div class="row inq_row">
 
-            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                 <div class="text_box">
 
                     <h4 data-aos="fade-up">Inquiries</h4>
@@ -882,7 +906,7 @@
                 </div>
             </div>
 
-            <div class="col-xxl-8 col-xl-8 col-lg-9 col-md-9 col-sm-12 col-12">
+            <div class="col-xxl-8 col-xl-8 col-lg-9 col-md-12 col-sm-12 col-12">
                 <div class="row">
                     <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 cover_bg d-flex align-items-center"
                         style="background-image: url('{{ asset('public/frontend/images/wave_bg.jpg') }}'); box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;">
@@ -1064,7 +1088,7 @@
                     </div>
                 </div>
 
-                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 right_col">
+                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 right_col">
 
                     <div style="width: 100%"><iframe width="100%" height="650" frameborder="0" scrolling="no"
                             marginheight="0" marginwidth="0"
@@ -1072,11 +1096,22 @@
                                 href="https://www.gps.ie/">gps tracker sport</a></iframe>
                     </div>
                 </div>
-
             </div>
-        </div>
     </div>
 </div>
+
+{{-- mobile map start --}}
+
+    <div class="container-fluid p-0 d-lg-none d-block">
+        <div style="width: 100%"><iframe width="100%" height="300" frameborder="0" scrolling="no"
+                marginheight="0" marginwidth="0"
+                src="https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=bedrock%20kalpitiya+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                    href="https://www.gps.ie/">gps tracker sport</a></iframe>
+        </div>
+    </div>
+
+{{-- mobile map end --}}
+
 <!-- Inquiries end -->
 
 <div class="clearfix"></div>
