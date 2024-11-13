@@ -13,7 +13,7 @@
 /******* fonts *********/
 
 body{
-  font-family: 'Poppins';
+  font-family: 'Poppins' !important;
   overflow-x: hidden;
 }
 
@@ -349,6 +349,7 @@ main{
   text-align: start;
   width: 700px;
   bottom: 7.25rem;
+  z-index: 99;
 }
 
 .carousel-caption h1{
@@ -897,6 +898,7 @@ main{
 
 .room_img{
   height: 300px;
+  position: relative;
 }
 
 .room_ca_div .detail{
@@ -906,6 +908,7 @@ main{
   margin-left: 70px;
   margin-top: -50px;
   padding: 20px;
+  position: relative;
 }
 
 .small_icon{
@@ -1033,5 +1036,11 @@ main{
 .right_border_none{
   border-right: none !important;
 }
-/* inner pages end */
 
+.char_img{
+  width: 85px !important;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+/* inner pages end */

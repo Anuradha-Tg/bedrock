@@ -43,11 +43,11 @@
         <div
             class="offset-xxl-1 col-xxl-9 offset-xl-1 col-xl-9 offset-lg-1 col-lg-9 offset-md-1 col-md-9 col-sm-12 col-12">
             <div class="row">
-                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 cover_bg"
+                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 cover_bg d-flex align-items-center"
                     style="background-image: url({{ asset('public/frontend/images/wave_bg.jpg') }}); box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;">
                     <div class=" contact_col">
 
-                        <div class="contact_box">
+                        <div class="contact_box mb-4">
                             <p class="head">Address</p>
                             <p class="detail">
                                 {{ $contactDetails->address }}
@@ -56,7 +56,7 @@
 
                         <!-- ================== -->
 
-                        <div class="contact_box">
+                        <div class="contact_box mb-4">
                             <p class="head">Phone Number</p>
                             <p class="detail">
                                 <a href="tel: {{ $contactDetails->contact_no }}">
@@ -67,7 +67,7 @@
 
                         <!-- ================== -->
 
-                        <div class="contact_box">
+                        <div class="contact_box mb-4">
                             <p class="head">Email Address</p>
                             <p class="detail">
                                 <a href="mailto:{{ $contactDetails->email }}">
@@ -78,7 +78,7 @@
 
                         <!-- ================== -->
 
-                        <div class="contact_box">
+                        <div class="contact_box mb-4">
                             <p class="head">Social Media</p>
                             <p class="detail d-flex gap-3">
                                 @if ($contactDetails->facebook_url != '' && $contactDetails->facebook_url != '#')
@@ -106,7 +106,7 @@
 
                         <!-- ================== -->
 
-                        <div class="contact_box">
+                        <div class="contact_box mb-4">
                             <p class="head">Online Booking</p>
                             <div class="detail d-flex gap-3">
                                 <a href="{{ $contactDetails->banking1 }}" target="_blank">
@@ -155,6 +155,15 @@
                                     <label for="floatingInputEmail">Email Address</label>
                                 </div>
                             </div>
+
+                            <div class="col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="tel" name="phone" class="form-control" id="phone"
+                                        required="" placeholder="Mobile Number" fdprocessedid="kcqaug">
+                                    <label for="floatingInput">Mobile Number</label>
+                                </div>
+                            </div>
+
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
 
                                 <div class="form-floating d-flex mb-3">

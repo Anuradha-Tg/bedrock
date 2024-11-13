@@ -22,7 +22,7 @@
 
 <!-- main slider start -->
 
-<div id="carouselExampleCaptions" class="carousel slide carousel" data-bs-ride="carousel">
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
         @foreach ($sliders as $index => $slider)
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ $index }}"
@@ -35,9 +35,9 @@
             <div class="carousel-item {{ $index === 0 ? 'active' : '' }} slider_img"
                 style="background-image: linear-gradient(to bottom, rgb(0 0 0 / 20%), rgb(0 0 0 / 20%)), url('storage/app/{{ $slider->desktop_image }}')">
                 <div class="carousel-caption d-none d-md-block">
-                    <h1>{{ $slider->title_en }}</h1>
+                    <h1 class="animate__animated animate__fadeInUp animate__delay-500ms">{{ $slider->title_en }}</h1>
 
-                    <div class="slider_desc">
+                    <div class="slider_desc animate__animated animate__fadeInDown">
 
                         {!! $slider->description_en !!}
 
@@ -112,7 +112,7 @@
         <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 d-flex align-items-center cover_bg"
             style="height: 600px; background-image: url('{{ asset('public/frontend/images/wave_bg.jpg') }}');">
             <div class="row">
-                <div class="offset-xxl-2 col-xxl-8  col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
+                <div class="offset-xxl-2 col-xxl-8 offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-2 col-md-8 col-sm-12 col-12">
                     <div class="text_box">
 
                         <h4 data-aos="fade-up">Welcome To Bedrock</h4>
@@ -172,12 +172,12 @@
                             </div>
 
 
-                        </div>
+                        </div>  
                     </a>
 
                 </div>
 
-                <div class="d-flex align-items-center gap-5 justify-content-center">
+                <div class="d-flex align-items-center gap-0 gap-lg-5 justify-content-center">
                     <div class="expe_div">
                         <div class="round_bg fade_blue_bg">
                             <img src="storage/app/{{ $stay->icon1 }}" alt="features">
@@ -238,7 +238,7 @@
     style="background-image: url('{{ asset('public/frontend/images/wave_full_bg.jpg') }}');">
     <div class="container">
         <div class="row">
-            <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12 mb-3">
+            <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-8 col-sm-12 col-12 mb-3">
                 <div class="text_box">
 
                     <h4 data-aos="fade-up">Rooms</h4>
@@ -260,7 +260,7 @@
 
                 </div>
             </div>
-            <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
+            <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-8 col-sm-12 col-12">
                 <div class="owl-carousel owl-theme rooms_owl">
                     @foreach ($roomTypeDetails as $room)
                         <div class="item custom_card">
@@ -287,7 +287,7 @@
             </div>
 
             <!-- Promotion start -->
-            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 promo_col">
+            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12 promo_col">
                 <div class="item custom_card">
                     <img src="{{ !empty($promotion) ? asset('storage/app/' . $contentToShow->home_image1) : asset('storage/app/' . $contentToShow->image1) }}"
                         alt="promotion" class="w-100">
@@ -556,7 +556,7 @@
 
 
 
-    <div class="row justify-content-center mt-4">
+    <div class="row justify-content-center mt-4 mb-5">
         <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
 
             <nav>
@@ -884,13 +884,13 @@
                 </div>
             </div>
 
-            <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+            <div class="col-xxl-8 col-xl-8 col-lg-9 col-md-9 col-sm-12 col-12">
                 <div class="row">
-                    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 cover_bg"
+                    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 cover_bg d-flex align-items-center"
                         style="background-image: url('{{ asset('public/frontend/images/wave_bg.jpg') }}'); box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;">
                         <div class=" contact_col">
 
-                            <div class="contact_box">
+                            <div class="contact_box mb-4">
                                 <p class="head">Address</p>
                                 <p class="detail">
                                     {{ $contactDetails->address }}
@@ -899,7 +899,7 @@
 
                             <!-- ================== -->
 
-                            <div class="contact_box">
+                            <div class="contact_box mb-4">
                                 <p class="head">Phone Number</p>
                                 <p class="detail">
                                     <a href="tel: {{ $contactDetails->contact_no }}">
@@ -910,7 +910,7 @@
 
                             <!-- ================== -->
 
-                            <div class="contact_box">
+                            <div class="contact_box mb-4">
                                 <p class="head">Email Address</p>
                                 <p class="detail">
                                     <a href="mailto:{{ $contactDetails->email }}">
@@ -921,7 +921,7 @@
 
                             <!-- ================== -->
 
-                            <div class="contact_box">
+                            <div class="contact_box mb-4">
                                 <p class="head">Social Media</p>
                                 <p class="detail d-flex gap-3">
                                     @if ($contactDetails->facebook_url != '' && $contactDetails->facebook_url != '#')
@@ -949,7 +949,7 @@
 
                             <!-- ================== -->
 
-                            <div class="contact_box">
+                            <div class="contact_box mb-4">
                                 <p class="head">Online Booking</p>
                                 <div class="detail d-flex gap-3">
                                     <a href="{{ $contactDetails->banking1 }}" target="_blank">
@@ -1005,6 +1005,13 @@
                                         <input type="email" name="email" class="form-control" id="email"
                                             required="" placeholder="Email Address" fdprocessedid="kcqaug">
                                         <label for="floatingInput">Email Address</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="tel" name="phone" class="form-control" id="phone"
+                                            required="" placeholder="Mobile Number" fdprocessedid="kcqaug">
+                                        <label for="floatingInput">Mobile Number</label>
                                     </div>
                                 </div>
                                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">

@@ -86,6 +86,11 @@
     </link>
     <!-- date picker -->
 
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
     <!--scroll bar style-->
     <style>
         ::-webkit-scrollbar {
@@ -125,7 +130,18 @@
 
             <div class="container d-flex justify-content-end align-items-center">
                 <div class="row text-end">
+                    <div class="col-12">
+                        <div class="top_nav d-flex justify-content-end gap-4">
 
+                            <a href="tel: {{ $contactDetails->contact_no }}">
+                                <p class="mb-0"><i class="fa-solid fa-phone me-2"></i> {{ $contactDetails->contact_no }}
+                                </p>
+                            </a>
+                            <!-- ======================= -->
+                            <a href="mailto:{{ $contactDetails->email }}">
+                                <p class="mb-0"><i class="fa-regular fa-envelope me-2"></i>{{ $contactDetails->email }}
+                                </p>
+                            </a>
                     <div class="top_nav d-flex justify-content-end gap-4">
 
                         <a href="tel: {{ $contactDetails->contact_no }}">
@@ -177,8 +193,41 @@
                                 </li>
                             </ul>
                         </div>
-                    </nav>
 
+                        <nav class="navbar navbar-expand-lg">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link {{ request()->is('/') ? 'active' : ''}}" aria-current="page" href="{{ url('/') }}">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">About Us</a>
+                                    </li>
+                                    {{-- <li class="nav-item">
+                                        <a class="nav-link {{ request()->is('about-us') ? 'active' : ''}}"  href="{{ route('about-us') }}">About Us</a>
+                                    </li> --}}
+                                    <li class="nav-item">
+                                        <a class="nav-link {{ request()->is('rooms') ? 'active' : ''}}"  href="{{ route('rooms') }}">Rooms</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link {{ request()->is('experience-detail') ? 'active' : ''}}" href="{{ route('experience-detail') }}">Experiences</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link {{ request()->is('gallery') ? 'active' : ''}}" href="{{ route('gallery') }}">Gallery</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link border-0 {{ request()->is('contact-us') ? 'active' : ''}}" href="{{ route('contact-us') }}">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
 
                 <div>

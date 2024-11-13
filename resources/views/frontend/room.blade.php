@@ -106,7 +106,7 @@
     <div class="container">
         <div class="row justify-content-center">
 
-            <div class="col-10">
+            <div class="col-10 mb-4">
                 <div class="text_box">
                     <h4 data-aos="fade-up">Rooms</h4>
                     <h2 class="mb-3" data-aos="fade-down">Where Tranquility Meets Timeless Comfort</h2>
@@ -128,6 +128,7 @@
                     @if ($room->room_images->isNotEmpty())
                         <div class="room_img cover_bg"
                             style="background-image: url({{ asset('storage/app/' . $room->room_images->first()->image_name) }});">
+                            <img src="{{ asset('public/frontend/images/char1.png') }}" alt="" class="char_img">
                         </div>
                     @endif
                     <div class="detail">

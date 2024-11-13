@@ -85,7 +85,7 @@
               </div>
             </div>
             <!-- ========== -->
-            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 p-5">
+            <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12 p-5">
 
               <div class="contact_box mb-4">
                 <p class="head">Phone Number</p>
@@ -213,10 +213,13 @@
       <!-- Initialize Swiper -->
       <script>
         var swiper = new Swiper(".custom_swiper", {
+          direction: "horizontal",
           spaceBetween: 0,
           loop: true,
+          speed: 2000,
+          grabCursor: true,
           autoplay: {
-            delay: 4000,
+            delay:4000,
             disableOnInteraction: false,
           },
           pagination: {
@@ -251,8 +254,15 @@
                 items: 3,
                 nav: false
               },
-              1000: {
+
+              1199: {
                 items: 3,
+                nav: false,
+                loop: true
+              },
+
+              1000: {
+                items: 2,
                 nav: false,
                 loop: true
               }
@@ -274,8 +284,15 @@
               items: 4,
               nav: false
             },
+
+            1199: {
+                items: 4,
+                nav: false,
+                loop: true
+              },
+
             1000: {
-              items: 4,
+              items: 3,
               nav: false,
               loop: true
             }
