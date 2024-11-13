@@ -48,7 +48,7 @@ class RoomsController extends Controller
             'room_size' => 'required|string',
             'rooms_bed' => 'required|string',
             'occupancy' => 'required|string',
-            'character_image' => 'image|mimes:jpg,png,jpeg,gif,svg',
+            'character_image' => 'required|image|mimes:jpg,png,jpeg,gif,svg',
             'status' => 'required|in:Y,N',
             'home_image1' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
 

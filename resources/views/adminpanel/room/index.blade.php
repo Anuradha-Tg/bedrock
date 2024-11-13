@@ -133,7 +133,7 @@
                                         <section class="col col-2">
                                             <label class="label">{{ __('Character Image') }} (800 x 1175) </label>
                                             <label class="input">
-                                                <input type="file" class="form-control form-input" id="character_image" name="character_image" style="overflow: hidden;" >
+                                                <input type="file" class="form-control form-input" id="character_image" name="character_image" style="overflow: hidden;" required>
                                             </label>
                                         </section>
                                         <section class="col col-2">
