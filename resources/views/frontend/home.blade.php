@@ -7,9 +7,9 @@
         <a href="{{ $contactDetails->instagram_url }}">
             <i class="fa-brands fa-instagram"></i>
         </a>
-        <a href="{{ $contactDetails->twitter_url }}">
+        {{-- <a href="{{ $contactDetails->twitter_url }}">
             <i class="fa-brands fa-x-twitter"></i>
-        </a>
+        </a> --}}
         <a href="{{ $contactDetails->youtube_url }}">
             <i class="fa-brands fa-youtube"></i>
         </a>
@@ -109,8 +109,8 @@
             style="background-image: url('{{ asset('public/frontend/images/about_left.jpg') }}');">
             <img src="{{ asset('public/frontend/images/about.png') }}" alt="about">
         </div>
-        <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 d-flex align-items-center cover_bg"
-            style="height: 600px; background-image: url('{{ asset('public/frontend/images/wave_bg.jpg') }}');">
+        <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 d-flex align-items-center cover_bg about_right"
+            style=" background-image: url('{{ asset('public/frontend/images/wave_bg.jpg') }}');">
             <div class="row">
                 <div class="offset-xxl-2 col-xxl-8 offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-2 col-md-8 col-sm-12 col-12">
                     <div class="text_box">
@@ -150,8 +150,8 @@
 <div class="container-fluid half_dark_bg stay_con">
     <div class="container">
         <div class="row dark_bg">
-            <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 py-5">
-                <div class="text_box text-light mb-5">
+            <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 py-lg-5 pt-5 pb-0">
+                <div class="text_box text-light mb-lg-5 mb-3">
 
                     <h4 class="text-light" data-aos="fade-up">Stay</h4>
 
@@ -177,7 +177,7 @@
 
                 </div>
 
-                <div class="d-flex align-items-center gap-0 gap-lg-5 justify-content-center">
+                <div class="d-flex align-items-center gap-5 gap-lg-5 justify-content-center">
                     <div class="expe_div">
                         <div class="round_bg fade_blue_bg">
                             <img src="storage/app/{{ $stay->icon1 }}" alt="features">
@@ -209,7 +209,7 @@
 
             </div>
 
-            <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 px-3 position-relative">
+            <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 px-3 position-relative">
 
                 <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="wave line" class="wave_line_img">
 
@@ -264,8 +264,7 @@
                 <div class="owl-carousel owl-theme rooms_owl">
                     @foreach ($roomTypeDetails as $room)
                         <div class="item custom_card">
-                            <img src="{{ asset('storage/app/' . $room->home_image1) }}"
-                                alt="{{ $room->home_title }}" class="w-100">
+                                <div class="cover_bg owl_img" style="background-image: url('{{ asset('storage/app/' . $room->home_image1) }}');" ></div>
                             <div class="card_text">
                                 <h4>{{ $room->home_title }}</h4>
                                 <p>{{ $room->home_content }}</p>
@@ -289,8 +288,8 @@
             <!-- Promotion start -->
             <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12 promo_col">
                 <div class="item custom_card">
-                    <img src="{{ !empty($promotion) ? asset('storage/app/' . $contentToShow->home_image1) : asset('storage/app/' . $contentToShow->image1) }}"
-                        alt="promotion" class="w-100">
+                    <div class="cover_bg owl_img" style="background-image: url('{{ !empty($promotion) ? asset('storage/app/' . $contentToShow->home_image1) : asset('storage/app/' . $contentToShow->image1) }}');" ></div>
+
                     <div class="card_text">
                         <h4>{{ !empty($promotion) ? $contentToShow->home_title : $contentToShow->subheading }}</h4>
                         <p class="text-light">
@@ -412,8 +411,7 @@
 
 <!-- Experiences start -->
 
-<div class="container-fluid cover_bg py-5 mb-5"
-    style="background-image: linear-gradient(to left, #ffffff 7%, rgba(0, 0, 0, 0) 7%), url('{{ asset('public/frontend/images/wave_blue_bg.jpg') }}');">
+<div class="container-fluid cover_bg py-5 mb-5 exp_con">
     <div class="container">
         <div class="row mb-4">
             <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
@@ -475,7 +473,7 @@
 <!-- Gallery start -->
 <div class="container mb-5">
     <div class="row">
-        <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+        <div class="col-xxl-7 col-xl-7 col-lg-8 col-md-10 col-sm-12 col-12">
             <div class="text_box">
 
                 <h4 data-aos="fade-up">Gallery</h4>
@@ -492,8 +490,8 @@
             </div>
         </div>
 
-        <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 d-flex align-items-end">
-            <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="wave line" class="w-100">
+        <div class="col-xxl-5 col-xl-5 col-lg-4 d-lg-flex d-none align-items-end">
+            <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="" class="w-100">
         </div>
     </div>
 
@@ -934,11 +932,11 @@
                                             <i class="fa-brands fa-instagram"></i>
                                         </a>
                                     @endif
-                                    @if ($contactDetails->twitter_url != '' && $contactDetails->twitter_url != '#')
+                                    {{-- @if ($contactDetails->twitter_url != '' && $contactDetails->twitter_url != '#')
                                         <a href="{{ $contactDetails->twitter_url }}" target="_blank">
                                             <i class="fa-brands fa-x-twitter"></i>
                                         </a>
-                                    @endif
+                                    @endif --}}
                                     @if ($contactDetails->youtube_url != '' && $contactDetails->youtube_url != '#')
                                         <a href="{{ $contactDetails->youtube_url }}" target="_blank">
                                             <i class="fa-brands fa-youtube"></i>
