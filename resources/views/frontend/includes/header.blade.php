@@ -124,9 +124,27 @@
                 <img src="{{ asset('public/frontend/images/logo.jpg') }}" alt="logo" class="header_logo">
             </a>
 
-            <div class="container d-flex justify-content-end align-items-center ">
+            <div class="container d-flex d-lg-none justify-content-end align-items-center top_con">
                 <div class="row text-end">
                     <div class="top_nav d-flex justify-content-end gap-4">
+
+                        <a href="tel: {{ $contactDetails->contact_no }}">
+                            <p class="mb-0"><i class="fa-solid fa-phone me-2"></i>
+                                {{ $contactDetails->contact_no }}
+                            </p>
+                        </a>
+                        <!-- ======================= -->
+                        <a href="mailto:{{ $contactDetails->email }}">
+                            <p class="mb-0"><i class="fa-regular fa-envelope me-2"></i>{{ $contactDetails->email }}
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container d-flex justify-content-end align-items-center top_con">
+                <div class="row text-end">
+                    <div class="top_nav justify-content-end gap-4 d-none d-lg-flex">
 
                         <a href="tel: {{ $contactDetails->contact_no }}">
                             <p class="mb-0"><i class="fa-solid fa-phone me-2"></i>
