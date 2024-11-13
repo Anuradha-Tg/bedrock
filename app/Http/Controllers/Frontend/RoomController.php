@@ -64,7 +64,7 @@ class RoomController extends Controller
         return view('frontend.room', compact('topBanner', 'room', 'features', 'contactDetails', 'promotion', 'roomDetails','roomFeatureDetails'));
     }
 
-    public function RoomDetail($id)
+    public function RoomDetail($meta_title)
     {
         $topBanner = TopBanner::where('id', 4)->first();
 
@@ -79,21 +79,23 @@ class RoomController extends Controller
         //     ->first();
 
         $roomDetails = Rooms::where('status', 'Y')->where('is_delete', 0)
-        ->where('id', $id)
+        ->where('meta_title', $meta_title)
         ->with(['room_images' => function ($query) {
             $query->orderBy('order', 'ASC');
         }])
         ->first();
 
+        $roomId = $roomDetails->id;
+
         $roomFeatureDetails = RoomFeatureData::select('room_feature_data.id', 'room_feature.feature_name', 'room_feature.icon2')
             ->join('room_feature', 'room_feature.id', '=', 'room_feature_data.feature_id')
-            ->where('room_feature_data.room_id', $id)
+            ->where('room_feature_data.room_id', $roomId)
             ->orderBy('room_feature.order', 'ASC')
             ->get();
 //  \DB::enableQueryLog();
             $roomFacilityDetails = RoomFacilityData::select('room_facility_data.id', 'room_facility.facility_name')
             ->join('room_facility', 'room_facility.id', '=', 'room_facility_data.facility_id')
-            ->where('room_facility_data.room_id', $id)
+            ->where('room_facility_data.room_id', $roomId)
             ->orderBy('room_facility.id', 'ASC')
             ->get();
 

@@ -7,7 +7,7 @@
           <div class="row justify-content-center">
             <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 right_border p-3">
               <a href="{{ url('/') }}">
-              <img src="{{asset('public/frontend/images/logo.jpg')}}" alt="" class="footer_logo mb-3">
+              <img src="{{asset('public/frontend/images/logo.jpg')}}" alt="logo" class="footer_logo mb-3">
               </a>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
               aliqua. Ut enim ad minim veniam.  </p>
@@ -73,12 +73,12 @@
                 <div class="detail d-flex gap-3">
                 @if($contactDetails->banking1 != "" && $contactDetails->banking1 != "#")
                   <a href="{{ $contactDetails->banking1 }}" target="_blank">
-                     <img src="{{ asset('public/frontend/images/agoda_icon.jpg') }}" alt="" class="w-100">
+                     <img src="{{ asset('public/frontend/images/agoda_icon.jpg') }}" alt="online banking" class="w-100">
                   </a>
                 @endif
                 @if($contactDetails->banking2 != "" && $contactDetails->banking2 != "#")
                   <a href="{{ $contactDetails->banking2 }}" target="_blank">
-                    <img src="{{ asset('public/frontend/images/booking_icon.png') }}" alt="" class="w-100">
+                    <img src="{{ asset('public/frontend/images/booking_icon.png') }}" alt="online banking" class="w-100">
                   </a>
                 @endif
                 </div>
@@ -112,6 +112,7 @@
               <div class="contact_box">
                 <p class="head">Social Media</p>
                 <div class="detail d-flex gap-3">
+                  
                   <div class="footer_social_icon">
                     @if($contactDetails->facebook_url != "" && $contactDetails->facebook_url != "#")
                     <a href="{{ $contactDetails->facebook_url }}" target="_blank">
@@ -127,6 +128,7 @@
                     </a>
                     @endif
                   </div>
+                  
 
                   <div class="footer_social_icon">
                     @if($contactDetails->twitter_url != "" && $contactDetails->twitter_url != "#")
