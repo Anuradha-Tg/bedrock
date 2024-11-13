@@ -39,7 +39,7 @@
         </div>
 
         <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 d-flex align-items-end">
-            <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="" class="w-100">
+            <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="wave line" class="w-100">
         </div>
     </div>
 

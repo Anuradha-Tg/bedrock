@@ -110,11 +110,11 @@
                             <p class="head">Online Booking</p>
                             <div class="detail d-flex gap-3">
                                 <a href="{{ $contactDetails->banking1 }}" target="_blank">
-                                    <img src="{{ asset('public/frontend/images/agoda_icon.jpg') }}" alt=""
+                                    <img src="{{ asset('public/frontend/images/agoda_icon.jpg') }}" alt="online banking"
                                         class="w-100">
                                 </a>
                                 <a href="{{ $contactDetails->banking2 }}" target="_blank">
-                                    <img src="{{ asset('public/frontend/images/booking_icon.png') }}" alt=""
+                                    <img src="{{ asset('public/frontend/images/booking_icon.png') }}" alt="online banking"
                                         class="w-100">
                                 </a>
                             </div>

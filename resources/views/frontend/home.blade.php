@@ -64,7 +64,7 @@
         <div class="d-flex justify-content-center d-flex flex-column align-items-center">
             <div class="expe_div">
                 <div class="round_bg">
-                    <img src="{{ asset('public/frontend/images/surfing.png') }}" alt="">
+                    <img src="{{ asset('public/frontend/images/surfing.png') }}" alt="kitesurf">
                 </div>
                 <p>KITESURF</p>
             </div>
@@ -73,7 +73,7 @@
 
             <div class="expe_div">
                 <div class="round_bg">
-                    <img src="{{ asset('public/frontend/images/whale.png') }} " alt="">
+                    <img src="{{ asset('public/frontend/images/whale.png') }} " alt="dolphin watching">
                 </div>
                 <p>Dolphin watching</p>
             </div>
@@ -82,7 +82,7 @@
 
             <div class="expe_div">
                 <div class="round_bg">
-                    <img src="{{ asset('public/frontend/images/sea_food.png') }}" alt="">
+                    <img src="{{ asset('public/frontend/images/sea_food.png') }}" alt="sea food">
                 </div>
                 <p>Sea Food</p>
             </div>
@@ -107,7 +107,7 @@
     <div class="row">
         <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 cover_bg about_left"
             style="background-image: url('{{ asset('public/frontend/images/about_left.jpg') }}');">
-            <img src="{{ asset('public/frontend/images/about.png') }}" alt="">
+            <img src="{{ asset('public/frontend/images/about.png') }}" alt="about">
         </div>
         <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 d-flex align-items-center cover_bg"
             style="height: 600px; background-image: url('{{ asset('public/frontend/images/wave_bg.jpg') }}');">
@@ -180,7 +180,7 @@
                 <div class="d-flex align-items-center gap-0 gap-lg-5 justify-content-center">
                     <div class="expe_div">
                         <div class="round_bg fade_blue_bg">
-                            <img src="storage/app/{{ $stay->icon1 }}" alt="">
+                            <img src="storage/app/{{ $stay->icon1 }}" alt="features">
                         </div>
                         <p>{{ $stay->icon1_title }}</p>
                     </div>
@@ -189,7 +189,7 @@
 
                     <div class="expe_div">
                         <div class="round_bg fade_blue_bg">
-                            <img src="storage/app/{{ $stay->icon2 }}" alt="">
+                            <img src="storage/app/{{ $stay->icon2 }}" alt="features">
                         </div>
                         <p>{{ $stay->icon2_title }}</p>
                     </div>
@@ -198,7 +198,7 @@
 
                     <div class="expe_div">
                         <div class="round_bg fade_blue_bg">
-                            <img src="storage/app/{{ $stay->icon3 }}" alt="">
+                            <img src="storage/app/{{ $stay->icon3 }}" alt="features">
                         </div>
                         <p>{{ $stay->icon3_title }}</p>
                     </div>
@@ -211,7 +211,7 @@
 
             <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 px-3 position-relative">
 
-                <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="" class="wave_line_img">
+                <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="wave line" class="wave_line_img">
 
                 <div class="swiper mySwiper custom_swiper">
                     <div class="swiper-wrapper">
@@ -290,7 +290,7 @@
             <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12 promo_col">
                 <div class="item custom_card">
                     <img src="{{ !empty($promotion) ? asset('storage/app/' . $contentToShow->home_image1) : asset('storage/app/' . $contentToShow->image1) }}"
-                        alt="" class="w-100">
+                        alt="promotion" class="w-100">
                     <div class="card_text">
                         <h4>{{ !empty($promotion) ? $contentToShow->home_title : $contentToShow->subheading }}</h4>
                         <p class="text-light">
@@ -383,10 +383,10 @@
 
                 <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
                     <div class="dark_bg food_right_div">
-                        <img src="{{ asset('public/frontend/images/food_plate1.png') }}" alt=""
+                        <img src="{{ asset('public/frontend/images/food_plate1.png') }}" alt="food plate"
                             class="food_plate">
-                        {{-- <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt=""
-                            class="wave_line"> --}}
+                        <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="wave line"
+                            class="wave_line">
                     </div>
                 </div>
             </div>
@@ -493,7 +493,7 @@
         </div>
 
         <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 d-flex align-items-end">
-            <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="" class="w-100">
+            <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="wave line" class="w-100">
         </div>
     </div>
 
@@ -954,11 +954,11 @@
                                 <div class="detail d-flex gap-3">
                                     <a href="{{ $contactDetails->banking1 }}" target="_blank">
                                         <img src="{{ asset('public/frontend/images/agoda_icon.jpg') }}"
-                                            alt="" class="w-100">
+                                            alt="online banking" class="w-100">
                                     </a>
                                     <a href="{{ $contactDetails->banking2 }}" target="_blank">
                                         <img src="{{ asset('public/frontend/images/booking_icon.png') }}"
-                                            alt="" class="w-100">
+                                            alt="online banking" class="w-100">
                                     </a>
                                 </div>
                             </div>

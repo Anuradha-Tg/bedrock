@@ -132,7 +132,11 @@
                                 </div>
                                 <div class="row">
                                     <section class="col col-4">
-                                    <img id="preview-image-before-upload" src="../../storage/app/{{ $data->og_image }}" alt="preview image" style="max-height: 250px;">
+                                        @if( $data->og_image)
+                                        <img id="preview-image-before-upload" src="../storage/app/{{ $data->og_image }}" alt="preview image" style="max-height: 250px;">
+                                        @else
+                                        <img id="preview-image-before-upload" src="{{ asset('public/back/img/whitebg.jpg') }}" alt="default image" style="max-height: 250px;">
+                                        @endif
                                     </section>
                                 </div>
                                 <div class="row">

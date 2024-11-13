@@ -38,7 +38,7 @@
 
           <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 px-3 position-relative">
 
-            <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="" class="wave_line_img">
+            <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="wave line" class="wave_line_img">
 
             <div class="swiper mySwiper custom_swiper">
               <div class="swiper-wrapper">

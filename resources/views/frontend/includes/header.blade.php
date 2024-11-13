@@ -7,26 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    {{-- @php
-        $meta = \App\Helpers\HeaderHelper::getMeta('home');
-    @endphp --}}
-
     @php
+        $room = e(Request::segment(2)); // Get the second segment and sanitize it
 
-
-    if(request()->is('rooms') == 1) {
-    $meta = \App\Helpers\HeaderHelper::getMeta('rooms');
-    } else if(request()->is('experience-detail') == 1) {
-    $meta = \App\Helpers\HeaderHelper::getMeta('experience-detail');
-    } else if(request()->is('gallery') == 1) {
-    $meta = \App\Helpers\HeaderHelper::getMeta('gallery');
-    } else if(request()->is('contact-us') == 1) {
-    $meta = \App\Helpers\HeaderHelper::getMeta('contact-us');
-    }
-    else {
-        $meta = \App\Helpers\HeaderHelper::getMeta('home');
-    }
+        if (request()->is('rooms')) {
+            $meta = \App\Helpers\HeaderHelper::getMeta('rooms');
+        } elseif (request()->is('experience-detail')) {
+            $meta = \App\Helpers\HeaderHelper::getMeta('experience-detail');
+        } elseif (request()->is('gallery')) {
+            $meta = \App\Helpers\HeaderHelper::getMeta('gallery');
+        } elseif (request()->is('contact-us')) {
+            $meta = \App\Helpers\HeaderHelper::getMeta('contact-us');
+        } elseif (request()->is('room-details/' . $room)) {
+            
+            $meta = \App\Helpers\HeaderHelper::getRoomDetail($room, 'room-details');
+            // dd($meta);
+        } else {
+            // dd('hi');
+            $meta = \App\Helpers\HeaderHelper::getMeta('home');
+        }
+        // dd($meta);
     @endphp
+
 
 
 
@@ -43,7 +45,7 @@
     <meta name="og:email" content="{{ $meta->og_email }}" />
     <link rel="canonical" href="{{ url()->full() }}" />
     <title>{{ $meta->page_title }}</title>
-
+    
     <!-- Bootstrap CSS -->
     <link href="{{ asset('public/frontend/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Custom CSS -->
@@ -123,7 +125,7 @@
         <div class="container-fluid position-relative nav_col">
 
             <a href="{{ url('/') }}">
-                <img src="{{ asset('public/frontend/images/logo.jpg') }}" alt="" class="header_logo">
+                <img src="{{ asset('public/frontend/images/logo.jpg') }}" alt="logo" class="header_logo">
             </a>
 
             <div class="container d-flex justify-content-end align-items-center">
@@ -140,7 +142,56 @@
                                 <p class="mb-0"><i class="fa-regular fa-envelope me-2"></i>{{ $contactDetails->email }}
                                 </p>
                             </a>
+                    <div class="top_nav d-flex justify-content-end gap-4">
 
+                        <a href="tel: {{ $contactDetails->contact_no }}">
+                            <p class="mb-0"><i class="fa-solid fa-phone me-2"></i> {{ $contactDetails->contact_no }}
+                            </p>
+                        </a>
+                        <!-- ======================= -->
+                        <a href="mailto:{{ $contactDetails->email }}">
+                            <p class="mb-0"><i class="fa-regular fa-envelope me-2"></i>{{ $contactDetails->email }}
+                            </p>
+                        </a>
+
+                    </div>
+
+                    <nav class="navbar navbar-expand-lg">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" aria-current="page"
+                                        href="{{ url('/') }}">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About Us</a>
+                                </li>
+                                {{-- <li class="nav-item">
+                                    <a class="nav-link {{ request()->is('about-us') ? 'active' : ''}}"  href="{{ route('about-us') }}">About Us</a>
+                                </li> --}}
+                                <li class="nav-item">
+                                    <a class="nav-link {{ request()->is('rooms') ? 'active' : '' }}"
+                                        href="{{ route('rooms') }}">Rooms</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link {{ request()->is('experience-detail') ? 'active' : '' }}"
+                                        href="{{ route('experience-detail') }}">Experiences</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link {{ request()->is('gallery') ? 'active' : '' }}"
+                                        href="{{ route('gallery') }}">Gallery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link border-0 {{ request()->is('contact-us') ? 'active' : '' }}"
+                                        href="{{ route('contact-us') }}">Contact Us</a>
+                                </li>
+                            </ul>
                         </div>
 
                         <nav class="navbar navbar-expand-lg">
@@ -180,7 +231,7 @@
                 </div>
 
                 <div>
-                    <a href="contact.html">
+                    <a href="#">
                         <button class="blue_btn">
                             <i class="fa-solid fa-bell"></i>
                             BOOK NOW

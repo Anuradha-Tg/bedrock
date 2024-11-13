@@ -14,6 +14,7 @@ class MetaTag extends Model
         // 'request_id',
         'page_name',
         'page_title',
+        'room_name',
         'description',
         'keywords',
         'og_title',

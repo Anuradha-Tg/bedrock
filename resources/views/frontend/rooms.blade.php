@@ -32,61 +32,13 @@
                     @foreach ($roomFeatureDetails as $featureData)
                         <div class="col-2">
                             <div class="small_icon_box">
-                                <img src="{{ asset($featureData->icon2) }}" alt="">
-                                <!-- Assuming 'check' holds the icon file name -->
+                                <img src="{{ asset($featureData->icon2) }}" alt="room features">
                                 <p>{{ $featureData->feature_name }}</p>
                             </div>
                         </div>
                     @endforeach
                 </div>
 
-
-                {{-- <!-- =============== -->
-
-                <div class="col-2">
-                  <div class="small_icon_box">
-                    <img src="images/lake_y.png" alt="">
-                    <p>Lake view</p>
-                  </div>
-                </div>
-
-                <!-- =============== -->
-
-                <div class="col-2">
-                  <div class="small_icon_box">
-                    <img src="images/garden_y.png" alt="">
-                    <p>Garden view</p>
-                  </div>
-                </div>
-
-                <!-- =============== -->
-
-                <div class="col-2">
-                  <div class="small_icon_box">
-                    <img src="images/bed_y.png" alt="">
-                    <p>2 single beds</p>
-                  </div>
-                </div>
-
-                <!-- =============== -->
-
-                <div class="col-2">
-                  <div class="small_icon_box">
-                    <img src="images/ac_y.png" alt="">
-                    <p>Air conditioning</p>
-                  </div>
-                </div>
-
-                <!-- =============== -->
-
-                <div class="col-2">
-                  <div class="small_icon_box">
-                    <img src="images/sq_y.png" alt="">
-                    <p>50 m²</p>
-                  </div>
-                </div>
-
-                <!-- =============== --> --}}
 
             </div>
 
@@ -128,7 +80,7 @@
 <div class="container mb-5">
     <div class="row justify-content-center">
         <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
-            
+
             <h4 class="mb-3">Description of the Room</h4>
 
             <div class="ms-4 mb-5">
@@ -139,7 +91,7 @@
 
                 <div class="d-flex gap-3 mt-4">
                     <div class="blue_box">
-                        <img src="{{ asset('public/frontend/images/size_w.png') }}" alt="">
+                        <img src="{{ asset('public/frontend/images/size_w.png') }}" alt="room size">
                         <p>Room Size</p>
                         <h4>{{ $roomDetails->room_size }}</h4>
                     </div>
@@ -147,7 +99,7 @@
                     <!-- ============= -->
 
                     <div class="blue_box">
-                        <img src="{{ asset('public/frontend/images/bed_w.png') }}" alt="">
+                        <img src="{{ asset('public/frontend/images/bed_w.png') }}" alt="room bed">
                         <p>Rooms Bed</p>
                         <h4>{{ $roomDetails->rooms_bed }}</h4>
                     </div>
@@ -155,7 +107,7 @@
                     <!-- ============= -->
 
                     <div class="blue_box">
-                        <img src="{{ asset('public/frontend/images/user_w.png') }}" alt="">
+                        <img src="{{ asset('public/frontend/images/user_w.png') }}" alt="occupancy">
                         <p>Occupancy</p>
                         <h4>{{ $roomDetails->occupancy }}</h4>
                     </div>
@@ -267,11 +219,11 @@
                             <p class="head">Online Booking</p>
                             <div class="detail d-flex gap-3">
                                 <a href="{{ $contactDetails->banking1 }}">
-                                    <img src="{{ asset('public/frontend/images/agoda_icon.jpg') }}" alt=""
+                                    <img src="{{ asset('public/frontend/images/agoda_icon.jpg') }}" alt="online banking"
                                         class="w-100">
                                 </a>
                                 <a href="{{ $contactDetails->banking2 }}">
-                                    <img src="{{ asset('public/frontend/images/booking_icon.png') }}" alt=""
+                                    <img src="{{ asset('public/frontend/images/booking_icon.png') }}" alt="online banking"
                                         class="w-100">
                                 </a>
                             </div>
@@ -382,12 +334,12 @@
                 </div>
             </div>
 
-        <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 right_col">
+            <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 right_col">
 
-            <div style="width: 100%"><iframe width="100%" height="550" frameborder="0" scrolling="no" marginheight="0"
-                marginwidth="0"
-                src="https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=bedrock%20kalpitiya+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
-                href="https://www.gps.ie/">gps tracker sport</a></iframe></div>
+                <div style="width: 100%"><iframe width="100%" height="550" frameborder="0" scrolling="no"
+                        marginheight="0" marginwidth="0"
+                        src="https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=bedrock%20kalpitiya+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                            href="https://www.gps.ie/">gps tracker sport</a></iframe></div>
             </div>
 
         </div>

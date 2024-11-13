@@ -48,7 +48,7 @@
 
             <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 px-3 position-relative">
 
-                <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="" class="wave_line_img">
+                <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="wave line" class="wave_line_img">
 
                 <div class="swiper mySwiper custom_swiper">
                     <div class="swiper-wrapper">
@@ -145,7 +145,7 @@
                             @foreach ($features as $featureData)
                                 <div class="col-4">
                                     <div class="d-flex gap-2">
-                                        <img src="{{ asset($featureData->icon1) }}" alt="" class="small_icon">
+                                        <img src="{{ asset($featureData->icon1) }}" alt="room features" class="small_icon">
                                         <p>{{ $featureData->feature_name }}</p>
                                     </div>
                                 </div>
@@ -157,7 +157,7 @@
                         <h4 data-aos="fade-up">{{ $room->home_title }}</h4>
                         <p>{{ $room->home_content }}</p>
 
-                        <a href="{{ url('room-details/' . $room->id) }}">
+                        <a href="{{ url('room-details/' . $room->meta_title) }}">
                             <div class="d-flex align-items-center dark_read_btn">
                                 <p class="mb-0"><i>Read More</i></p>
                                 <div class="circle"
