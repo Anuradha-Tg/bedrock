@@ -4,7 +4,7 @@
     <!-- footer start -->
     <div class="container-fluid cover_bg py-5 footer_con" style="background-image: url('{{asset('public/frontend/images/footer_bg.jpg')}}');">
         <div class="container">
-          <div class="row justify-content-center">
+          <div class="row justify-content-center m-auto">
             <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12 right_border p-lg-3 p-3">
               <a href="{{ url('/') }}">
               <img src="{{asset('public/frontend/images/logo.jpg')}}" alt="logo" class="footer_logo mb-3">
@@ -73,7 +73,7 @@
                 <div class="detail d-flex gap-3">
                 @if($contactDetails->banking1 != "" && $contactDetails->banking1 != "#")
                   <a href="{{ $contactDetails->banking1 }}" target="_blank">
-                     <img src="{{ asset('public/frontend/images/agoda_icon.jpg') }}" alt="online banking" class="w-100">
+                     <img src="{{ asset('public/frontend/images/airbnb.png') }}" alt="online banking" class="w-100">
                   </a>
                 @endif
                 @if($contactDetails->banking2 != "" && $contactDetails->banking2 != "#")
@@ -83,12 +83,19 @@
                 @endif
                 </div>
               </div>
+
+              <div class="contact_box mt-4">
+                <p class="head">Online Booking</p>
+                <div>
+                  <img src="{{ asset('public/frontend/images/trip_ad.png') }}" alt="online banking" class="w-50">
+                </div>
+              </div>
             </div>
             <!-- ========== -->
             <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12 p-lg-5 p-3">
 
               <div class="row">
-                <div class="contact_box mb-4 col-6 col-md-12">
+                <div class="contact_box col-12 col-sm-6 col-md-12 col-12 mb-2 mb-md-4">
                   <p class="head">Phone Number</p>
                   <p class="detail">
                     <a href="tel: {{ $contactDetails->contact_no }}">
@@ -99,7 +106,7 @@
 
                 <!-- ================== -->
 
-                <div class="contact_box mb-4 col-6 col-md-12">
+                <div class="contact_box col-12 col-sm-6 col-md-12 col-12 mb-2 mb-md-4">
                   <p class="head">Email Address</p>
                   <p class="detail">
                     <a href="mailto:{{ $contactDetails->email }}">
@@ -162,7 +169,7 @@
       <!-- copyrights -->
        <div class="container-fluid" style="background-color: #019392;">
         <div class="container">
-          <div class="row justify-content-center copyright_row">
+          <div class="row justify-content-center copyright_row m-auto">
             <div class="col-md-5 col-12">
               <p>
                 Copyright © 2024 BEDROCK. All rights reserved.
@@ -251,9 +258,15 @@
             responsiveClass: true,
             responsive: {
               0: {
+                items: 1,
+                nav: false
+              },
+
+              480: {
                 items: 2,
                 nav: false
               },
+
               600: {
                 items: 2,
                 nav: false
@@ -281,9 +294,15 @@
           responsiveClass: true,
           responsive: {
             0: {
+              items: 1,
+              nav: false
+            },
+
+            480: {
               items: 2,
               nav: false
             },
+
             600: {
               items: 2,
               nav: false
