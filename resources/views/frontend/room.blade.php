@@ -128,7 +128,7 @@
                     @if ($room->room_images->isNotEmpty())
                         <div class="room_img cover_bg"
                             style="background-image: url({{ asset('storage/app/' . $room->room_images->first()->image_name) }});">
-                            <img src="{{ asset('storage/app/' . $room->character_image) }}" alt="character image" class="char_img">
+                            <img src="storage/app/{{ $room->character_image }}" alt="character image" class="char_img">
                         </div>
                     @endif
                     <div class="detail">

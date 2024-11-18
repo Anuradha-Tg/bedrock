@@ -52,7 +52,7 @@ class WhoWeAreController extends Controller
 
         if(!$request->file('image2')==""){
             $image2 = $request->file('image2')->getClientOriginalName();
-            $image2Path = $request->file('image2')->store('pubic/about_us_images');
+            $image2Path = $request->file('image2')->store('public/about_us_images');
         }else{
             $path ="";
         }
