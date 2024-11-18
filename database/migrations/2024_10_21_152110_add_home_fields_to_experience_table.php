@@ -14,12 +14,8 @@ class AddHomeFieldsToExperienceTable extends Migration
     public function up()
     {
         Schema::table('experience', function (Blueprint $table) {
-            $table->string('home_image1')->nullable()->after('image3');
             $table->string('home_image2')->nullable()->after('home_image1');
             $table->string('home_image3')->nullable()->after('home_image2');
-            $table->longText('home_title')->nullable()->after('home_image3');
-            $table->longText('home_content')->nullable()->after('home_title');
-            $table->tinyInteger('checkbox')->default('0')->after('home_content');
 
         });
     }

@@ -163,14 +163,14 @@
        <div class="container-fluid" style="background-color: #019392;">
         <div class="container">
           <div class="row justify-content-center copyright_row">
-            <div class="col-md-5 col-6">
+            <div class="col-md-5 col-12">
               <p>
                 Copyright © 2024 BEDROCK. All rights reserved.
               </p>
             </div>
 
-            <div class="col-md-5 col-6">
-              <p class="d-flex justify-content-end">
+            <div class="col-md-5 col-12">
+              <p class="d-flex justify-content-md-end justify-content-start">
                 Design & Developed by <span class="ms-1"><a href="https://www.tekgeeks.net/" target="_blank" >TekGeeks</a></span>
               </p>
             </div>
@@ -251,7 +251,7 @@
             responsiveClass: true,
             responsive: {
               0: {
-                items: 1,
+                items: 2,
                 nav: false
               },
               600: {
@@ -281,7 +281,7 @@
           responsiveClass: true,
           responsive: {
             0: {
-              items: 1,
+              items: 2,
               nav: false
             },
             600: {
