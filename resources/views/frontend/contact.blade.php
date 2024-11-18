@@ -21,8 +21,7 @@
 <div class="container mt-5">
     <div class="row inq_row">
 
-        <div
-            class="offset-xxl-1 col-xxl-8 offset-xl-1 col-xl-8 offset-lg-1 col-lg-8 offset-md-1 col-md-8 col-sm-12 col-12">
+        <div class="offset-xxl-1 col-xxl-8 offset-xl-1 col-xl-8 offset-lg-1 col-lg-8 offset-md-1 col-md-8 col-sm-12 col-12">
             <div class="text_box">
 
                 <h4 data-aos="fade-up">Inquiries</h4>
@@ -40,87 +39,86 @@
             </div>
         </div>
 
-        <div
-            class="offset-xxl-1 col-xxl-9 offset-xl-1 col-xl-9 offset-lg-1 col-lg-9 offset-md-1 col-md-9 col-sm-12 col-12">
+        <div class="offset-xxl-1 col-xxl-9 offset-xl-1 col-xl-9 col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="row">
                 <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 cover_bg d-flex align-items-center"
                     style="background-image: url({{ asset('public/frontend/images/wave_bg.jpg') }}); box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;">
-                    <div class=" contact_col">
+                    <div class=" contact_col row">
 
-                        <div class="contact_box mb-4">
-                            <p class="head">Address</p>
-                            <p class="detail">
-                                {{ $contactDetails->address }}
-                            </p>
-                        </div>
-
-                        <!-- ================== -->
-
-                        <div class="contact_box mb-4">
-                            <p class="head">Phone Number</p>
-                            <p class="detail">
-                                <a href="tel: {{ $contactDetails->contact_no }}">
-                                    {{ $contactDetails->contact_no }}
-                                </a>
-                            </p>
-                        </div>
-
-                        <!-- ================== -->
-
-                        <div class="contact_box mb-4">
-                            <p class="head">Email Address</p>
-                            <p class="detail">
-                                <a href="mailto:{{ $contactDetails->email }}">
-                                    {{ $contactDetails->email }}
-                                </a>
-                            </p>
-                        </div>
-
-                        <!-- ================== -->
-
-                        <div class="contact_box mb-4">
-                            <p class="head">Social Media</p>
-                            <p class="detail d-flex gap-3">
-                                @if ($contactDetails->facebook_url != '' )
-                                    <a href="{{ $contactDetails->facebook_url }}" target="_blank">
-                                        <i class="fa-brands fa-facebook-f"></i>
-                                    </a>
-                                @endif
-                                @if ($contactDetails->instagram_url != '')
-                                    <a href="{{ $contactDetails->instagram_url }}" target="_blank">
-                                        <i class="fa-brands fa-instagram"></i>
-                                    </a>
-                                @endif
-                                @if ($contactDetails->twitter_url != '' )
-                                    <a href="{{ $contactDetails->twitter_url }}" target="_blank">
-                                        <i class="fa-brands fa-x-twitter"></i>
-                                    </a>
-                                @endif
-                                @if ($contactDetails->youtube_url != '' )
-                                    <a href="{{ $contactDetails->youtube_url }}" target="_blank">
-                                        <i class="fa-brands fa-youtube"></i>
-                                    </a>
-                                @endif
-                            </p>
-                        </div>
-
-                        <!-- ================== -->
-
-                        <div class="contact_box mb-4">
-                            <p class="head">Online Booking</p>
-                            <div class="detail d-flex gap-3">
-                                <a href="{{ $contactDetails->banking1 }}" target="_blank">
-                                    <img src="{{ asset('public/frontend/images/agoda_icon.jpg') }}" alt="online banking"
-                                        class="w-100">
-                                </a>
-                                <a href="{{ $contactDetails->banking2 }}" target="_blank">
-                                    <img src="{{ asset('public/frontend/images/booking_icon.png') }}" alt="online banking"
-                                        class="w-100">
-                                </a>
+                            <div class="contact_box mb-4 col-6 col-md-12">
+                                <p class="head">Address</p>
+                                <p class="detail">
+                                    {{ $contactDetails->address }}
+                                </p>
                             </div>
-                        </div>
 
-                    </div>
+                            <!-- ================== -->
+
+                            <div class="contact_box mb-4 col-6 col-md-12">
+                                <p class="head">Phone Number</p>
+                                <p class="detail">
+                                    <a href="tel: {{ $contactDetails->contact_no }}">
+                                        {{ $contactDetails->contact_no }}
+                                    </a>
+                                </p>
+                            </div>
+
+                            <!-- ================== -->
+
+                            <div class="contact_box mb-4 col-12 col-md-12">
+                                <p class="head">Email Address</p>
+                                <p class="detail">
+                                    <a href="mailto:{{ $contactDetails->email }}">
+                                        {{ $contactDetails->email }}
+                                    </a>
+                                </p>
+                            </div>
+
+                            <!-- ================== -->
+
+                            <div class="contact_box mb-4 col-6 col-md-12">
+                                <p class="head">Social Media</p>
+                                <p class="detail d-flex gap-3">
+                                    @if ($contactDetails->facebook_url != '' && $contactDetails->facebook_url != '#')
+                                        <a href="{{ $contactDetails->facebook_url }}" target="_blank">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                    @endif
+                                    @if ($contactDetails->instagram_url != '' && $contactDetails->instagram_url != '#')
+                                        <a href="{{ $contactDetails->instagram_url }}" target="_blank">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                    @endif
+                                    {{-- @if ($contactDetails->twitter_url != '' && $contactDetails->twitter_url != '#')
+                                        <a href="{{ $contactDetails->twitter_url }}" target="_blank">
+                                            <i class="fa-brands fa-x-twitter"></i>
+                                        </a>
+                                    @endif --}}
+                                    @if ($contactDetails->youtube_url != '' && $contactDetails->youtube_url != '#')
+                                        <a href="{{ $contactDetails->youtube_url }}" target="_blank">
+                                            <i class="fa-brands fa-youtube"></i>
+                                        </a>
+                                    @endif
+                                </p>
+                            </div>
+
+                            <!-- ================== -->
+
+                            <div class="contact_box mb-0 col-6 col-md-12">
+                                <p class="head">Online Booking</p>
+                                <div class="detail d-flex gap-3">
+                                    <a href="{{ $contactDetails->banking1 }}" target="_blank">
+                                        <img src="{{ asset('public/frontend/images/airbnb.png') }}"
+                                            alt="online banking" class="w-100">
+                                    </a>
+                                    <a href="{{ $contactDetails->banking2 }}" target="_blank">
+                                        <img src="{{ asset('public/frontend/images/booking_icon.png') }}"
+                                            alt="online banking" class="w-100">
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
                 </div>
 
                 <!-- ============= -->
@@ -237,8 +235,8 @@
     <div style="width: 100%"><iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0"
             marginwidth="0"
             src="https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=bedrock%20kalpitiya+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
-                href="https://www.gps.ie/">gps tracker sport</a></iframe></div>
-</div>
+            href="https://www.gps.ie/">gps tracker sport</a></iframe></div>
+    </div>
 </div>
 
 <!-- ================================= -->

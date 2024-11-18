@@ -24,7 +24,7 @@
 <div class="container-fluid half_dark_bg stay_con">
     <div class="container">
         <div class="row dark_bg">
-            <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 py-5">
+            <div class="col-xxl-5 col-xl-5 col-lg-10 col-md-11 col-sm-12 col-12 py-xl-5 pt-5">
                 <div class="text_box text-light mb-5">
 
                     <h4 class="text-light" data-aos="fade-up">Stay</h4>
@@ -46,7 +46,7 @@
                 </div>
             </div>
 
-            <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 px-3 position-relative">
+            <div class="col-xxl-7 offset-xl-0 col-xl-7 offset-lg-2 col-lg-10 offset-md-2 col-md-10 col-sm-12 col-12 px-3 position-relative">
 
                 <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="wave line" class="wave_line_img">
 
@@ -71,7 +71,7 @@
 
 <!-- banner start -->
 
-<div class="container-fluid banner_full p-0 cover_bg" id="promotion">
+<div class="container-fluid banner_full p-0 cover_bg mt-xl-0" id="promotion">
     <div class="swiper mySwiper custom_swiper" style="top: 0;">
         <div class="swiper-wrapper">
             @foreach ($promotion as $promo)
@@ -79,7 +79,7 @@
                     style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ asset('storage/app/' . $promo->image) }}');">
                     <div class="container h-100">
                         <div class="row justify-content-end h-100">
-                            <div class="col-6 d-flex align-items-center">
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12 d-flex align-items-center">
                                 <div class="text_box text-light">
                                     <h4 class="text-light" data-aos="fade-up">Promotion</h4>
                                     <h2 class="mb-3 text-light" data-aos="fade-down">{{ $promo->heading }}</h2>
@@ -106,7 +106,7 @@
     <div class="container">
         <div class="row justify-content-center">
 
-            <div class="col-10 mb-4">
+            <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 mb-4">
                 <div class="text_box">
                     <h4 data-aos="fade-up">Rooms</h4>
                     <h2 class="mb-3" data-aos="fade-down">Where Tranquility Meets Timeless Comfort</h2>
@@ -124,7 +124,7 @@
             
 
             @foreach ($roomDetails as $room)
-                <div class="col-5 room_ca_div mb-4">
+                <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 room_ca_div mb-4">
                     @if ($room->room_images->isNotEmpty())
                         <div class="room_img cover_bg"
                             style="background-image: url({{ asset('storage/app/' . $room->room_images->first()->image_name) }});">
@@ -143,7 +143,7 @@
                             @endphp
 
                              @foreach ($roomListing as $listingFeatureData)
-                                <div class="col-4">
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 mt-2 md-mt-0">
                                     <div class="d-flex gap-2">
                                         <img src="{{ asset($listingFeatureData->icon) }}" alt="room features" class="small_icon">
                                         <p>{{ $listingFeatureData->feature_name }}</p>

@@ -23,7 +23,7 @@
  <div class="container-fluid half_dark_bg">
      <div class="container">
          <div class="row dark_bg">
-             <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 py-5">
+             <div class="col-xxl-5 col-xl-5 col-lg-10 col-md-11 col-sm-12 col-12 py-xl-5 pt-5">
                  <div class="text_box text-light">
 
                      <h2 class="mb-3 text-light" data-aos="fade-down">Who We Are</h2>
@@ -32,7 +32,7 @@
                  </div>
              </div>
 
-             <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 px-3 position-relative">
+             <div class="col-xxl-7 offset-xl-0 col-xl-7 offset-lg-2 col-lg-10 offset-md-2 col-md-10 col-sm-12 col-12 px-3 position-relative">
 
                  <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="wave_line" class="wave_line_img">
 
@@ -57,7 +57,7 @@
 
  <!-- about kalpitiya start -->
 
- <div class="container-fluid py-5">
+ <div class="container-fluid py-5 about_text_con">
      <div class="container">
          <div class="row justify-content-center">
              <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
@@ -65,10 +65,11 @@
 
                      <h2 class="mb-3" data-aos="fade-down">{{ $aboutUsContent->heading }}</h2>
 
-                     <img src="storage/app/{{ $aboutUsContent->image1 }}" alt="about us" class="float_img">
+                     <img src="storage/app/{{ $aboutUsContent->image1 }}" alt="about us" class="float_img  d-none d-md-block">
 
                      <p class="text">{!! $aboutUsContent->description !!}</p>
 
+                     <img src="storage/app/{{ $aboutUsContent->image1 }}" alt="about us" class="float_img  d-block d-md-none">
 
                  </div>
              </div>
