@@ -9,6 +9,8 @@ use App\Models\RoomFeature;
 use App\Models\RoomFacility;
 use App\Models\RoomFeatureData;
 use App\Models\RoomFacilityData;
+use App\Models\RoomListingFeatures;
+use App\Models\RoomListingFeaturesData;
 use Illuminate\Http\Request;
 use DataTables;
 
@@ -27,9 +29,10 @@ class RoomsController extends Controller
     {
         $features = RoomFeature::all();
         $facilities = RoomFacility::all();
+        $listingFeatures = RoomListingFeatures::all();
 
 
-        return view('adminpanel.room.index', compact('features', 'facilities'));
+        return view('adminpanel.room.index', compact('features', 'facilities','listingFeatures'));
     }
 
     private function generateMetaTitle($title)
@@ -119,6 +122,8 @@ class RoomsController extends Controller
 
         $this->saveRoomFeatures($request, $room->id);
         $this->saveRoomFacilities($request, $room->id);
+        $this->saveRoomListingFeatures($request, $room->id);
+
 
         \LogActivity::addToLog('New Room ' . $request->title . ' added(' . $id . ').');
 
@@ -149,8 +154,9 @@ class RoomsController extends Controller
     {
         // Clear previous room facilities for the room
         RoomFacilityData::where('room_id', $roomId)->delete();
-
+//  \DB::enableQueryLog();
         $facilities = $request->input('facilities', []);
+
         foreach ($facilities as $facilityId => $checked) {
             if ($checked) {
                 // Save each checked facility in the room_facility_data table
@@ -160,7 +166,31 @@ class RoomsController extends Controller
                 $roomFacilityData->save();
             }
         }
+        // dd(\DB::getQueryLog());
     }
+
+    public function saveRoomListingFeatures(Request $request, $roomId)
+    {
+        
+        // Clear previous room facilities for the room
+        RoomListingFeaturesData::where('room_id', $roomId)->delete();
+
+   
+        $listingFeatures = $request->input('listingFeatures', []);
+        // dd($listingFeatures);
+
+        foreach ($listingFeatures as $listingFeatureId => $checked) {
+            if ($checked) {
+                // Save each checked listing feature in the room_listing_features table
+                $roomListingFeature = new RoomListingFeaturesData();
+                $roomListingFeature->room_id = $roomId;
+                $roomListingFeature->listing_feature_id = $listingFeatureId; // Assuming `feature_id` corresponds to the listing feature ID
+                $roomListingFeature->save();
+            }
+        }
+        
+    }
+    
 
     public function list(Request $request)
     {
@@ -203,14 +233,16 @@ class RoomsController extends Controller
         $data = Rooms::find($roomID);
         $features = RoomFeature::all();
         $facilities = RoomFacility::all();
+        $listingFeatures = RoomListingFeatures::all();
         $roomFacilities = RoomFacilityData::where('room_id', $roomID)->get();
         $roomFeatures = RoomFeatureData::where('room_id', $roomID)->get();
+        $roomListingFeatures = RoomListingFeaturesData::where('room_id', $roomID)->get();
         $metaTag = MetaTag::where('room_name', $data->meta_title)->first();
 
 
         // dd($metaTag);
 
-        return view('adminpanel.room.edit', compact('data', 'features', 'facilities', 'roomFacilities', 'roomFeatures', 'metaTag'));
+        return view('adminpanel.room.edit', compact('data', 'features', 'facilities', 'roomFacilities', 'roomFeatures', 'metaTag','listingFeatures','roomListingFeatures'));
     }
 
     public function update(Request $request)
@@ -280,6 +312,7 @@ class RoomsController extends Controller
         $data->save();
         $this->saveRoomFeatures($request, $data->id);
         $this->saveRoomFacilities($request, $data->id);
+        $this->saveRoomListingFeatures($request, $data->id);
 
         $metaTag = MetaTag::where('room_name', $data->meta_title)->first();
         $metaTag->page_name = 'room-details';

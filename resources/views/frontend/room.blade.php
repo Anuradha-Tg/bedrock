@@ -135,18 +135,18 @@
                         <div class="row">
                             @php
                                 // Get the features related to the current room
-                                $features = $roomFeatureDetails
+                                $roomListing = $roomListingFeatures
                                     ->filter(function ($featureData) use ($room) {
                                         return $featureData->room_id === $room->id; // Assuming room_id is the foreign key
                                     })
                                     ->take(3); // Limit to the first 3 features
                             @endphp
 
-                            @foreach ($features as $featureData)
+                             @foreach ($roomListing as $listingFeatureData)
                                 <div class="col-4">
                                     <div class="d-flex gap-2">
-                                        <img src="{{ asset($featureData->icon1) }}" alt="room features" class="small_icon">
-                                        <p>{{ $featureData->feature_name }}</p>
+                                        <img src="{{ asset($listingFeatureData->icon) }}" alt="room features" class="small_icon">
+                                        <p>{{ $listingFeatureData->feature_name }}</p>
                                     </div>
                                 </div>
                             @endforeach
