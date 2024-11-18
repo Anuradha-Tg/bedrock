@@ -30,7 +30,6 @@ class CreateRoomListingFeaturesDataTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('room_listing_features_data');
         Schema::table('room_listing_features_data', function (Blueprint $table) {
             //
             $table->dropForeign('room_id');
@@ -38,5 +37,7 @@ class CreateRoomListingFeaturesDataTable extends Migration
             $table->dropForeign('listing_feature_id');
             $table->dropColumn('listing_feature_id');
         });
+        Schema::dropIfExists('room_listing_features_data');
+
     }
 }
