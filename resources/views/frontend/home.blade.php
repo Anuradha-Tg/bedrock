@@ -898,14 +898,9 @@
 
                     <h2 class="mb-3" data-aos="fade-down">Ready to Book Your Adventure? Reach Out to Us Today!</h2>
 
-                    <p>Ready to book your stay at one of the best hotels in Kalpitiya, Sri Lanka? Reach out to us to
-                        plan
-                        your perfect
-                        getaway.
-                        Our team is here to make your stay unforgettable, blending luxury, nature, and adventure into
-                        one
-                        remarkable
-                        experience.
+                    <p>Ready to book your stay at one of the best boutique Beach Bungalows in Kalpitiya, Sri
+                        Lanka? Reach out to us to plan your perfect getaway. Our team is here to make your stay
+                        unforgettable, blending luxury, nature, and adventure into one remarkable experience.
                     </p>
 
                 </div>

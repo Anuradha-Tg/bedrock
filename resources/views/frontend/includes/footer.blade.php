@@ -10,9 +10,11 @@
                     <a href="{{ url('/') }}">
                         <img src="{{ asset('public/frontend/images/logo.jpg') }}" alt="logo" class="footer_logo mb-3">
                     </a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna
-                        aliqua. Ut enim ad minim veniam. </p>
+                    <p>At Bedrock Beach Bungalows Kalpitiya, we offer a serene escape where nature meets
+                        comfort. Nestled by the beach, our bungalows provide a perfect blend of relaxation and
+                        adventure. Experience the beauty of the coast while enjoying personalized service and
+                        unforgettable memories. Your paradise awaits!
+                        </p>
                 </div>
                 <!-- ========== -->
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 right_border p-lg-5 p-2">
