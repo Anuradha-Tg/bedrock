@@ -39,12 +39,13 @@
 
                     <div class="slider_desc animate__animated animate__fadeInDown">
 
-                        {!! $slider->description_en !!}
-
+                        <div class="d-sm-block d-none">
+                            {!! $slider->description_en !!}
+                        </div>
 
                         <a href="{{ $slider->link }}">
-                            <div class="d-flex align-items-center light_read_btn">
-                                <p class="mb-0">Read More</p>
+                            <div class="align-items-center light_read_btn d-sm-flex d-none">
+                                <p class="mb-0 read_btn">Read More</p>
                                 <div class="circle">
                                     <span class="icon arrow1"><i class="fa fa-long-arrow-right "></i></span>
                                     <span class="icon arrow2"><i class="fa fa-long-arrow-right"></i></span>
@@ -181,7 +182,7 @@
 
                 </div>
 
-                <div class="d-flex align-items-center gap-5 gap-lg-5 justify-content-center">
+                <div class="d-sm-flex align-items-center gap-5 gap-lg-5 justify-content-center d-none">
                     <div class="expe_div">
                         <div class="round_bg fade_blue_bg">
                             <img src="storage/app/{{ $stay->icon1 }}" alt="features">
@@ -213,7 +214,7 @@
 
             </div>
 
-            <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 px-3 position-relative">
+            <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 px-0 px-md-3 position-relative">
 
                 <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="wave line" class="wave_line_img">
 
@@ -359,7 +360,7 @@
             <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 p-0 cover_bg"
                 style="background-image: url('{{ asset('public/frontend/images/ocean_bg.jpg') }}');">
                 <div class="row cover_bg h-100">
-                    <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 p-5 d-flex justify-content-center align-items-center">
+                    <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 p-4 p-sm-5 d-flex justify-content-center align-items-center">
                         <div class="text_box">
 
                             <h4 data-aos="fade-up">Foods</h4>
@@ -499,7 +500,7 @@
 
 <!-- Gallery start -->
 <div class="container mb-5">
-    <div class="row">
+    <div class="row m-auto">
         <div class="col-xxl-7 col-xl-7 col-lg-8 col-md-12 col-sm-12 col-12">
             <div class="text_box">
 
@@ -581,7 +582,7 @@
 
 
 
-    <div class="row justify-content-center mt-4 mb-5">
+    <div class="row justify-content-center mt-4 mb-5 m-auto">
         <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12">
 
             <nav>
@@ -936,7 +937,7 @@
 
                             <!-- ================== -->
 
-                            <div class="contact_box mb-4 col-6 col-md-12">
+                            <div class="contact_box mb-4 col-12 col-md-12">
                                 <p class="head">Email Address</p>
                                 <p class="detail">
                                     <a href="mailto:{{ $contactDetails->email }}">
@@ -979,7 +980,7 @@
                                 <p class="head">Online Booking</p>
                                 <div class="detail d-flex gap-3">
                                     <a href="{{ $contactDetails->banking1 }}" target="_blank">
-                                        <img src="{{ asset('public/frontend/images/agoda_icon.jpg') }}"
+                                        <img src="{{ asset('public/frontend/images/airbnb.png') }}"
                                             alt="online banking" class="w-100">
                                     </a>
                                     <a href="{{ $contactDetails->banking2 }}" target="_blank">
@@ -1010,14 +1011,14 @@
                             @csrf
                             <div class="row form_row">
 
-                                <div class="col-6 col-md-12">
+                                <div class="col-12 col-sm-6">
                                     <div class="form-floating mb-3">
                                         <input type="text" name="full_name" class="form-control" id="full_name"
                                             required="" placeholder="Full Name" fdprocessedid="kcqaug">
                                         <label for="floatingInput">Full Name</label>
                                     </div>
                                 </div>
-                                <div class="col-6 col-md-12">
+                                <div class="col-12 col-sm-6">
                                     <div class="form-floating mb-3">
                                         <input type="email" name="email" class="form-control" id="email"
                                             required="" placeholder="Email Address" fdprocessedid="kcqaug">
