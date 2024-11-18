@@ -104,7 +104,7 @@
 <!-- about us section start -->
 
 <div class="container-fluid">
-    <div class="row m-auto">
+    <div class="row">
         <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 cover_bg about_left"
             style="background-image: url('{{ asset('public/frontend/images/about_left.jpg') }}');">
             <img src="{{ asset('public/frontend/images/about.png') }}" alt="about">
@@ -113,7 +113,9 @@
             style=" background-image: url('{{ asset('public/frontend/images/wave_bg.jpg') }}');">
             <div class="row">
                 <div class="offset-xxl-2 col-xxl-8 offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-2 col-md-8 col-sm-12 col-12">
-                    <div class="text_box">
+                    
+                    <div class="row m-auto">
+                        <div class="text_box">
 
                         <h4 data-aos="fade-up">Welcome To Bedrock</h4>
 
@@ -135,6 +137,8 @@
                         </a>
 
                     </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -237,7 +241,7 @@
 <div class="container-fluid rooms_con"
     style="background-image: url('{{ asset('public/frontend/images/wave_full_bg.jpg') }}');">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row">
             <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-8 col-sm-12 col-12 mb-3">
                 <div class="text_box">
 
@@ -389,7 +393,7 @@
                         </div>
                     </div>
 
-                    <div class="d-lg-none d-md-block col-md-7 col-sm-7 col-12 ps-0">
+                    <div class="d-lg-none d-md-block col-md-7 col-sm-7 col-10 ps-0">
                         <div class="swiper mySwiper custom_swiper food_slider top-0 mb-0">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide"

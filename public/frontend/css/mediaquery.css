@@ -301,7 +301,7 @@
 
   .wave_line_img {
     position: absolute;
-    right: -54px;
+    right: 0px;
     width: 392px;
   }
 
@@ -348,6 +348,14 @@
   .footer_con .right_border {
     border-right: 0px;
   }
+  
+  .nav-tabs .nav-link{
+    font-size: 10px;
+  }
+
+    .copyright_row p {
+      padding: 4px 0 !important;
+    }
 
 }
 
@@ -357,10 +365,10 @@
     font-size: 16px;
   }
 
-  main {
-    padding: 23px;
+  .social_icon_bar {
+    padding: 172px 20px 137px 20px;
   }
-
+  
   .top_logo {
     height: 36px;
   }
@@ -372,6 +380,54 @@
   .main_search h1 {
     line-height: 50px;
     font-size: 48px;
+  }
+
+  .wave_line_img {
+    position: absolute;
+    right: -12px;
+    width: 392px;
+  }
+
+  .food_right_div{
+    display: none;
+  }
+
+  .expe_card .expe_box {
+    min-height: 39px;
+    width: 246px;
+  }
+
+  .gallery_s {
+    height: 260px;
+    margin-bottom: 10px;
+  }
+
+  .gallery_l {
+    height: 260px;
+    margin-bottom: 10px;
+  }
+
+  .half_dark_bg {
+    background-image: linear-gradient(to right, #00606C 100%, rgba(0, 0, 0, 0) 20%);
+  }
+
+  .promo_col .card_text{
+    width: 95%;
+    left: 0px;
+    min-height: 162px;
+  }
+
+  .form_btn_row {
+    margin-right: -48px;
+    margin-top: 10px;
+  }
+
+  .form_btn_row button{
+    padding-right: 0;
+  }
+
+  .copyright_row p {
+    padding: 4px 0 !important;
   }
 
 }
