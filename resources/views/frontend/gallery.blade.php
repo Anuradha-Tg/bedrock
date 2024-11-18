@@ -19,7 +19,7 @@
 <div class="clearfix"></div>
 
 <div class="container mb-5 mt-5">
-    <div class="row">
+    <div class="row m-auto">
         <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
             <div class="text_box">
 
@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <div class="row justify-content-center mt-4">
+    <div class="row justify-content-center mt-4 m-auto">
         <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
 
             <nav>
@@ -65,7 +65,7 @@
                     <div class="row">
 
                         @foreach ($allImages as $image)
-                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                            <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
                                 <a href="{{ asset('storage/app/' . $image->image) }}" data-fancybox="images"
                                     data-caption="All Images" class="w-100">
                                     <div class="cover_bg gallery_s"
@@ -84,7 +84,7 @@
                         <div class="row">
                             @if ($category->images->isNotEmpty())
                                 @foreach ($category->images as $image)
-                                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                                    <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <a href="{{ asset('storage/app/' . $image->image_name) }}"
                                             data-fancybox="images" data-caption="{{ $category->category_name }}"
                                             class="w-100">

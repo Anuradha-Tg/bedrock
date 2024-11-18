@@ -36,6 +36,15 @@
     min-height: 54px;
   }
 
+  .room_ca_div .detail {
+    width: 490px;
+  }
+
+  .exp_div .detail {
+    width: 530px;
+    margin-left: 27px;
+  }
+
 }
 
 /* Large Devices, Wide Screens */
@@ -62,6 +71,10 @@
   }
 
   .social_icon_div p {
+    font-size: 10px;
+  }
+
+  .small_icon_box p {
     font-size: 10px;
   }
 
@@ -148,6 +161,28 @@
   .about_right{
     height: 530px;
   }
+
+  .about_text_con{
+    margin-top: 100px;
+  }
+
+  .room_ca_div .detail {
+    width: 473px;
+    margin-left: 0;
+  }
+
+  .char_img {
+    bottom: 38px;
+  }
+
+  .banner_full{
+    margin-top: 150px;
+  }
+
+  .exp_div .detail {
+    width: 102%;
+    margin-left: 2%;
+  }
   
 }
 
@@ -166,6 +201,10 @@
 
   .footer_logo {
     width: 130px;
+  }
+
+  .exp_img {
+    height: 335px;
   }
 	
 }
@@ -229,8 +268,8 @@
   }
 
   .expe_card .expe_box {
-    width: 217px;
-    min-height: 49px;
+    width: 93%;
+    min-height: 39px;
   }
 
   .md_col_rev{
@@ -243,6 +282,19 @@
 
   .food_con {
     background-image: url(../images/ocean_bg.jpg);
+  }
+
+  .float_img {
+    bottom: -10px;
+    width: 300px;
+  }
+
+  .room_ca_div .detail {
+    width: 336px;
+  }
+
+  .room_cate_bg {
+    background-size: 1511px;
   }
 
 }
@@ -265,7 +317,11 @@
   .contact_box .detail {
     margin-left: 9px;
   }
-	
+
+  .room_ca_div .detail {
+    width: 95%;       
+  }
+
 }
 
 /* Extra Small Devices, Phones */
@@ -353,9 +409,9 @@
     font-size: 10px;
   }
 
-    .copyright_row p {
-      padding: 4px 0 !important;
-    }
+  .copyright_row p {
+    padding: 4px 0 !important;
+  }
 
 }
 
@@ -411,6 +467,10 @@
     background-image: linear-gradient(to right, #00606C 100%, rgba(0, 0, 0, 0) 20%);
   }
 
+  .room_detail_bg {
+    background-image: linear-gradient(to left, #ffffff 0%, rgba(0, 0, 0, 0) 0%), url(../images/wave_dark_bg.jpg);
+  }
+
   .promo_col .card_text{
     width: 95%;
     left: 0px;
@@ -428,6 +488,18 @@
 
   .copyright_row p {
     padding: 4px 0 !important;
+  }
+
+  .thumb-swiper2 {
+    height: 350px;
+  }
+
+  .thumb-swiper {
+    height: 90px;
+  }
+
+  .map_con {
+    margin-top: 0px;
   }
 
 }
@@ -470,6 +542,19 @@
     padding: 0 15px !important;
   }
 
+  .float_img {
+    bottom: -10px;
+    width: 220px;
+  }
+
+  .small_icon_box img {
+    width: 16px;
+  }
+
+  .exp_img {
+    height: 282px;
+  }
+  
 }
 
 @media only screen and (max-width : 460px) {
@@ -486,6 +571,19 @@
 
   .text_box p {
     margin-left: 25px;
+  }
+
+  .thumb-swiper2 {
+    height: 233px;
+  }
+
+  .thumb-swiper {
+    height: 65px;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 20px !important;
   }
 	
 }

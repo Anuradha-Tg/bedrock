@@ -865,14 +865,12 @@ main{
 }
 
 .inner_banner h1{
-  text-transform: uppercase;
-}
-
-.inner_banner h1{
   position: absolute;
   bottom: 0;
   left: 10%;
   color: #ffffff;
+  width: fit-content;
+  text-transform: uppercase;
 }
 
 .small_icon_box{
@@ -1018,7 +1016,8 @@ main{
   align-items: center;
   flex-direction: column;
   padding: 20px 40px;
-  min-width: 185px;
+  text-align: center;
+  width: 100%;
 }
 
 .blue_box p {
