@@ -88,7 +88,7 @@ class RoomsImageController extends Controller
             'images.*.order' => 'required|integer',
         ]);
 
-        $image = Image::find($id);
+        $image = RoomImages::find($id);
         $image->room_id = $request->room_id;
         $image->order = $request->order;
 

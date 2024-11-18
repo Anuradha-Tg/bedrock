@@ -91,8 +91,8 @@
 
                 <div class="d-flex gap-3 mt-4">
                     <div class="blue_box">
-                        <img src="{{ asset('public/frontend/images/size_w.png') }}" alt="room size">
-                        <p>Room Size</p>
+                        <img src="{{ asset('public/frontend/images/size_w.png') }}" alt="villa size">
+                        <p>villa Size</p>
                         <h4>{{ $roomDetails->room_size }}</h4>
                     </div>
 

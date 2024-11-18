@@ -7,6 +7,7 @@ use App\Models\ContactUsDetail;
 use App\Models\Promotion;
 use App\Models\RoomFacilityData;
 use App\Models\RoomFeatureData;
+use App\Models\RoomListingFeaturesData;
 use App\Models\Rooms;
 use App\Models\StayContent;
 use App\Models\StayFeatures;
@@ -54,14 +55,20 @@ class RoomController extends Controller
 
         // dd($roomDetails);
 
-        $roomFeatureDetails = RoomFeatureData::select('room_feature_data.id', 'room_feature.feature_name', 'room_feature.icon1', 'room_feature_data.room_id')
-            ->join('room_feature', 'room_feature.id', '=', 'room_feature_data.feature_id')
-            ->whereIn('room_feature_data.room_id', $roomDetails->pluck('id')) // Get the features for the fetched rooms
-            ->orderBy('room_feature.order', 'ASC')
+        // $roomFeatureDetails = RoomFeatureData::select('room_feature_data.id', 'room_feature.feature_name', 'room_feature.icon1', 'room_feature_data.room_id')
+        //     ->join('room_feature', 'room_feature.id', '=', 'room_feature_data.feature_id')
+        //     ->whereIn('room_feature_data.room_id', $roomDetails->pluck('id')) // Get the features for the fetched rooms
+        //     ->orderBy('room_feature.order', 'ASC')
+        //     ->get();
+
+        $roomListingFeatures = RoomListingFeaturesData::select('room_listing_features_data.id', 'room_listing_features.feature_name', 'room_listing_features.icon', 'room_listing_features_data.room_id')
+            ->join('room_listing_features', 'room_listing_features.id', '=', 'room_listing_features_data.listing_feature_id')
+            ->whereIn('room_listing_features_data.room_id', $roomDetails->pluck('id')) // Get the features for the fetched rooms
+            ->orderBy('room_listing_features.order', 'ASC')
             ->get();
 
 
-        return view('frontend.room', compact('topBanner', 'room', 'features', 'contactDetails', 'promotion', 'roomDetails','roomFeatureDetails'));
+        return view('frontend.room', compact('topBanner', 'room', 'features', 'contactDetails', 'promotion', 'roomDetails','roomListingFeatures'));
     }
 
     public function RoomDetail($meta_title)

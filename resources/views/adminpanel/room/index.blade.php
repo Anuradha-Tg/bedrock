@@ -111,7 +111,7 @@
                                     </div>
                                     <div class="row">
                                     <section class="col col-4">
-                                        <label class="label">{{ __('Room Size') }}<span style="color: red;">*</span></label>
+                                        <label class="label">{{ __('Villa Size') }}<span style="color: red;">*</span></label>
                                         <label class="input">
                                             <input type="text" id="room_size" name="room_size" required>
                                         </label>
@@ -145,9 +145,9 @@
                                     <div class="row">
                                         <section class="col col-12">
                                             <label class="label">{{ __('Room Features') }}</label>
-                                            <div style="display:  flex-wrap: wrap; gap: 100px;">
-                                            @foreach ($features as $feature)
-                                            <label class="checkbox" style="display: flex; align-items: center;  gap: 100px;">
+                                            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                                                @foreach ($features as $feature)
+                                            <label class="checkbox" style="display: flex; align-items: center; gap: 10px;">
 
                                                     <input type="checkbox" name="features[{{ $feature->id }}]" value="1">
                                                     <i></i> {{ $feature->feature_name }}
@@ -159,12 +159,24 @@
 
                                         <section class="col col-12 gap: 100px;">
                                             <label class="label">{{ __('Room Facilities') }}</label>
-                                            <div style="display:  flex-wrap: wrap; gap: 100px;">
-                                            @foreach ($facilities as $facility)
-                                            <label class="checkbox" style="display: flex; align-items: center; gap: 100px;">
+                                            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                                                @foreach ($facilities as $facility)
+                                            <label class="checkbox" style="display: flex; align-items: center; gap: 10px;">
 
                                                     <input type="checkbox" name="facilities[{{ $facility->id }}]" value="1">
                                                     <i></i> {{ $facility->facility_name }}
+                                                </label>
+                                            @endforeach
+                                        </section>
+
+                                        <section class="col col-12 gap: 100px;">
+                                            <label class="label">{{ __('Listing Page Room Facilities') }}</label>
+                                            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                                                @foreach ($listingFeatures as $listingFeature)
+                                            <label class="checkbox" style="display: flex; align-items: center; gap: 10px;">
+
+                                                    <input type="checkbox" name="listingFeatures[{{ $listingFeature->id }}]" value="1">
+                                                    <i></i> {{ $listingFeature->feature_name }}
                                                 </label>
                                             @endforeach
                                         </section>
