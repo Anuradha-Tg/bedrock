@@ -51,9 +51,11 @@ class AboutUsContentController extends Controller
         $data =  AboutUsContent::find($request->id);
         $data->heading = $request->heading;
         $data->description = $request->description;
-        if (!empty($image1Path)) {
-            $data->image1 = $image1Path;
+        if ($request->hasFile('image1')) {
+            $image1 = $request->file('image1')->store('public/about_us_images');
+            $data->image1 = $image1;
         }
+       
         $data->save();
 
         // \LogActivity::addToLog('Who we are record updated.');

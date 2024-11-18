@@ -35,7 +35,7 @@ class HomeController extends Controller
         ->where('is_delete', 0)
         ->where('checkbox', 1)
         ->orderBy('id', 'ASC')
-        ->select('id', 'home_image1', 'home_title', 'home_content')->get();
+        ->get();
 
         $today = Carbon::today()->format('d-m-Y'); // Format for comparison
 

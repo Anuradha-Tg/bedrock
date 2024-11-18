@@ -273,7 +273,7 @@
                                 <h4>{{ $room->home_title }}</h4>
                                 <p>{{ $room->home_content }}</p>
 
-                                <a href="{{ url('room-details/' . $room->id) }}">
+                                <a href="{{ url('room-details/' . $room->meta_title) }}">
                                     <div class="d-flex align-items-center dark_read_btn">
                                         <p class="mb-0"><i>Read More</i></p>
                                         <div class="circle"
