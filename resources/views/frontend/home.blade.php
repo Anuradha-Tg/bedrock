@@ -125,7 +125,7 @@
                         {!! $introduction->description !!}
 
 
-                        <a href="">
+                        <a href="{{ route('about-us') }}">
                             <div class="d-flex align-items-center dark_read_btn">
                                 <p class="mb-0">Read More</p>
                                 <div class="circle">

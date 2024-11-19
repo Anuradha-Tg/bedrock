@@ -33,8 +33,8 @@
 		<link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> -->
 
     <!-- #FAVICONS -->
-    <link rel="shortcut icon" href="{{ asset('public/back/img/favicon/favicon.ico') }}https://cms.tekgeeks.net/public/back/img/favicon/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="{{ asset('public/back/img/favicon/favicon.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('public/back/img/favicon/favicon.png') }}https://cms.tekgeeks.net/public/back/img/favicon/favicon.png" type="image/x-icon">
+    <link rel="icon" href="{{ asset('public/back/img/favicon/favicon.png') }}" type="image/x-icon">
 
 
 
