@@ -1225,3 +1225,33 @@ input {
   bottom: -15px;
   width: 350px;
 }
+
+/* pagination */
+
+.page-item:first-child .page-link {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.page-item:last-child .page-link {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.page-link {
+  margin-left: 2px !important;
+  color: #00606C;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #00606C;
+  border-color: #00606C;
+}
+
+.page-link:focus {
+  box-shadow: none;
+}
