@@ -121,20 +121,20 @@
                                     <section class="col col-10">
 
                                 <header>
-                                    {{ __('Online Banking Links') }}
+                                    {{ __('Online Booking Links') }}
                                 </header>
                             </section>
 
                                 </div>
                                 <div class="row">
                                     <section class="col col-4">
-                                        <label class="label">{{ __('Online Banking URL 1') }}</label>
+                                        <label class="label">{{ __('Online Booking URL 1') }}</label>
                                         <label class="input">
                                             <input type="text" id="banking1" name="banking1" maxlength="190" value="{{ $data->banking1 }}">
                                         </label>
                                     </section>
                                     <section class="col col-4">
-                                        <label class="label">{{ __('Online Banking URL 2') }} </label>
+                                        <label class="label">{{ __('Online Booking URL 2') }} </label>
                                         <label class="input">
                                             <input type="text" id="banking2" name="banking2" maxlength="190" value="{{ $data->banking2 }}">
                                         </label>
