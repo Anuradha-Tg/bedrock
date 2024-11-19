@@ -93,7 +93,7 @@
                     <div class="contact_box mt-4">
                         <p class="head">Online Booking</p>
                         <div>
-                          <a href="https://www.tripadvisor.com/" target="_blank">
+                          <a href="https://www.tripadvisor.com/Hotel_Review-g1404719-d8869743-Reviews-Bedrock_Beach_Bungalows_Kalpitiya-Kalpitiya_North_Western_Province.html" target="_blank">
                             <img src="{{ asset('public/frontend/images/trip_ad.png') }}" alt="online banking"
                                 class="w-50">
                           </a>
