@@ -25,14 +25,13 @@
 
                 <h4 data-aos="fade-up">Gallery</h4>
 
-                <h2 class="mb-3" data-aos="fade-down">Discover Bedrock’s Unique Charm Through Captivating Moments</h2>
+                <h2 class="mb-3" data-aos="fade-down">Experience Elegance and Tranquility</h2>
 
-                <p>Our gallery showcases the breathtaking views, luxurious accommodations, and exhilarating experiences
-                    that
-                    make Bedrock
-                    Kalpitiya a standout among Kalpitiya beach hotels. Browse through to catch a glimpse of the coastal
-                    paradise
-                    that awaits
+                <p>Explore our gallery to discover the stunning beauty of our Bungalows and the
+                    breathtaking landscapes that surround us. From elegantly designed rooms to
+                    picturesque views of the coastline, each image captures the essence of comfort and
+                    serenity. Immerse yourself in the inviting atmosphere of our accommodations and the
+                    natural splendor of Kalpitiya, where every corner is a picture-perfect escape.
                 </p>
 
             </div>

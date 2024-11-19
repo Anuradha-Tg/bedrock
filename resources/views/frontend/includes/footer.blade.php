@@ -200,7 +200,7 @@
 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="{{ asset('public/frontend/js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ asset('public/frontend/js/jquery-3.7.1.min.js') }}"></script>
     <script src="{{ asset('public/frontend/js/popper.min.js') }}"></script>
     <script src="{{ asset('public/frontend/js/bootstrap.min.js') }}"></script>
 

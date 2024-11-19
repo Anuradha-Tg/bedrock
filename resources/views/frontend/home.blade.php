@@ -43,6 +43,7 @@
                             {!! $slider->description_en !!}
                         </div>
 
+                        @if($slider->link !='' && $slider->link != '#')
                         <a href="{{ $slider->link }}">
                             <div class="align-items-center light_read_btn d-sm-flex d-none">
                                 <p class="mb-0 read_btn">Read More</p>
@@ -52,6 +53,7 @@
                                 </div>
                             </div>
                         </a>
+                        @endif
                     </div>
                 </div>
             </div>
