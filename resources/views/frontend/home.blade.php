@@ -428,8 +428,8 @@
 
 <!-- banner start -->
 
-<div class="container-fluid banner_full p-0">
-    <div class="banner_img cover_bg"
+<div class="container-fluid banner_full p-0 mt-0">
+    <div class="banner_img cover_bg "
         style="background-image: url('{{ asset('public/frontend/images/banner.jpg') }}');"></div>
 </div>
 
