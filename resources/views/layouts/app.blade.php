@@ -543,7 +543,7 @@
 
 	<!-- <script>
 		if (!window.jQuery) {
-			document.write('<script src="{{ asset('public/back/js/libs/jquery-3.2.1.min.js') }}"></script>');
+			document.write('<script src="{{ asset('public/back/js/libs/jquery-3.7.1.min.js') }}"></script>');
 		}
 	</script>
 

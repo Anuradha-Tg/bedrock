@@ -102,9 +102,9 @@
                                     
                                     <div class="row">
                                         <section class="col col-4">
-                                            <label class="label">{{ __('Read More (URL)') }} <span style=" color: red;">*</span></label>
+                                            <label class="label">{{ __('Read More (URL)') }}</label>
                                             <label class="input">
-                                                <input type="text" id="link" name="link" value="" required>
+                                                <input type="text" id="link" name="link" >
                                             </label>
                                         </section>
                                         <section class="col col-2">
