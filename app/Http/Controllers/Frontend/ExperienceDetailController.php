@@ -18,7 +18,7 @@ class ExperienceDetailController extends Controller
 
         $experience = ExperienceContent::first();
 
-        $experienceDetail = ExperienceList::where('status', 'Y')->where('is_delete', 0)->orderBy('order', 'ASC')->select('heading', 'description', 'image1')->get();
+        $experienceDetail = ExperienceList::where('status', 'Y')->where('is_delete', 0)->orderBy('order', 'ASC')->select('heading', 'description', 'image1')->paginate(8);
 
         $contactDetails = ContactUsDetail::first();
 
