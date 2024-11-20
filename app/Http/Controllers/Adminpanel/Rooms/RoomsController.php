@@ -107,7 +107,8 @@ class RoomsController extends Controller
         $metaTag->page_name = 'room-details';
         $metaTag->page_title = 'Beach Bungalows Kalpitiya | Room Detail |' . $room->meta_title;
         $metaTag->room_name = $room->meta_title;
-        $metaTag->description = $request->description;
+        $metaTag->description = $request->description;        
+        $metaTag->robots = 'index,follow';
         $metaTag->keywords = $request->keywords;
         $metaTag->og_title = $request->og_title;
         $metaTag->og_type = $request->og_type;
@@ -325,6 +326,7 @@ class RoomsController extends Controller
         $metaTag->room_name = $data->meta_title;
         $metaTag->description = $request->description;
         $metaTag->keywords = $request->keywords;
+        $metaTag->robots = 'index,follow';
         $metaTag->og_title = $request->og_title;
         $metaTag->og_type = $request->og_type;
         $metaTag->og_tag = $request->og_tag;

@@ -17,6 +17,7 @@ class MetaTag extends Model
         'room_name',
         'description',
         'keywords',
+        'robots',
         'og_title',
         'og_type',
         'og_tag',

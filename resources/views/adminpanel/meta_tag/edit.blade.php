@@ -92,6 +92,14 @@
                                 </div>
                                 <div class="row">
                                     <section class="col col-12"  style="width: 100%;">
+                                        <label class="label">{{ __('Robots text') }}</label>
+                                        <label class="input">
+                                            <input type="text" id="robots" name="robots" value="{{ $data->robots }}" >
+                                        </label>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-12"  style="width: 100%;">
                                         <label class="label">{{ __('OG Title') }}<span style=" color: red;">*</span></label>
                                         <label class="input">
                                             <input type="text" id="og_title" name="og_title" value="{{ $data->og_title }}" required>
