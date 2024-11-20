@@ -54,6 +54,7 @@ class MetaTagController extends Controller
         $data->page_title = $request->page_title;
         $data->description = $request->description;
         $data->keywords = $request->keywords;
+        $data->robots = $request->robots;
         $data->og_title = $request->og_title;
         $data->og_type = $request->og_type;
         $data->og_tag = $request->og_tag;
