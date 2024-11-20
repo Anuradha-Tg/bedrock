@@ -34,6 +34,7 @@
     <meta http-equiv="cleartype" content="on">
     <meta name="MobileOptimized" content="width">
     <link rel="icon" type="image/png" href="{{ asset('public/frontend/images/favicon.png') }}">
+    <meta name="og:keywords" content="{{ $meta->keywords }}" />
     <meta name="og:title" content="{{ $meta->og_title }}" />
     <meta name="og:type" content="{{ $meta->og_type }}" />
     <meta name="og:tag" content="{{ $meta->og_tag }}" />

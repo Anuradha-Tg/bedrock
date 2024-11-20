@@ -89,11 +89,11 @@
                                             <i class="fa-brands fa-instagram"></i>
                                         </a>
                                     @endif
-                                    {{-- @if ($contactDetails->twitter_url != '' && $contactDetails->twitter_url != '#')
+                                    @if ($contactDetails->twitter_url != '' && $contactDetails->twitter_url != '#')
                                         <a href="{{ $contactDetails->twitter_url }}" target="_blank">
                                             <i class="fa-brands fa-x-twitter"></i>
                                         </a>
-                                    @endif --}}
+                                    @endif
                                     @if ($contactDetails->youtube_url != '' && $contactDetails->youtube_url != '#')
                                         <a href="{{ $contactDetails->youtube_url }}" target="_blank">
                                             <i class="fa-brands fa-youtube"></i>

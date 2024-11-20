@@ -1,18 +1,26 @@
 @include('frontend.includes.header')
 <div class="social_icon_bar">
     <div class="social_icon_div">
+        @if($contactDetails->facebook_url !='' && $contactDetails->facebook_url !='#')
         <a href="{{ $contactDetails->facebook_url }}">
             <i class="fa-brands fa-facebook-f"></i>
         </a>
+        @endif
+        @if($contactDetails->instagram_url !='' && $contactDetails->instagram_url !='#')
         <a href="{{ $contactDetails->instagram_url }}">
             <i class="fa-brands fa-instagram"></i>
         </a>
-        {{-- <a href="{{ $contactDetails->twitter_url }}">
+        @endif
+        @if($contactDetails->twitter_url !='' && $contactDetails->twitter_url !='#')
+        <a href="{{ $contactDetails->twitter_url }}">
             <i class="fa-brands fa-x-twitter"></i>
-        </a> --}}
+        </a>
+        @endif
+        @if($contactDetails->youtube_url !='' && $contactDetails->youtube_url !='#')
         <a href="{{ $contactDetails->youtube_url }}">
             <i class="fa-brands fa-youtube"></i>
         </a>
+        @endif
 
         <hr>
 
@@ -371,8 +379,8 @@
 
                             {!! $food->description !!}
 
-
-                            <a href="">
+                            
+                            {{-- <a href="">
                                 <div class="d-flex align-items-center dark_read_btn">
                                     <p class="mb-0">Read More</p>
                                     <div class="circle">
@@ -380,7 +388,7 @@
                                         <span class="icon arrow2"><i class="fa fa-long-arrow-right"></i></span>
                                     </div>
                                 </div>
-                            </a>
+                            </a> --}}
 
                         </div>
                     </div>
@@ -521,7 +529,7 @@
         </div>
 
         <div class="col-xxl-5 col-xl-5 col-lg-4 d-lg-flex d-none align-items-end">
-            <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="" class="w-100">
+            <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="wave line" class="w-100">
         </div>
     </div>
 

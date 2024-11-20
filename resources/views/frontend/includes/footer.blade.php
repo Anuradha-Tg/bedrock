@@ -130,7 +130,7 @@
                             <p class="head">Social Media</p>
 
                             <div class="detail d-flex gap-3">
-                                @if ($contactDetails->facebook_url != '' )
+                                @if ($contactDetails->facebook_url != '' && $contactDetails->facebook_url != '#' )
                                     <div class="footer_social_icon">
                                         <a href="{{ $contactDetails->facebook_url }}" target="_blank">
                                             <i class="fa-brands fa-facebook-f"></i>
@@ -138,7 +138,7 @@
                                     </div>
                                 @endif
 
-                                @if ($contactDetails->instagram_url != '' )
+                                @if ($contactDetails->instagram_url != '' && $contactDetails->instagram_url != '#')
                                     <div class="footer_social_icon">
                                         <a href="{{ $contactDetails->instagram_url }}" target="_blank">
                                             <i class="fa-brands fa-instagram"></i>
@@ -146,7 +146,7 @@
                                     </div>
                                 @endif
 
-                                @if ($contactDetails->twitter_url != '' )
+                                @if ($contactDetails->twitter_url != '' && $contactDetails->twitter_url != '#')
                                     <div class="footer_social_icon">
                                         <a href="{{ $contactDetails->twitter_url }}" target="_blank">
                                             <i class="fa-brands fa-x-twitter"></i>
