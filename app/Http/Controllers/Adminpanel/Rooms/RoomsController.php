@@ -38,7 +38,7 @@ class RoomsController extends Controller
     private function generateMetaTitle($title)
     {
         // Remove special characters and replace spaces with dashes
-        return preg_replace('/[^A-Za-z0-9\-]/', '', str_replace(' ', '-', $title));
+        return preg_replace('/[^a-z0-9\-]/', '', str_replace(' ', '-', strtolower($title)));
     }
 
     public function store(Request $request)
