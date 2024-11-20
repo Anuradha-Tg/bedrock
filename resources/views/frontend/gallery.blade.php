@@ -66,7 +66,7 @@
                         @foreach ($allImages as $image)
                             <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
                                 <a href="{{ asset('storage/app/' . $image->image) }}" data-fancybox="images"
-                                    data-caption="All Images" class="w-100">
+                                     class="w-100">
                                     <div class="cover_bg gallery_s"
                                         style="background-image: url('{{ asset('storage/app/' . $image->image) }}');">
                                     </div>
@@ -85,7 +85,7 @@
                                 @foreach ($category->images as $image)
                                     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <a href="{{ asset('storage/app/' . $image->image_name) }}"
-                                            data-fancybox="images" data-caption="{{ $category->category_name }}"
+                                            data-fancybox="images" 
                                             class="w-100">
                                             <div class="cover_bg gallery_s"
                                                 style="background-image: url('{{ asset('storage/app/' . $image->image_name) }}');">

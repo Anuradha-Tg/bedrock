@@ -620,13 +620,13 @@
 
                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $allImages[0]->image) }}" data-fancybox="images"
-                                data-caption="This image has a caption" class="w-100">
+                                 class="w-100">
                                 <div class="cover_bg gallery_s"
                                     style="background-image: url({{ asset('storage/app/' . $allImages[0]->image) }});">
                                 </div>
                             </a>
                             <a href="{{ asset('storage/app/' . $allImages[1]->image) }}" data-fancybox="images"
-                                data-caption="This image has a caption" class="w-100">
+                                 class="w-100">
                                 <div class="cover_bg gallery_l"
                                     style="background-image: url({{ asset('storage/app/' . $allImages[1]->image) }});">
                                 </div>
@@ -635,13 +635,13 @@
 
                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $allImages[2]->image) }}" data-fancybox="images"
-                                data-caption="This image has a caption" class="w-100">
+                             class="w-100">
                                 <div class="cover_bg gallery_l"
                                     style="background-image: url({{ asset('storage/app/' . $allImages[2]->image) }});">
                                 </div>
                             </a>
                             <a href="{{ asset('storage/app/' . $allImages[3]->image) }}" data-fancybox="images"
-                                data-caption="This image has a caption" class="w-100">
+                             class="w-100">
                                 <div class="cover_bg gallery_s"
                                     style="background-image: url({{ asset('storage/app/' . $allImages[3]->image) }});">
                                 </div>
@@ -650,13 +650,13 @@
 
                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $allImages[4]->image) }}" data-fancybox="images"
-                                data-caption="This image has a caption" class="w-100">
+                             class="w-100">
                                 <div class="cover_bg gallery_s"
                                     style="background-image: url({{ asset('storage/app/' . $allImages[4]->image) }});">
                                 </div>
                             </a>
                             <a href="{{ asset('storage/app/' . $allImages[5]->image) }}" data-fancybox="images"
-                                data-caption="This image has a caption" class="w-100">
+                             class="w-100">
                                 <div class="cover_bg gallery_l"
                                     style="background-image: url({{ asset('storage/app/' . $allImages[5]->image) }});">
                                 </div>
@@ -665,13 +665,13 @@
 
                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $allImages[6]->image) }}" data-fancybox="images"
-                                data-caption="This image has a caption" class="w-100">
+                             class="w-100">
                                 <div class="cover_bg gallery_l"
                                     style="background-image: url({{ asset('storage/app/' . $allImages[6]->image) }});">
                                 </div>
                             </a>
                             <a href="{{ asset('storage/app/' . $allImages[7]->image) }}" data-fancybox="images"
-                                data-caption="This image has a caption" class="w-100">
+                             class="w-100">
                                 <div class="cover_bg gallery_s"
                                     style="background-image: url({{ asset('storage/app/' . $allImages[7]->image) }});">
                                 </div>
@@ -685,13 +685,13 @@
 
                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $hotelImages[0]->image_name) }}"
-                                data-fancybox="images" data-caption="This image has a caption" class="w-100">
+                                data-fancybox="images" class="w-100">
                                 <div class="cover_bg gallery_s"
                                     style="background-image: url({{ asset('storage/app/' . $hotelImages[0]->image_name) }});">
                                 </div>
                             </a>
                             <a href="{{ asset('storage/app/' . $hotelImages[1]->image_name) }}"
-                                data-fancybox="images" data-caption="This image has a caption" class="w-100">
+                                data-fancybox="images" class="w-100">
                                 <div class="cover_bg gallery_l"
                                     style="background-image: url({{ asset('storage/app/' . $hotelImages[1]->image_name) }});">
                                 </div>
@@ -700,13 +700,13 @@
 
                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $hotelImages[2]->image_name) }}"
-                                data-fancybox="images" data-caption="This image has a caption" class="w-100">
+                                data-fancybox="images" class="w-100">
                                 <div class="cover_bg gallery_l"
                                     style="background-image: url({{ asset('storage/app/' . $hotelImages[2]->image_name) }});">
                                 </div>
                             </a>
                             <a href="{{ asset('storage/app/' . $hotelImages[3]->image_name) }}"
-                                data-fancybox="images" data-caption="This image has a caption" class="w-100">
+                                data-fancybox="images" class="w-100">
                                 <div class="cover_bg gallery_s"
                                     style="background-image: url({{ asset('storage/app/' . $hotelImages[3]->image_name) }});">
                                 </div>
@@ -715,13 +715,13 @@
 
                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $hotelImages[4]->image_name) }}"
-                                data-fancybox="images" data-caption="This image has a caption" class="w-100">
+                                data-fancybox="images" class="w-100">
                                 <div class="cover_bg gallery_s"
                                     style="background-image: url({{ asset('storage/app/' . $hotelImages[4]->image_name) }});">
                                 </div>
                             </a>
                             <a href="{{ asset('storage/app/' . $hotelImages[5]->image_name) }}"
-                                data-fancybox="images" data-caption="This image has a caption" class="w-100">
+                                data-fancybox="images" class="w-100">
                                 <div class="cover_bg gallery_l"
                                     style="background-image: url({{ asset('storage/app/' . $hotelImages[5]->image_name) }});">
                                 </div>
@@ -730,13 +730,13 @@
 
                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $hotelImages[6]->image_name) }}"
-                                data-fancybox="images" data-caption="This image has a caption" class="w-100">
+                                data-fancybox="images" class="w-100">
                                 <div class="cover_bg gallery_l"
                                     style="background-image: url({{ asset('storage/app/' . $hotelImages[6]->image_name) }});">
                                 </div>
                             </a>
                             <a href="{{ asset('storage/app/' . $hotelImages[7]->image_name) }}"
-                                data-fancybox="images" data-caption="This image has a caption" class="w-100">
+                                data-fancybox="images" class="w-100">
                                 <div class="cover_bg gallery_s"
                                     style="background-image: url({{ asset('storage/app/' . $hotelImages[7]->image_name) }});">
                                 </div>
@@ -750,13 +750,13 @@
 
                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $foodImages[0]->image_name) }}" data-fancybox="images"
-                                data-caption="This image has a caption" class="w-100">
+                             class="w-100">
                                 <div class="cover_bg gallery_s"
                                     style="background-image: url({{ asset('storage/app/' . $foodImages[0]->image_name) }});">
                                 </div>
                             </a>
                             <a href="{{ asset('storage/app/' . $foodImages[1]->image_name) }}" data-fancybox="images"
-                                data-caption="This image has a caption" class="w-100">
+                             class="w-100">
                                 <div class="cover_bg gallery_l"
                                     style="background-image: url({{ asset('storage/app/' . $foodImages[1]->image_name) }});">
                                 </div>
@@ -765,13 +765,13 @@
 
                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $foodImages[2]->image_name) }}" data-fancybox="images"
-                                data-caption="This image has a caption" class="w-100">
+                             class="w-100">
                                 <div class="cover_bg gallery_l"
                                     style="background-image: url({{ asset('storage/app/' . $foodImages[2]->image_name) }});">
                                 </div>
                             </a>
                             <a href="{{ asset('storage/app/' . $foodImages[3]->image_name) }}" data-fancybox="images"
-                                data-caption="This image has a caption" class="w-100">
+                             class="w-100">
                                 <div class="cover_bg gallery_s"
                                     style="background-image: url({{ asset('storage/app/' . $foodImages[3]->image_name) }});">
                                 </div>
@@ -780,13 +780,13 @@
 
                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $foodImages[4]->image_name) }}" data-fancybox="images"
-                                data-caption="This image has a caption" class="w-100">
+                             class="w-100">
                                 <div class="cover_bg gallery_s"
                                     style="background-image: url({{ asset('storage/app/' . $foodImages[4]->image_name) }});">
                                 </div>
                             </a>
                             <a href="{{ asset('storage/app/' . $foodImages[5]->image_name) }}"
-                                data-fancybox="images" data-caption="This image has a caption" class="w-100">
+                                data-fancybox="images" class="w-100">
                                 <div class="cover_bg gallery_l"
                                     style="background-image: url({{ asset('storage/app/' . $foodImages[5]->image_name) }});">
                                 </div>
@@ -795,13 +795,13 @@
 
                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $foodImages[6]->image_name) }}"
-                                data-fancybox="images" data-caption="This image has a caption" class="w-100">
+                                data-fancybox="images" class="w-100">
                                 <div class="cover_bg gallery_l"
                                     style="background-image: url({{ asset('storage/app/' . $foodImages[6]->image_name) }});">
                                 </div>
                             </a>
                             <a href="{{ asset('storage/app/' . $foodImages[7]->image_name) }}"
-                                data-fancybox="images" data-caption="This image has a caption" class="w-100">
+                                data-fancybox="images" class="w-100">
                                 <div class="cover_bg gallery_s"
                                     style="background-image: url({{ asset('storage/app/' . $foodImages[7]->image_name) }});">
                                 </div>
@@ -815,13 +815,13 @@
 
                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $experienceImages[0]->image_name) }}"
-                                data-fancybox="images" data-caption="This image has a caption" class="w-100">
+                                data-fancybox="images" class="w-100">
                                 <div class="cover_bg gallery_s"
                                     style="background-image: url({{ asset('storage/app/' . $experienceImages[0]->image_name) }});">
                                 </div>
                             </a>
                             <a href="{{ asset('storage/app/' . $experienceImages[1]->image_name) }}"
-                                data-fancybox="images" data-caption="This image has a caption" class="w-100">
+                                data-fancybox="images" class="w-100">
                                 <div class="cover_bg gallery_l"
                                     style="background-image: url({{ asset('storage/app/' . $experienceImages[1]->image_name) }});">
                                 </div>
@@ -830,13 +830,13 @@
 
                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $experienceImages[2]->image_name) }}"
-                                data-fancybox="images" data-caption="This image has a caption" class="w-100">
+                                data-fancybox="images" class="w-100">
                                 <div class="cover_bg gallery_l"
                                     style="background-image: url({{ asset('storage/app/' . $experienceImages[2]->image_name) }});">
                                 </div>
                             </a>
                             <a href="{{ asset('storage/app/' . $experienceImages[3]->image_name) }}"
-                                data-fancybox="images" data-caption="This image has a caption" class="w-100">
+                                data-fancybox="images" class="w-100">
                                 <div class="cover_bg gallery_s"
                                     style="background-image: url({{ asset('storage/app/' . $experienceImages[3]->image_name) }});">
                                 </div>
@@ -845,13 +845,13 @@
 
                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $experienceImages[4]->image_name) }}"
-                                data-fancybox="images" data-caption="This image has a caption" class="w-100">
+                                data-fancybox="images" class="w-100">
                                 <div class="cover_bg gallery_s"
                                     style="background-image: url({{ asset('storage/app/' . $experienceImages[4]->image_name) }});">
                                 </div>
                             </a>
                             <a href="{{ asset('storage/app/' . $experienceImages[5]->image_name) }}"
-                                data-fancybox="images" data-caption="This image has a caption" class="w-100">
+                                data-fancybox="images" class="w-100">
                                 <div class="cover_bg gallery_l"
                                     style="background-image: url({{ asset('storage/app/' . $experienceImages[5]->image_name) }});">
                                 </div>
@@ -860,13 +860,13 @@
 
                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
                             <a href="{{ asset('storage/app/' . $experienceImages[6]->image_name) }}"
-                                data-fancybox="images" data-caption="This image has a caption" class="w-100">
+                                data-fancybox="images" class="w-100">
                                 <div class="cover_bg gallery_l"
                                     style="background-image: url({{ asset('storage/app/' . $experienceImages[6]->image_name) }});">
                                 </div>
                             </a>
                             <a href="{{ asset('storage/app/' . $experienceImages[7]->image_name) }}"
-                                data-fancybox="images" data-caption="This image has a caption" class="w-100">
+                                data-fancybox="images" class="w-100">
                                 <div class="cover_bg gallery_s"
                                     style="background-image: url({{ asset('storage/app/' . $experienceImages[7]->image_name) }});">
                                 </div>
