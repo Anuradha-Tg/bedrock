@@ -13,6 +13,7 @@ use App\Models\ExperienceList;
 use App\Models\Rooms;
 use App\Models\GalleryCategory;
 use App\Models\ContactUsDetail;
+use App\Models\Country;
 use App\Models\GalleryImages;
 use App\Models\Promotion;
 use Carbon\Carbon;
@@ -85,6 +86,7 @@ class HomeController extends Controller
         $allImages = AllCategory::where('checkbox', 1)->OrderBy('order', 'ASC')->get();
 
 
+        $country = Country::get();
 
 
 
@@ -110,7 +112,7 @@ class HomeController extends Controller
             'roomTypeDetails',
             'hotelImages',
             'foodImages',
-            'experienceImages'
+            'experienceImages','country'
         ));
     }
 }

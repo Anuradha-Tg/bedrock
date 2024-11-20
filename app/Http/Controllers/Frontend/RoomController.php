@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\ContactUsDetail;
+use App\Models\Country;
 use App\Models\Promotion;
 use App\Models\RoomFacilityData;
 use App\Models\RoomFeatureData;
@@ -110,10 +111,11 @@ class RoomController extends Controller
 
         // dd(\DB::getQueryLog());
 
+        $country = Country::get();
 
         $contactDetails = ContactUsDetail::first();
 
 
-        return view('frontend.rooms', compact('topBanner', 'roomDetails', 'contactDetails', 'roomFeatureDetails','roomFacilityDetails'));
+        return view('frontend.rooms', compact('topBanner', 'roomDetails', 'contactDetails', 'roomFeatureDetails','roomFacilityDetails','country'));
     }
 }

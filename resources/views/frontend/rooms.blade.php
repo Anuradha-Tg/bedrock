@@ -232,14 +232,18 @@
                             <div class="contact_box mb-0 col-6 col-md-12">
                                 <p class="head">Online Booking</p>
                                 <div class="detail d-flex gap-3">
+                                    @if($contactDetails->banking1 !='' && $contactDetails->banking1 !='#')
                                     <a href="{{ $contactDetails->banking1 }}" target="_blank">
                                         <img src="{{ asset('public/frontend/images/airbnb.png') }}"
                                             alt="online banking" class="w-100">
                                     </a>
+                                    @endif
+                                    @if($contactDetails->banking2 !='' && $contactDetails->banking2 !='#')
                                     <a href="{{ $contactDetails->banking2 }}" target="_blank">
                                         <img src="{{ asset('public/frontend/images/booking_icon.png') }}"
                                             alt="online banking" class="w-100">
                                     </a>
+                                    @endif
                                 </div>
                             </div>
 
@@ -313,11 +317,12 @@
                                     <div class="form-floating mb-3">
                                         <select class="form-select shadow-none" name="country" id="country"
                                             aria-label="Floating label select example" fdprocessedid="i20ioc">
-                                            <option value="Sri Lanka">Sri Lanka</option>
-                                            <option value="Australia">Australia</option>
-                                            <option value="Japan">Japan</option>
+                                            <option value="" disabled selected>Select Country</option>
+                                            @foreach ($country as $countries)
+                                                <option value="{{ $countries->name }}">{{ $countries->name }}</option>
+                                            @endforeach
                                         </select>
-                                        <label for="floatingSelect">Country</label>
+                                        <label for="country">Country</label>
                                     </div>
                                 </div>
 

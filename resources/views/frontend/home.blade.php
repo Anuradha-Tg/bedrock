@@ -957,22 +957,22 @@
                                 <p class="head">Social Media</p>
                                 <p class="detail d-flex gap-3">
                                     @if ($contactDetails->facebook_url != '' && $contactDetails->facebook_url != '#')
-                                        <a href="{{ $contactDetails->facebook_url }}" target="_blank">
+                                        <a href="{{ $contactDetails->facebook_url }}" aria-label="direct to facebook" target="_blank">
                                             <i class="fa-brands fa-facebook-f"></i>
                                         </a>
                                     @endif
                                     @if ($contactDetails->instagram_url != '' && $contactDetails->instagram_url != '#')
-                                        <a href="{{ $contactDetails->instagram_url }}" target="_blank">
+                                        <a href="{{ $contactDetails->instagram_url }}" aria-label="direct to instagram" target="_blank">
                                             <i class="fa-brands fa-instagram"></i>
                                         </a>
                                     @endif
-                                    {{-- @if ($contactDetails->twitter_url != '' && $contactDetails->twitter_url != '#')
-                                        <a href="{{ $contactDetails->twitter_url }}" target="_blank">
+                                    @if ($contactDetails->twitter_url != '' && $contactDetails->twitter_url != '#')
+                                        <a href="{{ $contactDetails->twitter_url }}" aria-label="direct to twitter" target="_blank">
                                             <i class="fa-brands fa-x-twitter"></i>
                                         </a>
-                                    @endif --}}
+                                    @endif
                                     @if ($contactDetails->youtube_url != '' && $contactDetails->youtube_url != '#')
-                                        <a href="{{ $contactDetails->youtube_url }}" target="_blank">
+                                        <a href="{{ $contactDetails->youtube_url }}" aria-label="direct to youtube" target="_blank">
                                             <i class="fa-brands fa-youtube"></i>
                                         </a>
                                     @endif
@@ -984,14 +984,18 @@
                             <div class="contact_box mb-0 col-6 col-md-12">
                                 <p class="head">Online Booking</p>
                                 <div class="detail d-flex gap-3">
+                                    @if($contactDetails->banking1 !='' && $contactDetails->banking1 !='#')
                                     <a href="{{ $contactDetails->banking1 }}" target="_blank">
                                         <img src="{{ asset('public/frontend/images/airbnb.png') }}"
                                             alt="online banking" class="w-100">
                                     </a>
+                                    @endif
+                                    @if($contactDetails->banking2 !='' && $contactDetails->banking2 !='#')
                                     <a href="{{ $contactDetails->banking2 }}" target="_blank">
                                         <img src="{{ asset('public/frontend/images/booking_icon.png') }}"
                                             alt="online banking" class="w-100">
                                     </a>
+                                    @endif
                                 </div>
                             </div>
 
@@ -1065,11 +1069,12 @@
                                     <div class="form-floating mb-3">
                                         <select class="form-select shadow-none" name="country" id="country"
                                             aria-label="Floating label select example" fdprocessedid="i20ioc">
-                                            <option value="Sri Lanka">Sri Lanka</option>
-                                            <option value="Australia">Australia</option>
-                                            <option value="Japan">Japan</option>
+                                            <option value="" disabled selected>Select Country</option>
+                                            @foreach ($country as $countries)
+                                                <option value="{{ $countries->name }}">{{ $countries->name }}</option>
+                                            @endforeach
                                         </select>
-                                        <label for="floatingSelect">Country</label>
+                                        <label for="country">Country</label>
                                     </div>
                                 </div>
 
