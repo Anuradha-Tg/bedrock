@@ -107,14 +107,18 @@
                             <div class="contact_box mb-0 col-6 col-md-12">
                                 <p class="head">Online Booking</p>
                                 <div class="detail d-flex gap-3">
+                                    @if($contactDetails->banking1 !='' && $contactDetails->banking1 !='#')
                                     <a href="{{ $contactDetails->banking1 }}" target="_blank">
                                         <img src="{{ asset('public/frontend/images/airbnb.png') }}"
-                                            alt="online banking" class="w-100">
+                                            alt="online booking" class="w-100">
                                     </a>
+                                    @endif
+                                    @if($contactDetails->banking2 !='' && $contactDetails->banking2 !='#')
                                     <a href="{{ $contactDetails->banking2 }}" target="_blank">
                                         <img src="{{ asset('public/frontend/images/booking_icon.png') }}"
-                                            alt="online banking" class="w-100">
+                                            alt="online booking" class="w-100">
                                     </a>
+                                    @endif
                                 </div>
                             </div>
 
@@ -242,3 +246,9 @@
 <!-- ================================= -->
 <!-- ================================= -->
 @include('frontend.includes.footer')
+
+
+
+
+
+
