@@ -34,6 +34,7 @@
     <meta http-equiv="cleartype" content="on">
     <meta name="MobileOptimized" content="width">
     <link rel="icon" type="image/png" href="{{ asset('public/frontend/images/favicon.png') }}">
+    <meta name="description" content="{{ $meta->description }}" />
     <meta name="og:keywords" content="{{ $meta->keywords }}" />
     <meta name="og:title" content="{{ $meta->og_title }}" />
     <meta name="og:type" content="{{ $meta->og_type }}" />
@@ -41,7 +42,7 @@
     <meta name="og:url" content="{{ $meta->og_url }}" />
     <meta name="og:image" content="{{ asset('storage/app/' . $meta->og_image) }}" />
     <meta name="og:site_name" content="{{ $meta->og_sitename }}" />
-    <meta name="og:description" content="{{ $meta->description }}" />
+    <meta name="og:description" content="{{ $meta->og_description }}" />
     <link rel="canonical" href="{{ url()->full() }}" />
     <title>{{ $meta->page_title }}</title>
 
@@ -52,7 +53,7 @@
     <link href="{{ asset('public/frontend/css/mediaquery.css') }}" rel="stylesheet">
     <!-- Custom CSS -->
 
-    <title>Bedrock</title>
+    
 
     <!--favicon-->
     <link rel="shortcut icon" href="{{ asset('public/frontend/images/favicon.png') }}" />
