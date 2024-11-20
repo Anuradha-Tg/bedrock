@@ -64,11 +64,14 @@ class RoomsController extends Controller
 
         $pathhome_image1 = $request->file('home_image1') ? $request->file('home_image1')->store('public/rooms_images') : null;
 
-        if (!$request->file('og_image') == "") {
-
-            $og_image = $request->file('og_image')->getClientOriginalName();
-
-            $pathog_image = $request->file('og_image')->store('public/og_image');
+        if ($request->hasFile('og_image')) {
+            // Get the original name of the uploaded file
+            $originalName = $request->file('og_image')->getClientOriginalName();
+        
+            // Store the file with the original name in the desired directory
+            $pathog_image = $request->file('og_image')->storeAs('public/og_image', $originalName);
+        
+        
         } else {
             $path = "";
         }
@@ -268,12 +271,14 @@ class RoomsController extends Controller
 
             $pathhome_image1 = $request->file('home_image1')->store('public/rooms_images');
         }
-        if (!$request->hasFile('og_image') == "") {
-
-            $og_image = $request->file('og_image')->getClientOriginalName();
-
-            $pathog_image = $request->file('og_image')->store('public/og_image');
+        if ($request->hasFile('og_image')) {
+            // Get the original name of the uploaded file
+            $originalName = $request->file('og_image')->getClientOriginalName();
+        
+            // Store the file with the original name in the desired directory
+            $pathog_image = $request->file('og_image')->storeAs('public/og_image', $originalName);
         }
+        
 
         if (!$request->hasFile('character_image') == ""){
             $character_image = $request->file('character_image')->getClientOriginalName();
