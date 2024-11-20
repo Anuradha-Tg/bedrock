@@ -16,6 +16,8 @@
             $meta = \App\Helpers\HeaderHelper::getMeta('experience-detail');
         } elseif (request()->is('gallery')) {
             $meta = \App\Helpers\HeaderHelper::getMeta('gallery');
+        } elseif (request()->is('about-us')) {
+            $meta = \App\Helpers\HeaderHelper::getMeta('about-us');
         } elseif (request()->is('contact-us')) {
             $meta = \App\Helpers\HeaderHelper::getMeta('contact-us');
         } elseif (request()->is('room-details/' . $room)) {
