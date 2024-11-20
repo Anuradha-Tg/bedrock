@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\ContactUsDetail;
+use App\Models\Country;
 use App\Models\Inquiry;
 use App\Models\TopBanner;
 use Illuminate\Http\Request;
@@ -15,10 +16,11 @@ class ContactController extends Controller
 
         $topBanner = TopBanner::where('id', 3)->first();
         $contactDetails = ContactUsDetail::first();
+        $country = Country::get();
 
         // dd($testimonials);
 
-        return view('frontend.contact', compact('topBanner','contactDetails'));
+        return view('frontend.contact', compact('topBanner','contactDetails','country'));
     }
 
     public function store(Request $request) {

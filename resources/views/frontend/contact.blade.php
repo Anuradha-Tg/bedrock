@@ -21,7 +21,8 @@
 <div class="container mt-5">
     <div class="row inq_row">
 
-        <div class="offset-xxl-1 col-xxl-8 offset-xl-1 col-xl-8 offset-lg-1 col-lg-8 offset-md-1 col-md-8 col-sm-12 col-12">
+        <div
+            class="offset-xxl-1 col-xxl-8 offset-xl-1 col-xl-8 offset-lg-1 col-lg-8 offset-md-1 col-md-8 col-sm-12 col-12">
             <div class="text_box">
 
                 <h4 data-aos="fade-up">Inquiries</h4>
@@ -45,84 +46,88 @@
                     style="background-image: url({{ asset('public/frontend/images/wave_bg.jpg') }}); box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;">
                     <div class=" contact_col row">
 
-                            <div class="contact_box mb-4 col-6 col-md-12">
-                                <p class="head">Address</p>
-                                <p class="detail">
-                                    {{ $contactDetails->address }}
-                                </p>
-                            </div>
+                        <div class="contact_box mb-4 col-6 col-md-12">
+                            <p class="head">Address</p>
+                            <p class="detail">
+                                {{ $contactDetails->address }}
+                            </p>
+                        </div>
 
-                            <!-- ================== -->
+                        <!-- ================== -->
 
-                            <div class="contact_box mb-4 col-6 col-md-12">
-                                <p class="head">Phone Number</p>
-                                <p class="detail">
-                                    <a href="tel: {{ $contactDetails->contact_no }}">
-                                        {{ $contactDetails->contact_no }}
+                        <div class="contact_box mb-4 col-6 col-md-12">
+                            <p class="head">Phone Number</p>
+                            <p class="detail">
+                                <a href="tel: {{ $contactDetails->contact_no }}">
+                                    {{ $contactDetails->contact_no }}
+                                </a>
+                            </p>
+                        </div>
+
+                        <!-- ================== -->
+
+                        <div class="contact_box mb-4 col-12 col-md-12">
+                            <p class="head">Email Address</p>
+                            <p class="detail">
+                                <a href="mailto:{{ $contactDetails->email }}">
+                                    {{ $contactDetails->email }}
+                                </a>
+                            </p>
+                        </div>
+
+                        <!-- ================== -->
+
+                        <div class="contact_box mb-4 col-6 col-md-12">
+                            <p class="head">Social Media</p>
+                            <p class="detail d-flex gap-3">
+                                @if ($contactDetails->facebook_url != '' && $contactDetails->facebook_url != '#')
+                                    <a href="{{ $contactDetails->facebook_url }}" aria-label="direct to facebook"
+                                        target="_blank">
+                                        <i class="fa-brands fa-facebook-f"></i>
                                     </a>
-                                </p>
-                            </div>
-
-                            <!-- ================== -->
-
-                            <div class="contact_box mb-4 col-12 col-md-12">
-                                <p class="head">Email Address</p>
-                                <p class="detail">
-                                    <a href="mailto:{{ $contactDetails->email }}">
-                                        {{ $contactDetails->email }}
+                                @endif
+                                @if ($contactDetails->instagram_url != '' && $contactDetails->instagram_url != '#')
+                                    <a href="{{ $contactDetails->instagram_url }}" aria-label="direct to instagram"
+                                        target="_blank">
+                                        <i class="fa-brands fa-instagram"></i>
                                     </a>
-                                </p>
-                            </div>
+                                @endif
+                                @if ($contactDetails->twitter_url != '' && $contactDetails->twitter_url != '#')
+                                    <a href="{{ $contactDetails->twitter_url }}" aria-label="direct to twitter"
+                                        target="_blank">
+                                        <i class="fa-brands fa-x-twitter"></i>
+                                    </a>
+                                @endif
+                                @if ($contactDetails->youtube_url != '' && $contactDetails->youtube_url != '#')
+                                    <a href="{{ $contactDetails->youtube_url }}" aria-label="direct to youtube"
+                                        target="_blank">
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </a>
+                                @endif
+                            </p>
+                        </div>
 
-                            <!-- ================== -->
+                        <!-- ================== -->
 
-                            <div class="contact_box mb-4 col-6 col-md-12">
-                                <p class="head">Social Media</p>
-                                <p class="detail d-flex gap-3">
-                                    @if ($contactDetails->facebook_url != '' && $contactDetails->facebook_url != '#')
-                                        <a href="{{ $contactDetails->facebook_url }}" target="_blank">
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                        </a>
-                                    @endif
-                                    @if ($contactDetails->instagram_url != '' && $contactDetails->instagram_url != '#')
-                                        <a href="{{ $contactDetails->instagram_url }}" target="_blank">
-                                            <i class="fa-brands fa-instagram"></i>
-                                        </a>
-                                    @endif
-                                    @if ($contactDetails->twitter_url != '' && $contactDetails->twitter_url != '#')
-                                        <a href="{{ $contactDetails->twitter_url }}" target="_blank">
-                                            <i class="fa-brands fa-x-twitter"></i>
-                                        </a>
-                                    @endif
-                                    @if ($contactDetails->youtube_url != '' && $contactDetails->youtube_url != '#')
-                                        <a href="{{ $contactDetails->youtube_url }}" target="_blank">
-                                            <i class="fa-brands fa-youtube"></i>
-                                        </a>
-                                    @endif
-                                </p>
-                            </div>
-
-                            <!-- ================== -->
-
-                            <div class="contact_box mb-0 col-6 col-md-12">
-                                <p class="head">Online Booking</p>
-                                <div class="detail d-flex gap-3">
-                                    @if($contactDetails->banking1 !='' && $contactDetails->banking1 !='#')
+                        <div class="contact_box mb-0 col-6 col-md-12">
+                            <p class="head">Online Booking</p>
+                            <div class="detail d-flex gap-3">
+                                @if ($contactDetails->banking1 != '' && $contactDetails->banking1 != '#')
                                     <a href="{{ $contactDetails->banking1 }}" target="_blank">
                                         <img src="{{ asset('public/frontend/images/airbnb.png') }}"
                                             alt="online booking" class="w-100">
                                     </a>
-                                    @endif
-                                    @if($contactDetails->banking2 !='' && $contactDetails->banking2 !='#')
+                                @endif
+                                @if ($contactDetails->banking2 != '' && $contactDetails->banking2 != '#')
                                     <a href="{{ $contactDetails->banking2 }}" target="_blank">
                                         <img src="{{ asset('public/frontend/images/booking_icon.png') }}"
                                             alt="online booking" class="w-100">
                                     </a>
-                                    @endif
-                                </div>
+                                @endif
                             </div>
-
                         </div>
+
+                    </div>
                 </div>
 
                 <!-- ============= -->
@@ -171,8 +176,8 @@
                                 <div class="form-floating d-flex mb-3">
                                     <input type="text"
                                         class="datepicker_input form-control shadow-none datepicker-input"
-                                        id="check_in" required="" placeholder="DD/MM/YYYY" fdprocessedid="d9zs0c"
-                                        autocomplete="off" name="check_in">
+                                        id="check_in" required="" placeholder="DD/MM/YYYY"
+                                        fdprocessedid="d9zs0c" autocomplete="off" name="check_in">
                                     <label for="datepicker1">Check In</label>
                                     <i class="fa-solid fa-calendar-days"></i>
                                 </div>
@@ -194,9 +199,10 @@
                                 <div class="form-floating mb-3">
                                     <select class="form-select shadow-none" name="country" id="country"
                                         aria-label="Floating label select example" fdprocessedid="i20ioc">
-                                        <option value="Sri Lanka">Sri Lanka</option>
-                                        <option value="Australia">Australia</option>
-                                        <option value="Japan">Japan</option>
+                                        <option value="" disabled selected>Select Country</option>
+                                        @foreach ($country as $countries)
+                                            <option value="{{ $countries->name }}">{{ $countries->name }}</option>
+                                        @endforeach
                                     </select>
                                     <label for="country">Country</label>
                                 </div>
@@ -239,16 +245,10 @@
     <div style="width: 100%"><iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0"
             marginwidth="0"
             src="https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=bedrock%20kalpitiya+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
-            href="https://www.gps.ie/">gps tracker sport</a></iframe></div>
-    </div>
+                href="https://www.gps.ie/">gps tracker sport</a></iframe></div>
+</div>
 </div>
 
 <!-- ================================= -->
 <!-- ================================= -->
 @include('frontend.includes.footer')
-
-
-
-
-
-

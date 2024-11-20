@@ -91,7 +91,6 @@
                     </div>
 
                     <div class="contact_box mt-4">
-                        <p class="head">Online Booking</p>
                         <div>
                           <a href="https://www.tripadvisor.com/Hotel_Review-g1404719-d8869743-Reviews-Bedrock_Beach_Bungalows_Kalpitiya-Kalpitiya_North_Western_Province.html" target="_blank">
                             <img src="{{ asset('public/frontend/images/trip_ad.png') }}" alt="online booking"
@@ -132,7 +131,7 @@
                             <div class="detail d-flex gap-3">
                                 @if ($contactDetails->facebook_url != '' && $contactDetails->facebook_url != '#' )
                                     <div class="footer_social_icon">
-                                        <a href="{{ $contactDetails->facebook_url }}" target="_blank">
+                                        <a href="{{ $contactDetails->facebook_url }}" aria-label="direct to facebook" target="_blank">
                                             <i class="fa-brands fa-facebook-f"></i>
                                         </a>
                                     </div>
@@ -140,7 +139,7 @@
 
                                 @if ($contactDetails->instagram_url != '' && $contactDetails->instagram_url != '#')
                                     <div class="footer_social_icon">
-                                        <a href="{{ $contactDetails->instagram_url }}" target="_blank">
+                                        <a href="{{ $contactDetails->instagram_url }}" aria-label="direct to instagram" target="_blank">
                                             <i class="fa-brands fa-instagram"></i>
                                         </a>
                                     </div>
@@ -148,7 +147,7 @@
 
                                 @if ($contactDetails->twitter_url != '' && $contactDetails->twitter_url != '#')
                                     <div class="footer_social_icon">
-                                        <a href="{{ $contactDetails->twitter_url }}" target="_blank">
+                                        <a href="{{ $contactDetails->twitter_url }}" aria-label="direct to twitter" target="_blank">
                                             <i class="fa-brands fa-x-twitter"></i>
                                         </a>
                                     </div>
@@ -156,7 +155,7 @@
                                 {{-- @if ($contactDetails->youtube_url != '' && $contactDetails->youtube_url != '#') --}}
                                 @if ($contactDetails->youtube_url != '' && $contactDetails->youtube_url != '#')
                                     <div class="footer_social_icon">
-                                        <a href="{{ $contactDetails->youtube_url }}" target="_blank">
+                                        <a href="{{ $contactDetails->youtube_url }}" aria-label="direct to youtube" target="_blank">
                                             <i class="fa-brands fa-youtube"></i>
                                         </a>
                                     </div>
