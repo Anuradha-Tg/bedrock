@@ -9,7 +9,8 @@
                 <div class="col-lg-12">
                     <div class="row cms_top_btn_row" style="margin-left:auto;margin-right:auto;">
                         <a href="{{ route('room-images') }}">
-                            <button class="btn cms_top_btn top_btn_height cms_top_btn_active">{{ __('Add New') }}</button>
+                            <button
+                                class="btn cms_top_btn top_btn_height cms_top_btn_active">{{ __('Add New') }}</button>
                         </a>
                         <a href="{{ route('room-images-list') }}">
                             <button class="btn cms_top_btn top_btn_height ">{{ __('View All') }}</button>
@@ -35,7 +36,8 @@
                 </div>
             @endif
 
-            <div class="jarviswidget" id="wid-id-1" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-custombutton="false" role="widget">
+            <div class="jarviswidget" id="wid-id-1" data-widget-colorbutton="false" data-widget-editbutton="false"
+                data-widget-custombutton="false" role="widget">
                 <header>
                     <h2>{{ __('Images') }}</h2>
                 </header>
@@ -43,7 +45,8 @@
                 <div>
                     <div class="jarviswidget-editbox"></div>
                     <div class="widget-body no-padding">
-                        <form action="{{ route('new-room-images') }}" enctype="multipart/form-data" method="post" id="room-image-form" class="smart-form">
+                        <form action="{{ route('new-room-images') }}" enctype="multipart/form-data" method="post"
+                            id="room-image-form" class="smart-form">
                             @csrf
                             <fieldset>
                                 <div class="row">
@@ -52,7 +55,7 @@
                                         <label class="select">
                                             <select name="room_id" required>
                                                 <option value="">Select Room</option>
-                                                @foreach($rooms as $room)
+                                                @foreach ($rooms as $room)
                                                     <option value="{{ $room->id }}">{{ $room->title }}</option>
                                                 @endforeach
                                             </select>
@@ -66,20 +69,26 @@
                                 <div id="image-upload-section">
                                     <div class="row image-upload-wrapper">
                                         <section class="col col-4">
-                                            <label class="label">{{ __('Image') }} (1200 x 800) <span style="color: red;">*</span></label>
+                                            <label class="label">{{ __('Image') }} (1200 x 800) <span
+                                                    style="color: red;">*</span></label>
                                             <label class="input">
-                                                <input type="file" class="form-control form-input image-input" name="images[][image_name]" required>
+                                                <input type="file" class="form-control form-input image-input"
+                                                    name="images[][image_name]" required>
                                             </label>
                                         </section>
 
                                         <section class="col col-2">
-                                            <label class="label">{{ __('Order') }} <span style="color: red;">*</span></label>
+                                            <label class="label">{{ __('Order') }} <span
+                                                    style="color: red;">*</span></label>
                                             <label class="input">
-                                                <input type="number" class="form-control form-input" name="images[][order]" min="0" required>
+                                                <input type="number" class="form-control form-input"
+                                                    name="images[][order]" min="0" required>
                                             </label>
                                         </section>
-                                        <section class="col col-2" style="display: flex; align-items: flex-end;">
-                                            <button type="button" class="btn-sm btn-success add-image">{{ __('Add More') }}</button>
+                                        <section class="col col-2"
+                                            style="display: flex; align-items: flex-end; height: 55px;">
+                                            <button type="button"
+                                                class="btn-sm btn-success add-image">{{ __('Add More') }}</button>
                                         </section>
                                     </div>
                                 </div>
@@ -87,7 +96,8 @@
                             </fieldset>
                             <footer>
                                 <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
-                                <button type="button" class="btn btn-default" onclick="window.history.back();">{{ __('Back') }}</button>
+                                <button type="button" class="btn btn-default"
+                                    onclick="window.history.back();">{{ __('Back') }}</button>
                             </footer>
                         </form>
                     </div>
@@ -98,7 +108,7 @@
 
     <x-slot name="script">
         <script>
-            $(function(){
+            $(function() {
                 $('#room-image-form').parsley();
 
                 // Add more image upload fields
@@ -118,7 +128,7 @@
                                     <input type="number" class="form-control form-input" name="images[][order]" min="0" required>
                                 </label>
                             </section>
-                            <section class="col col-2" style="display: flex; align-items: flex-end;">
+                            <section class="col col-2" style="display: flex; align-items: flex-end;  height: 55px;">
                                 <button type="button" class="btn-sm btn-danger remove-image">{{ __('Remove') }}</button>
                             </section>
                         </div>`;
