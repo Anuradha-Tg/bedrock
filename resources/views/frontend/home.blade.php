@@ -898,7 +898,7 @@
 <div class="clearfix"></div>
 
 <!-- Inquiries start -->
-<div class="container mb-lg-5 mb-0">
+<div class="container mb-lg-5 mb-0" id="inquiryform">
     <div class="row inq_row">
 
             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">

@@ -12,20 +12,27 @@
 
         if (request()->is('rooms')) {
             $meta = \App\Helpers\HeaderHelper::getMeta('rooms');
+            $contactUsUrl = 'contact-us/#inquiryform';
         } elseif (request()->is('experience-detail')) {
             $meta = \App\Helpers\HeaderHelper::getMeta('experience-detail');
+            $contactUsUrl = 'contact-us/#inquiryform';
         } elseif (request()->is('gallery')) {
             $meta = \App\Helpers\HeaderHelper::getMeta('gallery');
+            $contactUsUrl = 'contact-us/#inquiryform';
         } elseif (request()->is('about-us')) {
             $meta = \App\Helpers\HeaderHelper::getMeta('about-us');
+            $contactUsUrl = 'contact-us/#inquiryform';
         } elseif (request()->is('contact-us')) {
             $meta = \App\Helpers\HeaderHelper::getMeta('contact-us');
+            $contactUsUrl = 'contact-us/#inquiryform';
         } elseif (request()->is('room-details/' . $room)) {
             $meta = \App\Helpers\HeaderHelper::getRoomDetail($room, 'room-details');
+            $contactUsUrl = 'room-details/'.$room .'/#inquiryform';
             // dd($meta);
         } else {
             // dd('hi');
             $meta = \App\Helpers\HeaderHelper::getMeta('home');
+            $contactUsUrl = '/#inquiryform';
         }
         // dd($meta);
     @endphp
@@ -56,7 +63,7 @@
     <link href="{{ asset('public/frontend/css/mediaquery.css') }}" rel="stylesheet">
     <!-- Custom CSS -->
 
-    
+
 
     <!--favicon-->
     <link rel="shortcut icon" href="{{ asset('public/frontend/images/favicon.png') }}" />
@@ -173,10 +180,11 @@
                                     <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" aria-current="page"
                                         href="{{ url('/') }}">Home</a>
                                 </li>
-                               
+
                                 <li class="nav-item">
-                                <a class="nav-link {{ request()->is('about-us') ? 'active' : ''}}"  href="{{ route('about-us') }}">About Us</a>
-                            </li>
+                                    <a class="nav-link {{ request()->is('about-us') ? 'active' : '' }}"
+                                        href="{{ route('about-us') }}">About Us</a>
+                                </li>
                                 <li class="nav-item">
                                     <a class="nav-link {{ request()->is('rooms') ? 'active' : '' }}"
                                         href="{{ route('rooms') }}">Rooms</a>
@@ -205,7 +213,7 @@
                 <!-- =========================================== -->
 
                 <div>
-                    <a href="#">
+                    <a href="{{ url($contactUsUrl) }}">
                         <button class="blue_btn">
                             <i class="fa-solid fa-bell"></i>
                             BOOK NOW
@@ -218,34 +226,40 @@
                     <input type="checkbox" id="menuToggle"></input>
 
                     <label for="menuToggle" class="menuOpen">
-                    <div class="open"></div>
+                        <div class="open"></div>
                     </label>
 
                     <div class="menu menuEffects">
-                    <label for="menuToggle"></label>
-                    <div class="menuContent">
-                        <ul>
-                            <li>
-                                <a class="mobi_nav_link {{ request()->is('/') ? 'active' : ''}}" aria-current="page" href="{{ url('/') }}">Home</a>
-                            </li>
-                           
-                            <li>
-                                <a class="mobi_nav_link {{ request()->is('about-us') ? 'active' : ''}}"  href="{{ route('about-us') }}">About Us</a>
-                            </li>
-                            <li>
-                                <a class="mobi_nav_link {{ request()->is('rooms') ? 'active' : ''}}"  href="{{ route('rooms') }}">Rooms</a>
-                            </li>
-                            <li>
-                                <a class="mobi_nav_link {{ request()->is('experience-detail') ? 'active' : ''}}" href="{{ route('experience-detail') }}">Experiences</a>
-                            </li>
-                            <li>
-                                <a class="mobi_nav_link {{ request()->is('gallery') ? 'active' : ''}}" href="{{ route('gallery') }}">Gallery</a>
-                            </li>
-                            <li>
-                                <a class="mobi_nav_link {{ request()->is('contact-us') ? 'active' : ''}}" href="{{ route('contact-us') }}">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
+                        <label for="menuToggle"></label>
+                        <div class="menuContent">
+                            <ul>
+                                <li>
+                                    <a class="mobi_nav_link {{ request()->is('/') ? 'active' : '' }}"
+                                        aria-current="page" href="{{ url('/') }}">Home</a>
+                                </li>
+
+                                <li>
+                                    <a class="mobi_nav_link {{ request()->is('about-us') ? 'active' : '' }}"
+                                        href="{{ route('about-us') }}">About Us</a>
+                                </li>
+                                <li>
+                                    <a class="mobi_nav_link {{ request()->is('rooms') ? 'active' : '' }}"
+                                        href="{{ route('rooms') }}">Rooms</a>
+                                </li>
+                                <li>
+                                    <a class="mobi_nav_link {{ request()->is('experience-detail') ? 'active' : '' }}"
+                                        href="{{ route('experience-detail') }}">Experiences</a>
+                                </li>
+                                <li>
+                                    <a class="mobi_nav_link {{ request()->is('gallery') ? 'active' : '' }}"
+                                        href="{{ route('gallery') }}">Gallery</a>
+                                </li>
+                                <li>
+                                    <a class="mobi_nav_link {{ request()->is('contact-us') ? 'active' : '' }}"
+                                        href="{{ route('contact-us') }}">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 {{-- mobile menu end --}}

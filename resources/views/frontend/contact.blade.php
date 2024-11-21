@@ -22,7 +22,7 @@
     <div class="row inq_row">
 
         <div
-            class="offset-xxl-1 col-xxl-8 offset-xl-1 col-xl-8 offset-lg-1 col-lg-8 offset-md-1 col-md-8 col-sm-12 col-12">
+            class="offset-xxl-1 col-xxl-8 offset-xl-1 col-xl-8 offset-lg-1 col-lg-8 offset-md-1 col-md-8 col-sm-12 col-12" id='inquiryform'>
             <div class="text_box">
 
                 <h4 data-aos="fade-up">Inquiries</h4>
@@ -131,7 +131,7 @@
                 </div>
 
                 <!-- ============= -->
-                <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 dark_bg py-4 px-5"
+                <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 dark_bg py-4 px-5" 
                     style="z-index: 9;">
                     @if ($message = Session::get('error'))
                         <div class="alert alert-danger">
