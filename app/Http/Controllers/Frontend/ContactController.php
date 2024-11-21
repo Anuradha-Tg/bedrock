@@ -64,7 +64,7 @@ class ContactController extends Controller
         ['inquirydetails' => $inquiry, 'contactsdetails' => $contactDetails], function($message) use($contactDetails)
         {
             $message->from('bedrockinquiries@gmail.com');
-            $message->to('ranminijayawardena@gmail.com')->subject('Bedrock - New Enquiry');
+            $message->to('bedrockinquiries@gmail.com')->subject('Bedrock - New Enquiry');
         });
 
         return redirect()->route('contact-us')->with('success', 'Enquiry submitted successfully.');

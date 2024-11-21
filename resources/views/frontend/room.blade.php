@@ -46,7 +46,8 @@
                 </div>
             </div>
 
-            <div class="col-xxl-7 offset-xl-0 col-xl-7 offset-lg-2 col-lg-10 offset-md-2 col-md-10 col-sm-12 col-12 px-3 position-relative">
+            <div
+                class="col-xxl-7 offset-xl-0 col-xl-7 offset-lg-2 col-lg-10 offset-md-2 col-md-10 col-sm-12 col-12 px-3 position-relative">
 
                 <img src="{{ asset('public/frontend/images/wave_line.png') }}" alt="wave line" class="wave_line_img">
 
@@ -79,7 +80,8 @@
                     style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ asset('storage/app/' . $promo->image) }}');">
                     <div class="container h-100">
                         <div class="row justify-content-end h-100">
-                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12 d-flex align-items-center">
+                            <div
+                                class="col-xxl-6 col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12 d-flex align-items-center">
                                 <div class="text_box text-light">
                                     <h4 class="text-light" data-aos="fade-up">Promotion</h4>
                                     <h2 class="mb-3 text-light" data-aos="fade-down">{{ $promo->heading }}</h2>
@@ -112,16 +114,19 @@
                     <h2 class="mb-3" data-aos="fade-down">Where Tranquility Meets Timeless Comfort</h2>
                     <p>At Bedrock Kalpitiya, each room promises a harmonious blend of minimalist elegance,
                         inspired by Greek design and accentuated with local artistry. Our oceanfront suites,
-                        Fred's Cave and Wilma's Sanctuary, offer breathtaking sunset views over the beach, while Betty's
-                        Pool House and Barney's Hideout provide serene poolside retreats with a view of our freshwater
-                        pond.
-                        Every room is crafted to ensure a luxurious, comfortable stay, equipped with modern amenities
-                        and thoughtfully
-                        arranged decor to capture the essence of Kalpitiya’s beauty. Experience coastal luxury,
-                        captivating vistas, and warm hospitality—your perfect retreat awaits.</p>
+                        Fred's Cave and Wilma's Sanctuary, offer breathtaking sunset views over the beach, while
+                        Betty's Pool House and Barney's Hideout provide serene poolside retreats with a view of
+                        our freshwater lagoon.
+                        <br><br>
+                        Every room is crafted to ensure a luxurious, comfortable stay, equipped with thoughtfully
+                        arranged amenities like Air Conditioning, WiFi, Tea/Coffee Making, Shisha, Board Games,
+                        Netflix, and Books, along with aesthetically curated decor to capture the essence of
+                        Kalpitiya’s beauty. Experience coastal luxury, captivating vistas, and warm
+                        hospitality—your perfect retreat awaits.
+                    </p>
                 </div>
             </div>
-            
+
 
             @foreach ($roomDetails as $room)
                 <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 room_ca_div mb-4">
@@ -142,10 +147,11 @@
                                     ->take(3); // Limit to the first 3 features
                             @endphp
 
-                             @foreach ($roomListing as $listingFeatureData)
+                            @foreach ($roomListing as $listingFeatureData)
                                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 mt-2 md-mt-0">
                                     <div class="d-flex gap-2">
-                                        <img src="{{ asset($listingFeatureData->icon) }}" alt="room features" class="small_icon">
+                                        <img src="{{ asset($listingFeatureData->icon) }}" alt="room features"
+                                            class="small_icon">
                                         <p>{{ $listingFeatureData->feature_name }}</p>
                                     </div>
                                 </div>
