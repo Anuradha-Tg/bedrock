@@ -148,7 +148,7 @@
 <div class="clearfix"></div>
 
 <!-- inquire form -->
-<div class="container mb-lg-5 mb-0">
+<div class="container mb-lg-5 mb-0" id="inquiryform">
     <div class="row inq_row">
 
         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -252,7 +252,7 @@
 
                     <!-- ============= -->
 
-                        <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 dark_bg py-4 px-5" style="z-index: 9;">
+                        <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 dark_bg py-4 px-5" style="z-index: 9;" >
                             @if ($message = Session::get('error'))
                             <div class="alert alert-danger">
                                 <p>{{ $message }}</p>
