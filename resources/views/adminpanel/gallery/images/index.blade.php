@@ -78,7 +78,7 @@
                                                 <input type="number" class="form-control form-input" name="images[][image_order]" min="0" required>
                                             </label>
                                         </section>
-                                        <section class="col col-2" style="display: flex; align-items: flex-end;">
+                                        <section class="col col-2" style="display: flex; align-items: flex-end;  height: 55px;">
                                             <button type="button" class="btn-sm btn-success add-image">{{ __('Add More') }}</button>
                                         </section>
                                     </div>
@@ -118,7 +118,7 @@
                                     <input type="number" class="form-control form-input" name="images[][image_order]" min="0" required>
                                 </label>
                             </section>
-                            <section class="col col-2" style="display: flex; align-items: flex-end;">
+                            <section class="col col-2" style="display: flex; align-items: flex-end;  height: 55px;">
                                 <button type="button" class="btn-sm btn-danger remove-image">{{ __('Remove') }}</button>
                             </section>
                         </div>`;

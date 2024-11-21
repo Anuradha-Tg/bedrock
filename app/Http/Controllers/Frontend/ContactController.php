@@ -63,7 +63,7 @@ class ContactController extends Controller
         \Mail::send('frontend.mail.inquirymail',
         ['inquirydetails' => $inquiry, 'contactsdetails' => $contactDetails], function($message) use($contactDetails)
         {
-            $message->from('devtekgeeks@gmail.com');
+            $message->from('bedrockinquiries@gmail.com');
             $message->to('ranminijayawardena@gmail.com')->subject('Bedrock - New Enquiry');
         });
 
